@@ -1,75 +1,62 @@
 # CS 555-A, Project 02
 # Submitted by: Meet Patel, cwid: 10446501
 # Date: 2 Feb 2020
-# please select the file by inserting name here
+from objectValidity import objectvalid
+from parseObjects import inddetails, famdetails
+from tagValidity import isvalid
 
 
-# reading the file and printing output
 def main() -> None:
+    # please select the file by inserting name here
     f = open("Project01.ged", "r")
-    obj = None
-    currtag = None  # flag to signal which object is being processed
-    indi = ()  # list of INDI objects
-    fam = ()  # list of FAM objects
+
+    obj = None  # refers to the Dict/JSON object being parsed at a given moment
+    currtag = None  # Type of object (FAM, INDI) being processed
+    indi = list()  # list of INDI objects
+    fam = list()  # list of FAM objects
 
     for line in f:
         elems = line.split()
-        v = isvalid(elems)
+        v = isvalid(elems)  # if line is valid it returns a list of level,tag,args, else returns None
         if v is None:
-            print(f' {line} is invalid')
+            # print(f' {line} is invalid')
             continue
-
+        else:
+            # print(v)
+            None
         # the line is valid
-        if v[0] is '0' and (v[1] is 'FAM' or v[1] is 'INDI'):
-            if currtag is not None:
-                # check validity of the existing object
-                # ideally will call functions defined in the INDI and FAM classes to check for user stories
-                print('check for object validity and save it, also make the variable pointing to the object as None')
 
-            # set the flag to new object value
+        if v[0] is '0' and (v[1] in ('FAM', 'INDI')):
+            if currtag is not None:
+                # check object validity
+                if objectvalid(obj):
+                    if 'INDI' in obj:
+                        indi.append(obj)
+                    else:
+                        fam.append(obj)
+                # end of if
+                obj = None
+
+            # set the currtag flag to the new tag being parsed
             currtag = v[1]
+
         elif v[0] is '0':
+            # NOTE, TRLR, HEAD
             continue
 
-        # use currtag to call function to create the appropriate object
+        # use currtag to call function to create the appropriate JSON/Dict object
         if currtag == 'FAM':
-            print('')
-            # call appropriate function
-        elif currtag is 'INDI':
-            print("")
-            # call appropriate function
+            obj = famdetails(obj, v)
+        elif currtag == 'INDI':
+            obj = inddetails(obj, v)
+        elif obj is None:   # the first valid line is not a FAM or IND
+            currtag = None
+    # end of for
 
-        print(v)
     f.close()
 
-
-# Function to check the validity of the line
-def isvalid(parser):
-    lvlonetags = ('NAME', 'SEX', 'BIRT', 'DEAT', 'FAMC', 'FAMS', "MARR", 'HUSB', 'WIFE', 'CHIL', 'DIV')
-    lvlzero = ('HEAD', "TRLR", 'NOTE')
-    lvlidentity = ('FAM', 'INDI')
-    lvltwotags = 'DATE'
-
-    level = parser[0]
-    tag = parser[1]
-    val = 'N'
-    args = ' '.join(parser[2:])
-    # check for tag IND or FAM separately
-    if level == '0' and parser[1] == lvlzero:
-        val = 'Y'
-    elif level == '0' and parser[2] in lvlidentity:
-        tag = parser[2]
-        args = parser[1]
-        val = 'Y'
-    elif level == '1' and parser[1] in lvlonetags:
-        val = 'Y'
-    elif level == '2' and parser[1] in lvltwotags:
-        val = 'Y'
-    # end of else
-    if val == 'N':
-        return None
-    else:
-        return level, tag, args
+    print(indi)
+    print(fam)
 
 
 if __name__ == "__main__":
