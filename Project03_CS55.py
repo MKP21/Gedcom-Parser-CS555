@@ -3,7 +3,7 @@
 # Date: 2 Feb 2020
 from objectValidity import objectvalid
 from parseObjects import inddetails, famdetails
-from tagValidity import isvalid
+from lineValidity import isvalid
 
 
 def main() -> None:
