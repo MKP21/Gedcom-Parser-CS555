@@ -1,6 +1,6 @@
-# CS 555-A, Project 02
-# Submitted by: Meet Patel, cwid: 10446501
-# Date: 2 Feb 2020
+# CS 555-A, Project 03
+# Date: 09 Feb 2020
+
 from subscripts.lineValidity import isvalid
 from subscripts.objectValidity import objectvalid
 from subscripts.parseObjects import inddetails, famdetails
