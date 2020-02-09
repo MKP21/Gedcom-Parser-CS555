@@ -1,0 +1,1 @@
+Please load te folder as a "project" and then run the script "Project03_CS555.py"

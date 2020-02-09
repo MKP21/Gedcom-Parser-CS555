@@ -1,5 +1,8 @@
 # script with functions to create and edit FAM, INDI JSON objects
 from collections import OrderedDict
+import datetime
+
+
 # obj will be referencing to the object being parsed at a given moment
 # v will be a list with { level, tag, args } format
 
@@ -11,10 +14,10 @@ def inddetails(obj, v):
             "INDI": v[2],
             "NAME": "NA",
             "SEX": "NA",
-            "BIRT": "NA",   # date
-            "DEAT": "NA",   # date
-            "FAMC": "NA",   # array to check possible errors
-            "FAMS": "NA"    # array to check possible errors
+            "BIRT": "NA",  # datetime
+            "DEAT": "NA",  # datetime
+            "FAMC": "NA",  # array to check possible errors
+            "FAMS": "NA"   # array
         })
         return obj
     # end of if
@@ -32,11 +35,11 @@ def inddetails(obj, v):
 
     elif v[1] == "DATE":
         if obj["DEAT"] is None:
-            # convert date to string
-            obj["DEAT"] = v[2]
+            # convert string to datetime
+            obj["DEAT"] = datetime.datetime.strptime(v[2], "%d %b %Y")
         elif obj["BIRT"] is None:
-            # convert date to string
-            obj["BIRT"] = v[2]
+            # convert string to datetime
+            obj["BIRT"] = datetime.datetime.strptime(v[2], "%d %b %Y")
         else:
             print()
 
@@ -73,11 +76,11 @@ def famdetails(obj, v):
             obj[v[1]] = None
     elif v[1] == "DATE":
         if obj["DIV"] is None:
-            # convert date to string
-            obj["DIV"] = v[2]
+            # convert string to datetime
+            obj["DIV"] = datetime.datetime.strptime(v[2], "%d %b %Y")
         elif obj["MARR"] is None:
-            # convert date to string
-            obj["MARR"] = v[2]
+            # convert string to datetime
+            obj["MARR"] = datetime.datetime.strptime(v[2], "%d %b %Y")
         else:
             print(f"Error with date {v}")
     else:

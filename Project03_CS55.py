@@ -1,9 +1,10 @@
 # CS 555-A, Project 02
 # Submitted by: Meet Patel, cwid: 10446501
 # Date: 2 Feb 2020
-from objectValidity import objectvalid
-from parseObjects import inddetails, famdetails
-from lineValidity import isvalid
+from subscripts.lineValidity import isvalid
+from subscripts.objectValidity import objectvalid
+from subscripts.parseObjects import inddetails, famdetails
+from subscripts.outputDisplay import outputtable
 
 
 def main() -> None:
@@ -22,7 +23,7 @@ def main() -> None:
             # print(f' {line} is invalid')
             continue
         else:
-            # print(v)
+            # print(f" {line}  is a valid line")
             None
         # the line is valid
 
@@ -49,14 +50,18 @@ def main() -> None:
             obj = famdetails(obj, v)
         elif currtag == 'INDI':
             obj = inddetails(obj, v)
-        elif obj is None:   # the first valid line is not a FAM or IND
+        elif obj is None:  # the first valid line is not a FAM or IND
             currtag = None
     # end of for
 
     f.close()
 
-    print(indi)
-    print(fam)
+    # sorting the lists by UID
+    indi = sorted(indi, key=lambda i: i["INDI"])
+    fam = sorted(fam, key=lambda i: i["FAM"])
+
+    # print the table
+    outputtable(indi, fam)
 
 
 if __name__ == "__main__":
