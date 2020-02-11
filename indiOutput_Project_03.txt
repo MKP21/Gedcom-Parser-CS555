@@ -1,0 +1,11 @@
+ID NAME GENDER BIRTHDAY AGE ALIVE DEATH CHILD SPOUSE 
+@I10@ Yoda /Palpatine/ M 29 Oct 1085 934 TRUE NA ['@F4@'] NA 
+@I1@ Anakin /Skywalker/ M 11 Oct 1010 39 FALSE 08 Oct 1050 NA ['@F1@'] 
+@I2@ Padme /Skywalker/ F 09 Feb 1001 27 FALSE 10 Mar 1028 NA ['@F1@'] 
+@I3@ Luke /Skywalker/ M 09 Sep 1026 48 FALSE 01 Jan 1075 ['@F1@'] NA 
+@I4@ Leia /Skywalker/ F 01 Sep 1026 52 FALSE 23 Aug 1079 ['@F1@'] ['@F2@'] 
+@I5@ Han /Solo/ M 04 Jun 1023 50 FALSE 06 Feb 1074 NA ['@F2@'] 
+@I6@ Ben /Solo/ M 17 Oct 1055 24 FALSE 07 Sep 1080 ['@F2@'] ['@F3@'] 
+@I7@ Rey /Palpatine/ F 17 Oct 1054 965 TRUE NA NA ['@F3@', '@F4@'] 
+@I8@ Hope /Solo/ F 13 Nov 1081 938 TRUE NA ['@F3@'] NA 
+@I9@ Finn /2187/ M 17 Mar 1054 965 TRUE NA NA ['@F4@'] 

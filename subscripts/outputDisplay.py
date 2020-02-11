@@ -10,40 +10,57 @@ def outputtable(indi, fam):
     # adding fieldnames
     itable.field_names = ["ID", "NAME", "GENDER", "BIRTHDAY", "AGE", "ALIVE", "DEATH", "CHILD", "SPOUSE"]
 
+    # creating text file
+    newf = open('indiOutput_Project_03.txt', 'w')
+    newf.write(f'{" ".join(["ID", "NAME", "GENDER", "BIRTHDAY", "AGE", "ALIVE", "DEATH", "CHILD", "SPOUSE"])} \n')
+
     # adding data
     for item in indi:
-        itable.add_row([item["INDI"],
-                        item["NAME"],
-                        item["SEX"],
-                        item["BIRT"] if item["BIRT"] == "NA" else item["BIRT"].date(),
-                        calculateage(item["BIRT"], item["DEAT"]),
-                        "TRUE" if item["DEAT"] == "NA" else "FALSE",
-                        item["DEAT"] if item["DEAT"] == "NA" else item["DEAT"].date(),
-                        item["FAMC"],
-                        item["FAMS"]])
+        newrow = [item["INDI"],
+                  item["NAME"],
+                  item["SEX"],
+                  item["BIRT"] if item["BIRT"] == "NA" else item["BIRT"].strftime("%d %b %Y"),
+                  calculateage(item["BIRT"], item["DEAT"]),
+                  "TRUE" if item["DEAT"] == "NA" else "FALSE",
+                  item["DEAT"] if item["DEAT"] == "NA" else item["DEAT"].strftime("%d %b %Y"),
+                  str(item["FAMC"]),
+                  str(item["FAMS"])]
+        itable.add_row(newrow)
+        newf.write(f"{' '.join(newrow)} \n")
 
     # printing the table
     print(itable)
+
+    newf.close()
 
     ftable = prettytable.PrettyTable()
     # adding fieldnames
     ftable.field_names = ["ID", "MARRIED", "DIVORCED", "HUSBAND ID", "HUSBAND NAME", "WIFE ID", "WIFE NAME", "CHILDREN"]
 
+    # creating text file
+    newf = open('famOutput_Project_03.txt', 'w')
+    newf.write(
+        f'{" ".join(["ID", "MARRIED", "DIVORCED", "HUSBAND ID", "HUSBAND NAME", "WIFE ID", "WIFE NAME", "CHILDREN"])} \n')
+
     # adding data
     for item in fam:
         husbobj = dictsearch(item["HUSB"], indi)
         wifeobj = dictsearch(item["WIFE"], indi)
-        ftable.add_row([item["FAM"],
-                        item["MARR"] if item["MARR"] == "NA" else item["MARR"].date(),
-                        item["DIV"] if item["DIV"] == "NA" else item["DIV"].date(),
-                        item["HUSB"],
-                        "NA" if husbobj is None else husbobj["NAME"],
-                        item["WIFE"],
-                        "NA" if wifeobj is None else wifeobj["NAME"],
-                        item["CHIL"]])
+        newrow = [item["FAM"],
+                  item["MARR"] if item["MARR"] == "NA" else item["MARR"].strftime("%d %b %Y"),
+                  item["DIV"] if item["DIV"] == "NA" else item["DIV"].strftime("%d %b %Y"),
+                  item["HUSB"],
+                  "NA" if husbobj is None else husbobj["NAME"],
+                  item["WIFE"],
+                  "NA" if wifeobj is None else wifeobj["NAME"],
+                  str(item["CHIL"])]
+        ftable.add_row(newrow)
+        newf.write(f"{' '.join(newrow)} \n")
 
     # printing the table
     print(ftable)
+    newf.close()
+
 
 # calculateage function referred from https://www.geeksforgeeks.org/python-program-to-calculate-age-in-year/
 
@@ -56,7 +73,7 @@ def calculateage(birth, death):
 
     days_in_year = 365.2425
     age = int((latest - birth.date()).days / days_in_year)
-    return age
+    return str(age)
 
 
 def dictsearch(uid, indilist):
