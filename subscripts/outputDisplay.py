@@ -10,10 +10,6 @@ def outputtable(indi, fam):
     # adding fieldnames
     itable.field_names = ["ID", "NAME", "GENDER", "BIRTHDAY", "AGE", "ALIVE", "DEATH", "CHILD", "SPOUSE"]
 
-    # creating text file
-    newf = open('indiOutput_Project_03.txt', 'w')
-    newf.write(f'{" ".join(["ID", "NAME", "GENDER", "BIRTHDAY", "AGE", "ALIVE", "DEATH", "CHILD", "SPOUSE"])} \n')
-
     # adding data
     for item in indi:
         newrow = [item["INDI"],
@@ -26,21 +22,17 @@ def outputtable(indi, fam):
                   str(item["FAMC"]),
                   str(item["FAMS"])]
         itable.add_row(newrow)
-        newf.write(f"{' '.join(newrow)} \n")
 
     # printing the table
     print(itable)
-
+    # creating text file
+    newf = open('indiOutput_Project_03.txt', 'w')
+    newf.write(str(itable))
     newf.close()
 
     ftable = prettytable.PrettyTable()
     # adding fieldnames
     ftable.field_names = ["ID", "MARRIED", "DIVORCED", "HUSBAND ID", "HUSBAND NAME", "WIFE ID", "WIFE NAME", "CHILDREN"]
-
-    # creating text file
-    newf = open('famOutput_Project_03.txt', 'w')
-    newf.write(
-        f'{" ".join(["ID", "MARRIED", "DIVORCED", "HUSBAND ID", "HUSBAND NAME", "WIFE ID", "WIFE NAME", "CHILDREN"])} \n')
 
     # adding data
     for item in fam:
@@ -55,10 +47,12 @@ def outputtable(indi, fam):
                   "NA" if wifeobj is None else wifeobj["NAME"],
                   str(item["CHIL"])]
         ftable.add_row(newrow)
-        newf.write(f"{' '.join(newrow)} \n")
 
     # printing the table
     print(ftable)
+    # creating text file
+    newf = open('famOutput_Project_03.txt', 'w')
+    newf.write(str(ftable))
     newf.close()
 
 
