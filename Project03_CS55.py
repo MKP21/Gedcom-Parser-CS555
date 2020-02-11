@@ -11,8 +11,8 @@ def main() -> None:
     # please select the file by inserting name here
     f = open("Project01.ged", "r")
 
-    obj = None  # refers to the Dict/JSON object being parsed at a given moment
-    currtag = None  # Type of object (FAM, INDI) being processed
+    obj = None  # refers to the actual Dict object being parsed at a given moment
+    currtag = None  # The tag being processed currently
     indi = list()  # list of INDI objects
     fam = list()  # list of FAM objects
 
@@ -45,7 +45,7 @@ def main() -> None:
             # NOTE, TRLR, HEAD
             continue
 
-        # use currtag to call function to create the appropriate JSON/Dict object
+        # use currtag to call function to create the appropriate Dict object
         if currtag == 'FAM':
             obj = famdetails(obj, v)
         elif currtag == 'INDI':
@@ -60,23 +60,10 @@ def main() -> None:
     indi = sorted(indi, key=lambda i: i["INDI"])
     fam = sorted(fam, key=lambda i: i["FAM"])
 
-    # print the table
+    # print the table and output a text file
     outputtable(indi, fam)
 
 
 if __name__ == "__main__":
     main()
 
-# read line
-# check for validity, else "read next line"
-# if level is 0 then we will check the class variable (IND or FAM or None)
-#       if tag is None (first object)
-#           set class variable to tag
-#       elif tag is already set
-#           run validity of object (call to user story tests) before pushing it to the list
-#               throw error or push object to list, set object variable to None and set tag to new value
-#
-#       if tag is IND:
-#           initialise IND object if it does not exist, or add the attribute mentioned in this line
-#       elif tag is FAM:
-#

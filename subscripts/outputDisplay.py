@@ -1,5 +1,4 @@
 # import pretty table for displaying output in Prettytable format
-# keep prettytable module files in the same folder as the file importing it
 
 
 def outputtable(indi, fam):
@@ -10,7 +9,7 @@ def outputtable(indi, fam):
     # adding fieldnames
     itable.field_names = ["ID", "NAME", "GENDER", "BIRTHDAY", "AGE", "ALIVE", "DEATH", "CHILD", "SPOUSE"]
 
-    # adding data
+    # adding rows to the table
     for item in indi:
         newrow = [item["INDI"],
                   item["NAME"],
@@ -70,7 +69,7 @@ def calculateage(birth, death):
     return str(age)
 
 
-def dictsearch(uid, indilist):
-    for i in indilist:
+def dictsearch(uid, itemlist):
+    for i in itemlist:
         if i["INDI"] == uid:
             return i

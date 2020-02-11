@@ -1,15 +1,15 @@
-# script with functions to create and edit FAM, INDI JSON objects
+# A script with functions to create and edit the FAM, INDI dictionaries
 from collections import OrderedDict
 import datetime
 
 
-# obj will be referencing to the object being parsed at a given moment
-# v will be a list with { level, tag, args } format
+# obj variable will refer to the object being parsed at a given moment
+# v variable will be a list with { level, tag, args } format
 
 
 def inddetails(obj, v):
     if obj is None:
-        # create a new INDI Dict, v[1] will be "INDI" in this line
+        # create a new INDI Dict, v[1] will be "INDI" in this line, v[2] will be the id
         obj = OrderedDict({
             "INDI": v[2],
             "NAME": "NA",
@@ -38,7 +38,6 @@ def inddetails(obj, v):
             # convert string to datetime
             obj["DEAT"] = datetime.datetime.strptime(v[2], "%d %b %Y")
         elif obj["BIRT"] is None:
-            # convert string to datetime
             obj["BIRT"] = datetime.datetime.strptime(v[2], "%d %b %Y")
         else:
             print()

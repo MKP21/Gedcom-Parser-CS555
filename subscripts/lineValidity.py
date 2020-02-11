@@ -26,4 +26,5 @@ def isvalid(parser):
     if val == 'N':
         return None
     else:
+        # returns a list
         return level, tag, args
