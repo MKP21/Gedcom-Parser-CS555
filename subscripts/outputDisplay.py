@@ -25,9 +25,9 @@ def outputtable(indi, fam):
     # printing the table
     print(itable)
     # creating text file
-    newf = open('indiOutput_Project_03.txt', 'w')
+    newf = open('Output_Project.txt', 'w')
     newf.write(str(itable))
-    newf.close()
+    newf.write("\n")
 
     ftable = prettytable.PrettyTable()
     # adding fieldnames
@@ -49,8 +49,7 @@ def outputtable(indi, fam):
 
     # printing the table
     print(ftable)
-    # creating text file
-    newf = open('famOutput_Project_03.txt', 'w')
+    # adding table to text file
     newf.write(str(ftable))
     newf.close()
 

@@ -22,22 +22,18 @@ def main() -> None:
         if v is None:
             # print(f' {line} is invalid')
             continue
-        else:
-            # print(f" {line}  is a valid line")
-            None
+
         # the line is valid
 
         if v[0] is '0' and (v[1] in ('FAM', 'INDI')):
             if currtag is not None:
-                # check object validity
-                if objectvalid(obj):
-                    if 'INDI' in obj:
-                        indi.append(obj)
-                    else:
-                        fam.append(obj)
+                # add object to correct list
+                if 'INDI' in obj:
+                    indi.append(obj)
+                else:
+                    fam.append(obj)
                 # end of if
                 obj = None
-
             # set the currtag flag to the new tag being parsed
             currtag = v[1]
 
@@ -62,6 +58,9 @@ def main() -> None:
 
     # print the table and output a text file
     outputtable(indi, fam)
+
+    # run user story functions inside this function
+    objectvalid(indi, fam)
 
 
 if __name__ == "__main__":
