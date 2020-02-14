@@ -1,6 +1,5 @@
 # CS 555-A, Project 03
 # Date: 09 Feb 2020
-
 from subscripts.lineValidity import isvalid
 from subscripts.objectValidity import objectvalid
 from subscripts.parseObjects import inddetails, famdetails
@@ -50,6 +49,12 @@ def main() -> None:
             currtag = None
     # end of for
 
+    # adding the last object in the file
+    if 'INDI' in obj:
+        indi.append(obj)
+    else:
+        fam.append(obj)
+
     f.close()
 
     # sorting the lists by UID
@@ -65,4 +70,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
