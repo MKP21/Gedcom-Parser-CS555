@@ -24,9 +24,9 @@ def us8(indi, fam):
         for child in family["CHIL"]:
             childobj = next((item for item in indi if item["INDI"] == child), False)
 
-            if childobj and childobj["BIRT"]>marriagedate:
+            if childobj and childobj["BIRT"] > marriagedate:
                 continue
-            elif childobj["BIRT"] > marriagedate:
+            elif childobj["BIRT"] < marriagedate:
                 print(f"Indi id -> {childobj['INDI']}, Birth before marriage")
                 return False
             else:
