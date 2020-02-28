@@ -2,7 +2,7 @@ from datetime import datetime
 
 
 # Birth before death
-def us2(indi, fam):
+def us3(indi, fam):
     print("User Story 2 - Birth before death, Running")
     for person in indi:
         m = person['DEAT']
@@ -10,7 +10,8 @@ def us2(indi, fam):
             m = datetime.now()
 
         if person['BIRT'] > m:
-            print(f"{person['INDI']} {person['NAME']} were born before they died")
+            print(
+                f"{person['INDI']} {person['NAME']} were born before they died")
 
     print("User Story 2 Completed")
     return True
@@ -22,7 +23,8 @@ def us8(indi, fam):
     for family in fam:
         marriagedate = family["MARR"]
         for child in family["CHIL"]:
-            childobj = next((item for item in indi if item["INDI"] == child), False)
+            childobj = next(
+                (item for item in indi if item["INDI"] == child), False)
 
             if childobj and childobj["BIRT"] > marriagedate:
                 continue
