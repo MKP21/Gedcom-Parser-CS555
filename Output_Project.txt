@@ -1,22 +1,22 @@
 +-------+--------------------+--------+-------------+-----+-------+-------------+----------+------------------+
 |   ID  |        NAME        | GENDER |   BIRTHDAY  | AGE | ALIVE |    DEATH    |  CHILD   |      SPOUSE      |
 +-------+--------------------+--------+-------------+-----+-------+-------------+----------+------------------+
-| @I10@ |  Yoda /Palpatine/  |   M    | 29 Oct 1085 | 934 |  TRUE |      NA     | ['@F4@'] |        NA        |
-|  @I1@ | Anakin /Skywalker/ |   M    | 11 Oct 1010 |  39 | FALSE | 08 Oct 1050 |    NA    |     ['@F1@']     |
-|  @I2@ | Padme /Skywalker/  |   F    | 09 Feb 1001 |  27 | FALSE | 10 Mar 1028 |    NA    |     ['@F1@']     |
-|  @I3@ |  Luke /Skywalker/  |   M    | 09 Sep 1026 |  48 | FALSE | 01 Jan 1075 | ['@F1@'] |        NA        |
-|  @I4@ |  Leia /Skywalker/  |   F    | 01 Sep 1026 |  52 | FALSE | 23 Aug 1079 | ['@F1@'] |     ['@F2@']     |
-|  @I5@ |     Han /Solo/     |   M    | 04 Jun 1023 |  50 | FALSE | 06 Feb 1074 |    NA    |     ['@F2@']     |
-|  @I6@ |     Ben /Solo/     |   M    | 17 Oct 1055 |  24 | FALSE | 07 Sep 1080 | ['@F2@'] |     ['@F3@']     |
-|  @I7@ |  Rey /Palpatine/   |   F    | 17 Oct 1054 | 965 |  TRUE |      NA     |    NA    | ['@F3@', '@F4@'] |
-|  @I8@ |    Hope /Solo/     |   F    | 13 Nov 1081 | 938 |  TRUE |      NA     | ['@F3@'] |        NA        |
-|  @I9@ |    Finn /2187/     |   M    | 17 Mar 1054 | 965 |  TRUE |      NA     |    NA    |     ['@F4@']     |
+| @I10@ |  Yoda /Palpatine/  |   M    | 29 Oct 1985 |  34 |  TRUE |      NA     | ['@F4@'] |        NA        |
+|  @I1@ | Anakin /Skywalker/ |   M    | 11 Oct 1910 |  39 | FALSE | 08 Oct 1950 |    NA    |     ['@F1@']     |
+|  @I2@ | Padme /Skywalker/  |   F    | 09 Feb 1901 |  27 | FALSE | 10 Mar 1928 |    NA    |     ['@F1@']     |
+|  @I3@ |  Luke /Skywalker/  |   M    | 09 Sep 1926 |  48 | FALSE | 01 Jan 1975 | ['@F1@'] |        NA        |
+|  @I4@ |  Leia /Skywalker/  |   F    | 01 Sep 1926 |  52 | FALSE | 23 Aug 1979 | ['@F1@'] |     ['@F2@']     |
+|  @I5@ |     Han /Solo/     |   M    | 04 Jun 1923 |  50 | FALSE | 06 Feb 1974 |    NA    |     ['@F2@']     |
+|  @I6@ |     Ben /Solo/     |   M    | 17 Oct 1955 |  24 | FALSE | 07 Sep 1980 | ['@F2@'] |     ['@F3@']     |
+|  @I7@ |  Rey /Palpatine/   |   F    | 17 Oct 1954 |  65 |  TRUE |      NA     |    NA    | ['@F3@', '@F4@'] |
+|  @I8@ |    Hope /Solo/     |   F    | 13 Nov 1981 |  38 |  TRUE |      NA     | ['@F3@'] |        NA        |
+|  @I9@ |    Finn /2187/     |   M    | 17 Mar 1954 |  65 |  TRUE |      NA     |    NA    |     ['@F4@']     |
 +-------+--------------------+--------+-------------+-----+-------+-------------+----------+------------------+
 +------+-------------+----------+------------+--------------------+---------+-------------------+------------------+
 |  ID  |   MARRIED   | DIVORCED | HUSBAND ID |    HUSBAND NAME    | WIFE ID |     WIFE NAME     |     CHILDREN     |
 +------+-------------+----------+------------+--------------------+---------+-------------------+------------------+
-| @F1@ | 10 Nov 1020 |    NA    |    @I1@    | Anakin /Skywalker/ |   @I2@  | Padme /Skywalker/ | ['@I3@', '@I4@'] |
-| @F2@ | 09 Jul 1050 |    NA    |    @I5@    |     Han /Solo/     |   @I4@  |  Leia /Skywalker/ |     ['@I6@']     |
-| @F3@ | 07 Aug 1080 |    NA    |    @I6@    |     Ben /Solo/     |   @I7@  |  Rey /Palpatine/  |     ['@I8@']     |
+| @F1@ | 10 Nov 1920 |    NA    |    @I1@    | Anakin /Skywalker/ |   @I2@  | Padme /Skywalker/ | ['@I3@', '@I4@'] |
+| @F2@ | 09 Jul 1950 |    NA    |    @I5@    |     Han /Solo/     |   @I4@  |  Leia /Skywalker/ |     ['@I6@']     |
+| @F3@ | 07 Aug 1980 |    NA    |    @I6@    |     Ben /Solo/     |   @I7@  |  Rey /Palpatine/  |     ['@I8@']     |
 | @F4@ | 17 Feb 1985 |    NA    |    @I9@    |    Finn /2187/     |   @I7@  |  Rey /Palpatine/  |    ['@I10@']     |
 +------+-------------+----------+------------+--------------------+---------+-------------------+------------------+

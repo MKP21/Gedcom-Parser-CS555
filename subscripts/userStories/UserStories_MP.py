@@ -2,8 +2,8 @@ from datetime import datetime
 
 
 # Birth before death
-def us2(indi, fam):
-    print("User Story 2 - Birth before death, Running")
+def us3(indi, fam):
+    print("User Story 3 - Birth before death, Running")
     for person in indi:
         m = person['DEAT']
         if person['DEAT'] == 'NA':
@@ -12,7 +12,7 @@ def us2(indi, fam):
         if person['BIRT'] > m:
             print(f"{person['INDI']} {person['NAME']} were born before they died")
 
-    print("User Story 2 Completed")
+    print("User Story 3 Completed")
     return True
 
 
