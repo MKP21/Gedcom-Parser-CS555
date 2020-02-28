@@ -1,4 +1,5 @@
 from datetime import date
+from subscripts.outputDisplay import calculateage
 
 today = date.today()
 dateList = []
@@ -58,3 +59,47 @@ def MarriageAfter14(indi, fam):
     print(" ")
     print(" User story 10 ends ")
     print(" ")
+
+#Helper functions
+def getLastNamebyId(indi, Id):
+    for i in indi:
+        list1= []
+        if(i["INDI"] == Id):
+            s = i["NAME"]
+            #print(s)
+            list1 = s.split()
+            return list1[1]
+
+def getSexByid(indi, Id):
+    sex = ""
+    for i in indi:
+        if(i["INDI"] == Id):
+            sex = i["SEX"]
+            
+    return sex
+
+def getAgeById(indi, Id):
+    age = 0
+    for i in indi:
+        if(i["INDI"] == Id ):
+            age = calculateage(i["BIRT"], i["DEAT"])
+    
+    return age
+
+def getAliveById(indi, Id):
+    alive = True
+    for i in indi:
+        if(i["DEAT"] == "NA"):
+            alive = True
+        else: 
+            alive = False
+    
+    return alive
+
+def getNamebyId(indi, Id):
+    name = " "
+    for i in indi:
+        if(i["INDI"] == Id):
+            name = i["NAME"]
+
+    return name
