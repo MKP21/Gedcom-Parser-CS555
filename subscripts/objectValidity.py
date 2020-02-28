@@ -4,6 +4,7 @@ from subscripts.userStories.UserStories_Pratik_Deo import DatebeforeCurrentDate
 from subscripts.userStories.UserStories_Pratik_Deo import MarriageAfter14
 from subscripts.userStories.UserStories_MP import us3, us8
 from subscripts.userStories.UserStories_MD import us4, us7
+from subscripts.userStories.UserStories_AS import us05,us06
 
 
 def objectvalid(indi, fam):
@@ -13,4 +14,6 @@ def objectvalid(indi, fam):
     us8(indi, fam)
     us4(indi,fam)
     us7(indi,fam)
+    us05(indi,fam)
+    us06(indi,fam)
     return True
