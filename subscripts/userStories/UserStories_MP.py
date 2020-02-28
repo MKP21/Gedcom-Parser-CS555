@@ -1,7 +1,9 @@
 from datetime import datetime
 
-
 # Birth before death
+from dateutil.relativedelta import relativedelta
+
+
 def us3(indi, fam):
     print("User Story 3 - Birth before death, Running")
     for person in indi:
@@ -25,6 +27,9 @@ def us8(indi, fam):
             childobj = next((item for item in indi if item["INDI"] == child), False)
 
             if childobj and childobj["BIRT"] > marriagedate:
+                if family["DIV"] != "NA" and childobj["BIRT"] > family["DIV"] + relativedelta(months=+9):
+                    print(f"Indi id -> {childobj['INDI']}, Birth after divorce")
+                    return False
                 continue
             elif childobj["BIRT"] < marriagedate:
                 print(f"Indi id -> {childobj['INDI']}, Birth before marriage")
