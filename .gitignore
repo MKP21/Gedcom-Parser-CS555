@@ -4,3 +4,6 @@ venv/bin/python
 *.iml
 *.json
 .vscode/settings.json
+*.pyc
+*.pyc
+*.pyc
