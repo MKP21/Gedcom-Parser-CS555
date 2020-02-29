@@ -24,6 +24,8 @@ def us2(indi, fam):
 def us9(indi, fam):
     print("User Story 9 - Birth before death of parents, Running")
     for family in fam:
+        fatherdeath = 'NA'
+        motherdeath = 'NA'
         for person in indi:
             if family["HUSB"] == person["INDI"]:
                 if person["DEAT"] != 'NA':
@@ -43,5 +45,5 @@ def us9(indi, fam):
                             f"Indi id -> {childobj['INDI']}, Birth before death of parents")
                         return False
 
-    print("User Story 8 Completed")
+    print("User Story 9 Completed")
     return True

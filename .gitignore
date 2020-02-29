@@ -1,3 +1,6 @@
 
 venv/bin/python3
 venv/bin/python
+*.iml
+*.json
+.vscode/settings.json

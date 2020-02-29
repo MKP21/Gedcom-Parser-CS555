@@ -9,6 +9,7 @@ from subscripts.outputDisplay import outputtable
 def main() -> None:
     # please select the file by inserting name here
     f = open("Project01.ged", "r")
+    f = open("My-Family-27-Jan-2020-330.ged", "r")
 
     obj = None  # refers to the actual Dict object being parsed at a given moment
     currtag = None  # The tag being processed currently
