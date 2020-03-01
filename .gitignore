@@ -87,3 +87,13 @@ venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/__pycache__/spe
 venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/__pycache__/version.cpython-37.pyc
 venv/lib/python3.7/site-packages/pkg_resources/extern/__pycache__/__init__.cpython-37.pyc
 .vscode/settings.json
+subscripts/__pycache__/__init__.cpython-37.pyc
+subscripts/__pycache__/lineValidity.cpython-37.pyc
+subscripts/__pycache__/objectValidity.cpython-37.pyc
+subscripts/__pycache__/outputDisplay.cpython-37.pyc
+subscripts/__pycache__/parseObjects.cpython-37.pyc
+subscripts/userStories/__pycache__/__init__.cpython-37.pyc
+subscripts/userStories/__pycache__/UserStories_DK.cpython-37.pyc
+subscripts/userStories/__pycache__/UserStories_MD.cpython-37.pyc
+subscripts/userStories/__pycache__/UserStories_MP.cpython-37.pyc
+subscripts/userStories/__pycache__/UserStories_Pratik_Deo.cpython-37.pyc
