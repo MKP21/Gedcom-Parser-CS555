@@ -23,6 +23,7 @@ def us02(indi, fam, f):
                     flag = False
     if flag:
         print("User Story 2 Completed")
+        return True
     else:
         return False
 
