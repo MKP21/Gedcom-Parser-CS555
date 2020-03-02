@@ -12,7 +12,7 @@
 | @I18@ |     Barron /Trump/    |   M    | 20 Mar 2006 |  13 |  TRUE |      NA     | ['@F1@'] |            NA            |
 | @I19@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78 |  TRUE |      NA     |    NA    |         ['@F5@']         |
 |  @I1@ |   Donald /Trump Sr./  |   M    | 14 Jun 1946 |  73 |  TRUE |      NA     | ['@F4@'] | ['@F1@', '@F2@', '@F3@'] |
-|  @I2@ |   Frederick /Trump/   |   M    | 11 Oct 1999 |  0  | FALSE | 25 Jun 1999 |    NA    |         ['@F4@']         |
+|  @I2@ |   Frederick /Trump/   |   M    | 11 Oct 1905 |  93 | FALSE | 25 Jun 1999 |    NA    |         ['@F4@']         |
 |  @I3@ |      Mary /Trump/     |   F    | 12 May 1912 |  88 | FALSE | 07 Aug 2000 |    NA    |         ['@F4@']         |
 |  @I4@ |    Maryanne /Trump/   |   F    | 05 Apr 1937 |  82 |  TRUE |      NA     | ['@F4@'] |            NA            |
 |  @I5@ | Frederick /Trump Jr./ |   M    | 14 Oct 1938 |  42 | FALSE | 06 Sep 1981 | ['@F4@'] |            NA            |
@@ -34,4 +34,3 @@
 | @F8@ | 12 Nov 2005 | 15 Mar 2018 |   @I11@    | Donald /Trump Jr./ |  @I12@  |  Vanessa /Haydon/  |                    NA                    |
 +------+-------------+-------------+------------+--------------------+---------+--------------------+------------------------------------------+
  
-Error: INDIVIDUAL: US02: @I2@ Frederick /Trump/ were born before they died 
