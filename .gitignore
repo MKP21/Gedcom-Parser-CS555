@@ -1,10 +1,9 @@
-
 venv/bin/python3
 venv/bin/python
 .idea
 *.iml
 *.json
-.vscode/settings.json
+.vscode
 *.pyc
 *.pyc
 *.pyc

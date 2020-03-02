@@ -1,9 +1,12 @@
 from datetime import datetime
 from datetime import timedelta
+from inspect import currentframe
+
+frameinfo = currentframe()
 
 
 # Marriage before divorce
-def us4(indi, fam):
+def us04(indi, fam, f):
     print("User Story 4 - Marriage before divorce, Running")
     for family in fam:
         # Gets divorce date of family
@@ -21,7 +24,9 @@ def us4(indi, fam):
 
             if div < marr:
                 print(
-                    f"Family with id {family['FAM']} has divorce before marriage")
+                    f"FAMILY: us04 {frameinfo.f_back.f_lineno}: {family['FAM']}: divorcre {family['DIV']} before marriage {family['MARR']} ")
+                f.write(
+                    f"FAMILY: us04 {frameinfo.f_back.f_lineno}: {family['FAM']}: divorcre {family['DIV']} before marriage {family['MARR']} ")
 
     # end of for loop
     print("User Story 4 Completed")
@@ -30,7 +35,7 @@ def us4(indi, fam):
 
 # Less than 150 years old
 
-def us7(indi, fam):
+def us07(indi, fam, f):
     print("User Story 7 - Less than 150 years old, Running")
     for indv in indi:
         death = indv['DEAT']
@@ -40,8 +45,10 @@ def us7(indi, fam):
             no_of_days = (death - birth)
             if no_of_days > timedelta(days=54750):
                 print(
-                    f"Death of person with name {indv['NAME']} and id {indv['INDI']} is more than 150 years from birth")
-        # if Death date is not defined for the individual
+                    f"INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: death {indv['DEAT']} after 150 years")
+                f.write(
+                    f"INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: death {indv['DEAT']} after 150 years")
+                # if Death date is not defined for the individual
         else:
             # current date
             cd = datetime.now()
@@ -49,6 +56,8 @@ def us7(indi, fam):
             if no_of_days > timedelta(days=54750):
                 print(
                     f"person with name {indv['NAME']} and id {indv['INDI']} is more than 150 years from birth")
+                f.write(
+                    f"ERROR: INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: birth {indv['DEAT']} before 150 years from current date")
     # End of for loop
     print("User Story 7 Completed")
     return True
@@ -56,7 +65,7 @@ def us7(indi, fam):
     # Multiple births <= 5
 
 
-def us14(indi, fam):
+def us14(indi, fam, f):
     print("User Story 14 - Multiple births <= 5, Running")
     for families in fam:
         if families['CHIL'] == 'NA' or len(families['CHIL']) <= 5:
@@ -73,7 +82,8 @@ def us14(indi, fam):
                 if birthDates[sib] == birthDates[sib + 1]:
                     count += 1
             if count > 5:
-                print(f"family with id {families['FAM']}has more than 5 siblings who were born on the same date and time")
+                print(
+                    f"family with id {families['FAM']}has more than 5 siblings who were born on the same date and time")
     # End of for loop
     print("User Story 14 Completed")
     return True
