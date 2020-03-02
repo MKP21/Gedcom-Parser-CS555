@@ -65,7 +65,5 @@ def us06(indi, fam, f):
                             f"ERROR: FAMILY : US06 : : {individuals['INDI']} : Divorced {families['DIV']} after wifi's ({individuals['INDI']}) death on {individuals['DEAT']} ")
                         flag = False
 
-
     print("User Story 6 Completed")
     return flag
-
