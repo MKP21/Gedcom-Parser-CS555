@@ -25,12 +25,14 @@ def us8(indi, fam):
     print("User Story 8 - Birth before marriage of parent, Running")
     for family in fam:
         marriagedate = family["MARR"]
+        if family["CHIL"] is "NA":
+            continue
         for child in family["CHIL"]:
             childobj = next(
                 (item for item in indi if item["INDI"] == child), False)
 
             if childobj and childobj["BIRT"] > marriagedate:
-                if family["DIV"] != "NA" and childobj["BIRT"] > family["DIV"] + timedelta(months=+9):
+                if family["DIV"] != "NA" and childobj["BIRT"] > family["DIV"] + timedelta(days=273.93188):
                     print(f"Indi id -> {childobj['INDI']}, Birth after divorce")
                     return False
                 continue
