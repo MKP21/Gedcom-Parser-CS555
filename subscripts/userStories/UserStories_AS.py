@@ -32,7 +32,7 @@ def us05(indi, fam, f):
                         flag = False
 
     print("User Story 5 Completed")
-
+    return flag
 
 
 # Divorce before death
@@ -67,4 +67,5 @@ def us06(indi, fam, f):
 
 
     print("User Story 6 Completed")
+    return flag
 
