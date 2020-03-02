@@ -16,7 +16,7 @@ class TestCases(unittest.TestCase):
         f = open("test.txt", "w+")
         value = us01(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
 
     def test_us02(self):
         f = open("test.txt", "a")
@@ -34,7 +34,7 @@ class TestCases(unittest.TestCase):
         f = open("test.txt", "a")
         value = us04(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
 
     def test_us05(self):
         f = open("test.txt", "a")
@@ -70,4 +70,4 @@ class TestCases(unittest.TestCase):
         f = open("test.txt", "a")
         value = us10(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
