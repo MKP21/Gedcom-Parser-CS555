@@ -27,7 +27,7 @@ def us04(indi, fam, f):
                 print(
                     f"FAMILY: us04 {frameinfo.f_back.f_lineno}: {family['FAM']}: divorce {family['DIV']} before marriage {family['MARR']} ")
                 f.write(
-                    f"FAMILY: us04 {frameinfo.f_back.f_lineno}: {family['FAM']}: divorce {family['DIV']} before marriage {family['MARR']} ")
+                    f"ERROR: FAMILY: us04 {frameinfo.f_back.f_lineno}: {family['FAM']}: divorce {family['DIV']} before marriage {family['MARR']} \n")
                 flag = False
 
     # end of for loop
@@ -54,7 +54,7 @@ def us07(indi, fam, f):
                 print(
                     f"INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: death {indv['DEAT']} after 150 years")
                 f.write(
-                    f"INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: death {indv['DEAT']} after 150 years")
+                    f"ERROR: INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: death {indv['DEAT']} after 150 years \n")
                 flag = False
                 # if Death date is not defined for the individual
         else:
@@ -65,7 +65,7 @@ def us07(indi, fam, f):
                 print(
                     f"person with name {indv['NAME']} and id {indv['INDI']} is more than 150 years from birth")
                 f.write(
-                    f"ERROR: INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: birth {indv['DEAT']} before 150 years from current date {cd}")
+                    f"ERROR: INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: birth {indv['DEAT']} before 150 years from current date {cd} \n")
                 flag = False
         # end of for loop
         if flag:
