@@ -7,7 +7,7 @@ venv/bin/python
 *.pyc
 *.pyc
 *.pyc
-subscripts/__pycache__
+subscripts/__pycache__/
 venv/lib/python3.7/site-packages/__pycache__/prettytable.cpython-37.pyc
 venv/lib/python3.7/site-packages/pip/__pycache__/__init__.cpython-37.pyc
 venv/lib/python3.7/site-packages/pip/__pycache__/__main__.cpython-37.pyc
