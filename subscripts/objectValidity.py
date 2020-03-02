@@ -10,6 +10,7 @@ from subscripts.userStories.UserStories_AS import us05, us06
 
 def objectvalid(indi, fam):
     f = open("Output_Project.txt", "a")
+    f.write("\n \n")
     DatebeforeCurrentDate(indi, fam, f)
     us02(indi, fam, f)
     us3(indi, fam, f)
