@@ -8,7 +8,6 @@ dateList = []
 # User story 1 - all dates should be before current date
 def DatebeforeCurrentDate(indi, fam):
     print("user story 1 - all dates should be before current date")
-    print(" ")
     for i in indi:
         # Checking death dates are before current dates and NA
         if str(i["DEAT"]) == "NA":
@@ -20,25 +19,25 @@ def DatebeforeCurrentDate(indi, fam):
         if str(i["BIRT"]) == "NA":
             pass
         elif i["BIRT"].date() > today:
-            print(" These dates are after the current date: " + str(i["NAME"]) + str(i["BIRT"].date()))
+            print("These dates are after the current date: " + str(i["NAME"]) + str(i["BIRT"].date()))
 
     for j in fam:
 
         if j["MARR"].date() > today:
-            print(" Marriage date " + str(j["MARR"].date()) + " cannot be after current date " + str(today))
+            print("Marriage date " + str(j["MARR"].date()) + " cannot be after current date " + str(today))
 
         if str(j["DIV"]) == "NA":
             pass
         elif j["DIV"].date() > today:
-            print(" Divorce date " + str(j["DIV"].date()) +" cannot be after the current date " + str(today))
-    print(" ")
-    print(" User stroy 1 ends ")
-    print(" ")
+            print("Divorce date " + str(j["DIV"].date()) +" cannot be after the current date " + str(today))
+    
+    print("User stroy 1 ends ")
+    
 
 # User story 10 - Marriage should be after 14 years of age
 def MarriageAfter14(indi, fam):
-    print("user story 10 - Marriage should be after 14 years of age")
-    print(" ")
+    print("User story 10 - Marriage should be after 14 years of age")
+    
     for j in fam:
         for i in indi:
             if i["INDI"] == j["WIFE"]:
@@ -55,10 +54,10 @@ def MarriageAfter14(indi, fam):
                 if age > 14:
                     pass
                 else:
-                    print(" Invalid marriage date ")                 
-    print(" ")
-    print(" User story 10 ends ")
-    print(" ")
+                    print("Invalid marriage date ")                 
+    
+    print("User story 10 ends ")
+    
 
 #Helper functions
 def getLastNamebyId(indi, Id):
