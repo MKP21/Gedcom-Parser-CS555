@@ -5,11 +5,11 @@ from subscripts.userStories.UserStories_Pratik_Deo import MarriageAfter14
 from subscripts.userStories.UserStories_MP import us3, us8
 from subscripts.userStories.UserStories_MD import us4, us7, us14
 from subscripts.userStories.UserStories_DK import us2, us9
-from subscripts.userStories.UserStories_AS import us05,us06
+from subscripts.userStories.UserStories_AS import us05, us06
 
 
 def objectvalid(indi, fam):
-    f = open("Output_Project", w)
+    f = open("Output_Project.txt", "a")
     DatebeforeCurrentDate(indi, fam, f)
     us2(indi, fam, f)
     us3(indi, fam, f)
