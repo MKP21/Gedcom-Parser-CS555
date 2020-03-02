@@ -37,7 +37,7 @@ def us08(indi, fam, f):
                 if family["DIV"] != "NA" and childobj["BIRT"] > family["DIV"] + timedelta(days=273.93188):
                     print(f" Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth after divorce of parents")
                     f.write(f"Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth after divorce of parents \n")
-                    falg = False
+                    flag = False
                 continue
             elif childobj["BIRT"] < marriagedate:
                 print(f"Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth before marriage of parents")

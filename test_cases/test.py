@@ -22,13 +22,13 @@ class TestCases(unittest.TestCase):
         f = open("test.txt", "a")
         value = us02(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
 
     def test_us03(self):
         f = open("test.txt", "a")
         value = us03(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
 
     def test_us04(self):
         f = open("test.txt", "a")
@@ -40,31 +40,31 @@ class TestCases(unittest.TestCase):
         f = open("test.txt", "a")
         value = us05(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
 
     def test_us06(self):
         f = open("test.txt", "a")
         value = us06(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
 
     def test_us07(self):
         f = open("test.txt", "a")
         value = us07(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
 
     def test_us08(self):
         f = open("test.txt", "a")
         value = us08(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
 
     def test_us09(self):
         f = open("test.txt", "a")
         value = us09(self.d[0], self.d[1], f)
         f.close()
-        self.assertTrue(value)
+        self.assertFalse(value)
 
     def test_us10(self):
         f = open("test.txt", "a")

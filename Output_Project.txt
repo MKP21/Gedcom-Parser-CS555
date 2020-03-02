@@ -2,18 +2,18 @@
 |   ID  |          NAME         | GENDER |   BIRTHDAY  | AGE | ALIVE |    DEATH    |  CHILD   |          SPOUSE          |
 +-------+-----------------------+--------+-------------+-----+-------+-------------+----------+--------------------------+
 | @I10@ |   Ivana /Zelnickova/  |   F    | 20 Feb 1949 |  71 |  TRUE |      NA     |    NA    |         ['@F2@']         |
-| @I11@ |   Donald /Trump Jr./  |   M    | 31 Dec 1977 |  42 |  TRUE |      NA     | ['@F2@'] |         ['@F8@']         |
-| @I12@ |    Vanessa /Haydon/   |   F    | 18 Dec 1977 |  42 |  TRUE |      NA     |    NA    |         ['@F8@']         |
+| @I11@ |   Donald /Trump Jr./  |   M    | 31 Dec 1977 |  39 | FALSE | 12 Nov 2017 | ['@F2@'] |         ['@F8@']         |
+| @I12@ |    Vanessa /Haydon/   |   F    | 18 Dec 1800 | 219 |  TRUE |      NA     |    NA    |         ['@F8@']         |
 | @I13@ |     Ivanka /Trump/    |   F    | 30 Oct 1981 |  38 |  TRUE |      NA     | ['@F2@'] |            NA            |
 | @I14@ |      Eric /Trump/     |   M    | 06 Jan 1984 |  36 |  TRUE |      NA     | ['@F2@'] |            NA            |
 | @I15@ |     Marla /Maples/    |   F    | 27 Oct 1963 |  56 |  TRUE |      NA     |    NA    |         ['@F3@']         |
-| @I16@ |    Tiffany /Trump/    |   F    | 30 Dec 1993 |  26 |  TRUE |      NA     | ['@F3@'] |            NA            |
+| @I16@ |    Tiffany /Trump/    |   F    | 30 Dec 1993 |  0  | FALSE | 29 Dec 1993 | ['@F3@'] |            NA            |
 | @I17@ |    Melania /Knavs/    |   F    | 26 Apr 1970 |  49 |  TRUE |      NA     |    NA    |         ['@F1@']         |
 | @I18@ |     Barron /Trump/    |   M    | 20 Mar 2006 |  13 |  TRUE |      NA     | ['@F1@'] |            NA            |
 | @I19@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78 |  TRUE |      NA     |    NA    |         ['@F5@']         |
 |  @I1@ |   Donald /Trump Sr./  |   M    | 14 Jun 2019 |  0  |  TRUE |      NA     | ['@F4@'] | ['@F1@', '@F2@', '@F3@'] |
-|  @I2@ |   Frederick /Trump/   |   M    | 11 Oct 1905 |  93 | FALSE | 25 Jun 1999 |    NA    |         ['@F4@']         |
-|  @I3@ |      Mary /Trump/     |   F    | 12 May 1912 | -11 | FALSE | 07 Aug 1900 |    NA    |         ['@F4@']         |
+|  @I2@ |   Frederick /Trump/   |   M    | 11 Oct 1905 |  38 | FALSE | 19 Jan 1944 |    NA    |         ['@F4@']         |
+|  @I3@ |      Mary /Trump/     |   F    | 12 May 1912 |  28 | FALSE | 07 Aug 1940 |    NA    |         ['@F4@']         |
 |  @I4@ |    Maryanne /Trump/   |   F    | 05 Apr 1937 |  82 |  TRUE |      NA     | ['@F4@'] |            NA            |
 |  @I5@ | Frederick /Trump Jr./ |   M    | 14 Oct 1938 |  42 | FALSE | 06 Sep 1981 | ['@F4@'] |            NA            |
 |  @I6@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  77 |  TRUE |      NA     | ['@F4@'] |     ['@F5@', '@F6@']     |
@@ -25,11 +25,11 @@
 |  ID  |   MARRIED   |   DIVORCED  | HUSBAND ID |    HUSBAND NAME    | WIFE ID |     WIFE NAME      |                 CHILDREN                 |
 +------+-------------+-------------+------------+--------------------+---------+--------------------+------------------------------------------+
 | @F1@ | 22 Jan 1976 |      NA     |    @I1@    | Donald /Trump Sr./ |  @I17@  |  Melania /Knavs/   |                ['@I18@']                 |
-| @F2@ | 16 Apr 1977 | 24 Aug 1990 |    @I1@    | Donald /Trump Sr./ |  @I10@  | Ivana /Zelnickova/ |       ['@I11@', '@I13@', '@I14@']        |
+| @F2@ | 16 Apr 1977 | 24 Aug 1970 |    @I1@    | Donald /Trump Sr./ |  @I10@  | Ivana /Zelnickova/ |       ['@I11@', '@I13@', '@I14@']        |
 | @F3@ | 20 Dec 1993 | 08 Jun 1999 |    @I1@    | Donald /Trump Sr./ |  @I15@  |   Marla /Maples/   |                ['@I16@']                 |
 | @F4@ | 08 Feb 1936 |      NA     |    @I2@    | Frederick /Trump/  |   @I3@  |    Mary /Trump/    | ['@I1@', '@I4@', '@I5@', '@I6@', '@I8@'] |
 | @F5@ | 20 Jul 2949 |      NA     |   @I19@    |  Thomas /Stevens/  |   @I6@  | Elizabeth /Trump/  |                    NA                    |
-| @F6@ | 26 Dec 1959 |      NA     |    @I7@    |    James /Grau/    |   @I6@  | Elizabeth /Trump/  |                    NA                    |
+| @F6@ | 26 Dec 1959 | 21 Jan 2000 |    @I7@    |    James /Grau/    |   @I6@  | Elizabeth /Trump/  |                    NA                    |
 | @F7@ | 01 Oct 1975 | 11 May 1990 |    @I8@    |   Robert /Trump/   |   @I9@  |  Martha /Blaine/   |                    NA                    |
 | @F8@ | 12 Nov 2018 | 15 Mar 2005 |   @I11@    | Donald /Trump Jr./ |  @I12@  |  Vanessa /Haydon/  |                    NA                    |
 +------+-------------+-------------+------------+--------------------+---------+--------------------+------------------------------------------+
@@ -38,11 +38,16 @@ Error: INDIVIDUAL: US01: Marriage date after current date 2949-07-20 2020-03-02
 Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
 Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
 Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
-Error: INDIVIDUAL: US03: @I3@ Mary /Trump/ were born before they died 
+Error: INDIVIDUAL: US03: @I16@ Tiffany /Trump/ were born before they died 
+ERROR: FAMILY: us04 219: @F2@: divorce 1970-08-24 00:00:00 before marriage 1977-04-16 00:00:00 
 ERROR: FAMILY: us04 219: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
-ERROR: INDIVIDUAL : US05 : : @I3@ : Married 1936-02-08 00:00:00 after wifi's (@I3@) death on 1900-08-07 00:00:00 Error: INDIVIDUAL: US09: @I1@ Donald /Trump Sr./ Birth after death of parents  
-Error: INDIVIDUAL: US09: @I4@ Maryanne /Trump/ Birth after death of parents  
-Error: INDIVIDUAL: US09: @I5@ Frederick /Trump Jr./ Birth after death of parents  
+ERROR: INDIVIDUAL : US05 : @I11@ : Married 2018-11-12 00:00:00 after husband's (@I11@) death on 2017-11-12 00:00:00 
+ERROR: FAMILY : US06 : @I7@ : Divorced 2000-01-21 00:00:00 after husband's (@I7@) death on 1998-02-23 00:00:00 
+ERROR: INDIVIDUAL: us07: 219: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-02 17:20:18.926733 
+Error: INDIVIDUAL: US08: id -> @I11@, Birth after divorce of parents 
+Error: INDIVIDUAL: US08: id -> @I13@, Birth after divorce of parents 
+Error: INDIVIDUAL: US08: id -> @I14@, Birth after divorce of parents 
+Error: INDIVIDUAL: US09: @I1@ Donald /Trump Sr./ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I6@ Elizabeth /Trump/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I8@ Robert /Trump/ Birth after death of parents  
 Error: INDIVIDUAL: US10: Too young for marriage @I17@ 1976-01-22 00:00:00
