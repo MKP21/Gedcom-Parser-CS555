@@ -4,7 +4,6 @@ from datetime import timedelta
 # Birth before death
 
 
-
 def us3(indi, fam):
     print("User Story 3 - Birth before death, Running")
     for person in indi:
@@ -32,11 +31,11 @@ def us8(indi, fam):
 
             if childobj and childobj["BIRT"] > marriagedate:
                 if family["DIV"] != "NA" and childobj["BIRT"] > family["DIV"] + timedelta(days=273.93188):
-                    print(f"Error: Indi id -> {childobj['INDI']}, Birth after divorce")
+                    print(f"Error: Indi id -> {childobj['INDI']}, Birth after divorce of parents")
                     return False
                 continue
             elif childobj["BIRT"] < marriagedate:
-                print(f"Error: Indi id -> {childobj['INDI']}, Birth before marriage")
+                print(f"Error: Indi id -> {childobj['INDI']}, Birth before marriage of parents")
                 return False
             else:
                 print(f'Error: child with id {child} does not exist in indi list')
