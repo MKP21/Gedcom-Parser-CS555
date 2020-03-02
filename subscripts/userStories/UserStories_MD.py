@@ -24,9 +24,9 @@ def us04(indi, fam, f):
 
             if div < marr:
                 print(
-                    f"FAMILY: us04 {frameinfo.f_back.f_lineno}: {family['FAM']}: divorcre {family['DIV']} before marriage {family['MARR']} ")
+                    f"FAMILY: us04 {frameinfo.f_back.f_lineno}: {family['FAM']}: divorce {family['DIV']} before marriage {family['MARR']} ")
                 f.write(
-                    f"FAMILY: us04 {frameinfo.f_back.f_lineno}: {family['FAM']}: divorcre {family['DIV']} before marriage {family['MARR']} ")
+                    f"FAMILY: us04 {frameinfo.f_back.f_lineno}: {family['FAM']}: divorce {family['DIV']} before marriage {family['MARR']} ")
 
     # end of for loop
     print("User Story 4 Completed")
