@@ -17,7 +17,7 @@ def us05(indi, fam, f):
                     if families['MARR'] > m:
                         f.write(
                             f"ERROR: INDIVIDUAL : US05 : : {individuals['INDI']} : Married {families['MARR']} after husband's ({individuals['INDI']}) death on {individuals['DEAT']} ")
-                flag = False
+                        flag = False
 
             # checking for wife id is equal to individual id
             elif families['WIFE'] == individuals['INDI']:
@@ -29,7 +29,7 @@ def us05(indi, fam, f):
                     if families['MARR'] > n:
                         f.write(
                             f"ERROR: INDIVIDUAL : US05 : : {individuals['INDI']} : Married {families['MARR']} after wifi's ({individuals['INDI']}) death on {individuals['DEAT']} ")
-                flag = False
+                        flag = False
 
     print("User Story 5 Completed")
     return True
@@ -51,7 +51,7 @@ def us06(indi, fam, f):
                     if m < families['DIV']:
                         f.write(
                             f"ERROR: FAMILY : US06 : : {individuals['INDI']} : Divorced {families['DIV']} after husband's ({individuals['INDI']}) death on {individuals['DEAT']} ")
-            flag = False
+                        flag = False
 
             # checking for wife id is equal to individual id
             if families['WIFE'] == individuals['INDI']:
@@ -63,7 +63,7 @@ def us06(indi, fam, f):
                     if n < families['DIV']:
                         f.write(
                             f"ERROR: FAMILY : US06 : : {individuals['INDI']} : Divorced {families['DIV']} after wifi's ({individuals['INDI']}) death on {individuals['DEAT']} ")
-            flag = False
+                        flag = False
 
 
     print("User Story 6 Completed")
