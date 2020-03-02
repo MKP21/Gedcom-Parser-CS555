@@ -13,6 +13,7 @@ def us3(indi, fam):
 
         if person['BIRT'] > m:
             print(f"Error: {person['INDI']} {person['NAME']} were born before they died")
+            return False;
 
     print("User Story 3 Completed")
     return True

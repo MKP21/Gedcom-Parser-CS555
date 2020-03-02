@@ -9,16 +9,17 @@ from subscripts.userStories.UserStories_AS import us05,us06
 
 
 def objectvalid(indi, fam):
-    DatebeforeCurrentDate(indi, fam)
-    us2(indi, fam)
-    us3(indi, fam)
-    us4(indi, fam)
-    us05(indi,fam)
-    us06(indi, fam)
-    us7(indi, fam)
-    us8(indi, fam)
-    us9(indi, fam)
-    MarriageAfter14(indi, fam)
+    f = open("Output_Project", w)
+    DatebeforeCurrentDate(indi, fam, f)
+    us2(indi, fam, f)
+    us3(indi, fam, f)
+    us4(indi, fam, f)
+    us05(indi, fam, f)
+    us06(indi, fam, f)
+    us7(indi, fam, f)
+    us8(indi, fam, f)
+    us9(indi, fam, f)
+    MarriageAfter14(indi, fam, f)
 
-    us14(indi, fam)
+    us14(indi, fam, f)
     return True
