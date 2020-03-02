@@ -13,8 +13,7 @@ def us3(indi, fam):
             m = datetime.now()
 
         if person['BIRT'] > m:
-            print(
-                f"{person['INDI']} {person['NAME']} were born before they died")
+            print(f"Error: {person['INDI']} {person['NAME']} were born before they died")
 
     print("User Story 3 Completed")
     return True
@@ -33,14 +32,14 @@ def us8(indi, fam):
 
             if childobj and childobj["BIRT"] > marriagedate:
                 if family["DIV"] != "NA" and childobj["BIRT"] > family["DIV"] + timedelta(days=273.93188):
-                    print(f"Indi id -> {childobj['INDI']}, Birth after divorce")
+                    print(f"Error: Indi id -> {childobj['INDI']}, Birth after divorce")
                     return False
                 continue
             elif childobj["BIRT"] < marriagedate:
-                print(f"Indi id -> {childobj['INDI']}, Birth before marriage")
+                print(f"Error: Indi id -> {childobj['INDI']}, Birth before marriage")
                 return False
             else:
-                print(f'child with id {child} does not exist in indi list')
+                print(f'Error: child with id {child} does not exist in indi list')
                 return False
 
     print("User Story 8 Completed")
