@@ -14,8 +14,8 @@ def us03(indi, fam, f):
             m = datetime.now()
 
         if person['BIRT'] > m:
-            print(f"Error: INDIVIDUAL: US02: {person['INDI']} {person['NAME']} were born before they died")
-            f.write(f"Error: INDIVIDUAL: US02: {person['INDI']} {person['NAME']} were born before they died \n")
+            print(f"Error: INDIVIDUAL: US03: {person['INDI']} {person['NAME']} were born before they died")
+            f.write(f"Error: INDIVIDUAL: US03: {person['INDI']} {person['NAME']} were born before they died \n")
             flag = False
 
     print("US 03 Completed")
@@ -35,17 +35,17 @@ def us08(indi, fam, f):
 
             if childobj and childobj["BIRT"] > marriagedate:
                 if family["DIV"] != "NA" and childobj["BIRT"] > family["DIV"] + timedelta(days=273.93188):
-                    print(f" Error: INDIVIDUAL: US02: id -> {childobj['INDI']}, Birth after divorce of parents")
-                    f.write(f"Error: INDIVIDUAL: US02: id -> {childobj['INDI']}, Birth after divorce of parents \n")
+                    print(f" Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth after divorce of parents")
+                    f.write(f"Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth after divorce of parents \n")
                     falg = False
                 continue
             elif childobj["BIRT"] < marriagedate:
-                print(f"Error: INDIVIDUAL: US02: id -> {childobj['INDI']}, Birth before marriage of parents")
-                f.write(f"Error: INDIVIDUAL: US02: -> {childobj['INDI']}, Birth before marriage of parents \n")
+                print(f"Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth before marriage of parents")
+                f.write(f"Error: INDIVIDUAL: US08: -> {childobj['INDI']}, Birth before marriage of parents \n")
                 flag = False
             else:
-                print(f'Error: INDIVIDUAL: US02: child with id {child} does not exist in indi list')
-                f.write(f"Error: INDIVIDUAL: US02:child with id {child} does not exist in indi list \n")
+                print(f'Error: INDIVIDUAL: US08: child with id {child} does not exist in indi list')
+                f.write(f"Error: INDIVIDUAL: US08:child with id {child} does not exist in indi list \n")
                 flag = False
 
     print("US 08 Completed")

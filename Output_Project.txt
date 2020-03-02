@@ -11,9 +11,9 @@
 | @I17@ |    Melania /Knavs/    |   F    | 26 Apr 1970 |  49 |  TRUE |      NA     |    NA    |         ['@F1@']         |
 | @I18@ |     Barron /Trump/    |   M    | 20 Mar 2006 |  13 |  TRUE |      NA     | ['@F1@'] |            NA            |
 | @I19@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78 |  TRUE |      NA     |    NA    |         ['@F5@']         |
-|  @I1@ |   Donald /Trump Sr./  |   M    | 14 Jun 1946 |  73 |  TRUE |      NA     | ['@F4@'] | ['@F1@', '@F2@', '@F3@'] |
+|  @I1@ |   Donald /Trump Sr./  |   M    | 14 Jun 2019 |  0  |  TRUE |      NA     | ['@F4@'] | ['@F1@', '@F2@', '@F3@'] |
 |  @I2@ |   Frederick /Trump/   |   M    | 11 Oct 1905 |  93 | FALSE | 25 Jun 1999 |    NA    |         ['@F4@']         |
-|  @I3@ |      Mary /Trump/     |   F    | 12 May 1912 |  88 | FALSE | 07 Aug 2000 |    NA    |         ['@F4@']         |
+|  @I3@ |      Mary /Trump/     |   F    | 12 May 1912 | -11 | FALSE | 07 Aug 1900 |    NA    |         ['@F4@']         |
 |  @I4@ |    Maryanne /Trump/   |   F    | 05 Apr 1937 |  82 |  TRUE |      NA     | ['@F4@'] |            NA            |
 |  @I5@ | Frederick /Trump Jr./ |   M    | 14 Oct 1938 |  42 | FALSE | 06 Sep 1981 | ['@F4@'] |            NA            |
 |  @I6@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  77 |  TRUE |      NA     | ['@F4@'] |     ['@F5@', '@F6@']     |
@@ -35,5 +35,17 @@
 +------+-------------+-------------+------------+--------------------+---------+--------------------+------------------------------------------+
  
 Error: INDIVIDUAL: US01: Marriage date after current date 2949-07-20 2020-03-02
+Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
+Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
+Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
+Error: INDIVIDUAL: US03: @I3@ Mary /Trump/ were born before they died 
 ERROR: FAMILY: us04 219: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
+ERROR: INDIVIDUAL : US05 : : @I3@ : Married 1936-02-08 00:00:00 after wifi's (@I3@) death on 1900-08-07 00:00:00 Error: INDIVIDUAL: US09: @I1@ Donald /Trump Sr./ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I4@ Maryanne /Trump/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I5@ Frederick /Trump Jr./ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I6@ Elizabeth /Trump/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I8@ Robert /Trump/ Birth after death of parents  
 Error: INDIVIDUAL: US10: Too young for marriage @I17@ 1976-01-22 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1976-01-22 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1977-04-16 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1993-12-20 00:00:00
