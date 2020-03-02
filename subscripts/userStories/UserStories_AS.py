@@ -15,8 +15,7 @@ def us05(indi, fam, f):
                 if m != 'NA':
                     # checking for marriage date greater than the individual's death date
                     if families['MARR'] > m:
-                        f.write(
-                            f"ERROR: INDIVIDUAL : US05 : : {individuals['INDI']} : Married {families['MARR']} after husband's ({individuals['INDI']}) death on {individuals['DEAT']} ")
+                        f.write(f"ERROR: INDIVIDUAL : US05 : {individuals['INDI']} : Married {families['MARR']} after husband's ({individuals['INDI']}) death on {individuals['DEAT']} \n")
                         flag = False
 
             # checking for wife id is equal to individual id
@@ -28,7 +27,7 @@ def us05(indi, fam, f):
                     # checking for marriage date greater than the individual's death date
                     if families['MARR'] > n:
                         f.write(
-                            f"ERROR: INDIVIDUAL : US05 : : {individuals['INDI']} : Married {families['MARR']} after wifi's ({individuals['INDI']}) death on {individuals['DEAT']} ")
+                            f"ERROR: INDIVIDUAL : US05 : {individuals['INDI']} : Married {families['MARR']} after wifi's ({individuals['INDI']}) death on {individuals['DEAT']} \n")
                         flag = False
 
     print("User Story 5 Completed")
@@ -50,7 +49,7 @@ def us06(indi, fam, f):
                     # checking for husband's death date less than the divorces date
                     if m < families['DIV']:
                         f.write(
-                            f"ERROR: FAMILY : US06 : : {individuals['INDI']} : Divorced {families['DIV']} after husband's ({individuals['INDI']}) death on {individuals['DEAT']} ")
+                            f"ERROR: FAMILY : US06 : {individuals['INDI']} : Divorced {families['DIV']} after husband's ({individuals['INDI']}) death on {individuals['DEAT']} \n")
                         flag = False
 
             # checking for wife id is equal to individual id
@@ -62,7 +61,7 @@ def us06(indi, fam, f):
                     # checking for wife's death date less than the divorces date
                     if n < families['DIV']:
                         f.write(
-                            f"ERROR: FAMILY : US06 : : {individuals['INDI']} : Divorced {families['DIV']} after wifi's ({individuals['INDI']}) death on {individuals['DEAT']} ")
+                            f"ERROR: FAMILY : US06 : {individuals['INDI']} : Divorced {families['DIV']} after wifi's ({individuals['INDI']}) death on {individuals['DEAT']} \n")
                         flag = False
 
     print("User Story 6 Completed")
