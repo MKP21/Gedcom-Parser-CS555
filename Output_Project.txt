@@ -31,8 +31,9 @@
 | @F5@ | 20 Jul 2949 |      NA     |   @I19@    |  Thomas /Stevens/  |   @I6@  | Elizabeth /Trump/  |                    NA                    |
 | @F6@ | 26 Dec 1959 |      NA     |    @I7@    |    James /Grau/    |   @I6@  | Elizabeth /Trump/  |                    NA                    |
 | @F7@ | 01 Oct 1975 | 11 May 1990 |    @I8@    |   Robert /Trump/   |   @I9@  |  Martha /Blaine/   |                    NA                    |
-| @F8@ | 12 Nov 2005 | 15 Mar 2018 |   @I11@    | Donald /Trump Jr./ |  @I12@  |  Vanessa /Haydon/  |                    NA                    |
+| @F8@ | 12 Nov 2018 | 15 Mar 2005 |   @I11@    | Donald /Trump Jr./ |  @I12@  |  Vanessa /Haydon/  |                    NA                    |
 +------+-------------+-------------+------------+--------------------+---------+--------------------+------------------------------------------+
  
 Error: INDIVIDUAL: US01: Marriage date after current date 2949-07-20 2020-03-02
+ERROR: FAMILY: us04 219: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
 Error: INDIVIDUAL: US10: Too young for marriage @I17@ 1976-01-22 00:00:00
