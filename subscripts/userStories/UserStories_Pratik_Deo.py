@@ -7,7 +7,7 @@ dateList = []
 
 
 # User story 1 - all dates should be before current date
-def DatebeforeCurrentDate(indi, fam , f):
+def us01(indi, fam , f):
     print("US 01 - all dates should be before current date, Running")
     for i in indi:
         # Checking death dates are before current dates and NA
@@ -43,7 +43,7 @@ def DatebeforeCurrentDate(indi, fam , f):
     
 
 # User story 10 - Marriage should be after 14 years of age
-def MarriageAfter14(indi, fam, f):
+def us10(indi, fam, f):
     print("US 10 - Marriage should be after 14 years of age, Runnning")
     
     for j in fam:
