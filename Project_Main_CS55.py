@@ -1,4 +1,4 @@
-# CS 555-A, Project 03
+# CS 555-A, Project
 # Date: 09 Feb 2020
 from subscripts.lineValidity import isvalid
 from subscripts.objectValidity import objectvalid
