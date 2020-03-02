@@ -9,6 +9,7 @@ dateList = []
 # User story 1 - all dates should be before current date
 def us01(indi, fam , f):
     print("US 01 - all dates should be before current date, Running")
+    lag = True 
     for i in indi:
         # Checking death dates are before current dates and NA
         if str(i["DEAT"]) == "NA":
@@ -16,7 +17,7 @@ def us01(indi, fam , f):
         elif i["DEAT"].date() > today:
             print("US 01 Error indi id ->" + str(i["INDI"]) + str(i["DEAT"]))
             f.write(f"Error: INDIVIDUAL: US01: Date before Current Date" + str(i["INDI"]) + " "+str(i["DEAT"])+"\n")
-            return False
+            lag =  False
 
         # Checking for Birth dates are before current Date
         if str(i["BIRT"]) == "NA":
@@ -24,28 +25,33 @@ def us01(indi, fam , f):
         elif i["BIRT"].date() > today:
             print("These dates are after the current date: " + str(i["NAME"]) + str(i["BIRT"].date()))
             f.write(f"Error: INDIVIDUAL: US01: Birth date after current date" + str(i["INDI"])+ " "+str(i["NAME"]) +" "+ str(i["BIRT"].date()) +"\n")
-            return False
+            lag = False
 
     for j in fam:
 
         if j["MARR"].date() > today:
             print("Error: INDIVIDUAL: US01: Marriage date after current date " + str(j["MARR"].date()) + " " + str(today))
-            return False
+            lag = False
+            f.write(f"Error: INDIVIDUAL: US01: Marriage date after current date " + str(j["MARR"].date()) + " " + str(today)+"\n")
 
         if str(j["DIV"]) == "NA":
             pass
         elif j["DIV"].date() > today:
             print("Error: INDIVIDUAL: US01: Divorce date after current date " + str(j["DIV"].date()) +" " + str(today))
-            return False
+            lag = False
+            f.write(f"Error: INDIVIDUAL: US01: Divorce date after current date " + str(j["DIV"].date()) +" " + str(today)+"\n")
     
-    print("US 01 completed ")
-    return True 
+    if(lag):
+        print("US 01 completed")
+        return True
+    else: 
+        return False
     
 
 # User story 10 - Marriage should be after 14 years of age
 def us10(indi, fam, f):
     print("US 10 - Marriage should be after 14 years of age, Runnning")
-    
+    flag = True
     for j in fam:
         for i in indi:
             if i["INDI"] == j["WIFE"]:
@@ -55,8 +61,9 @@ def us10(indi, fam, f):
                     pass
                 else:
                     print("US 10 Error indi id ->" + str(i["INDI"]) + str(j["MARR"]))
-                    f.write("Error: INDIVIDUAL: US10: Too young for marriage " + str(i["INDI"]) +" "+ str(j["MARR"]))
-                    return False
+                    f.write("Error: INDIVIDUAL: US10: Too young for marriage " + str(i["INDI"]) +" "+ str(j["MARR"])+"\n")
+                    #return False list2.append("false")
+                    flag = False
 
             if i["INDI"] == j["HUSB"]:
                 days = 365.2425
@@ -65,11 +72,16 @@ def us10(indi, fam, f):
                     pass
                 else:
                     print("US 10 Error indi id ->" + str(i["INDI"]) + str(j["MARR"])) 
-                    f.write("Error: INDIVIDUAL: US10: Too young for marriage " + str(i["INDI"]) +" "+ str(j["MARR"]))
-                    return False                
+                    f.write("Error: INDIVIDUAL: US10: Too young for marriage " + str(i["INDI"]) +" "+ str(j["MARR"])+"\n")
+                    #return False
+                      
+                    flag = False              
     
-    print("US 10 completed ")
-    return True 
+    if(flag):
+        return True
+        print("US 10 completed")
+    else:
+        return False 
     
 
 #Helper functions

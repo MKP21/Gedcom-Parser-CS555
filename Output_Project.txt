@@ -24,13 +24,15 @@
 +------+-------------+-------------+------------+--------------------+---------+--------------------+------------------------------------------+
 |  ID  |   MARRIED   |   DIVORCED  | HUSBAND ID |    HUSBAND NAME    | WIFE ID |     WIFE NAME      |                 CHILDREN                 |
 +------+-------------+-------------+------------+--------------------+---------+--------------------+------------------------------------------+
-| @F1@ | 22 Jan 2005 |      NA     |    @I1@    | Donald /Trump Sr./ |  @I17@  |  Melania /Knavs/   |                ['@I18@']                 |
+| @F1@ | 22 Jan 1976 |      NA     |    @I1@    | Donald /Trump Sr./ |  @I17@  |  Melania /Knavs/   |                ['@I18@']                 |
 | @F2@ | 16 Apr 1977 | 24 Aug 1990 |    @I1@    | Donald /Trump Sr./ |  @I10@  | Ivana /Zelnickova/ |       ['@I11@', '@I13@', '@I14@']        |
 | @F3@ | 20 Dec 1993 | 08 Jun 1999 |    @I1@    | Donald /Trump Sr./ |  @I15@  |   Marla /Maples/   |                ['@I16@']                 |
 | @F4@ | 08 Feb 1936 |      NA     |    @I2@    | Frederick /Trump/  |   @I3@  |    Mary /Trump/    | ['@I1@', '@I4@', '@I5@', '@I6@', '@I8@'] |
-| @F5@ | 20 Jul 2000 |      NA     |   @I19@    |  Thomas /Stevens/  |   @I6@  | Elizabeth /Trump/  |                    NA                    |
+| @F5@ | 20 Jul 2949 |      NA     |   @I19@    |  Thomas /Stevens/  |   @I6@  | Elizabeth /Trump/  |                    NA                    |
 | @F6@ | 26 Dec 1959 |      NA     |    @I7@    |    James /Grau/    |   @I6@  | Elizabeth /Trump/  |                    NA                    |
 | @F7@ | 01 Oct 1975 | 11 May 1990 |    @I8@    |   Robert /Trump/   |   @I9@  |  Martha /Blaine/   |                    NA                    |
 | @F8@ | 12 Nov 2005 | 15 Mar 2018 |   @I11@    | Donald /Trump Jr./ |  @I12@  |  Vanessa /Haydon/  |                    NA                    |
 +------+-------------+-------------+------------+--------------------+---------+--------------------+------------------------------------------+
  
+Error: INDIVIDUAL: US01: Marriage date after current date 2949-07-20 2020-03-02
+Error: INDIVIDUAL: US10: Too young for marriage @I17@ 1976-01-22 00:00:00
