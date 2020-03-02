@@ -65,15 +65,15 @@ def us07(indi, fam, f):
                 print(
                     f"person with name {indv['NAME']} and id {indv['INDI']} is more than 150 years from birth")
                 f.write(
-                    f"ERROR: INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: birth {indv['DEAT']} before 150 years from current date {cd} \n")
+                    f"ERROR: INDIVIDUAL: us07: {frameinfo.f_back.f_lineno}: {indv['INDI']}: birth {indv['BIRT']} before 150 years from current date {cd} \n")
                 flag = False
-        # end of for loop
-        if flag:
-            print("User Story 7 Completed")
-            return True
-        else:
-            print("User Story 7 Completed")
-            return False
+    # end of for loop
+    if flag:
+        print("User Story 7 Completed")
+        return True
+    else:
+        print("User Story 7 Completed")
+        return False
 
     # Multiple births <= 5
 
