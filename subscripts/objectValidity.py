@@ -20,5 +20,5 @@ def objectvalid(indi, fam):
     us08(indi, fam, f)
     us09(indi, fam, f)
     us10(indi, fam, f)
-
+    f.close()
     return True
