@@ -7,7 +7,7 @@ ERROR: FAMILY: us04 219: @F2@: divorce 1970-08-24 00:00:00 before marriage 1977-
 ERROR: FAMILY: us04 219: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
 ERROR: INDIVIDUAL : US05 : @I11@ : Married 2018-11-12 00:00:00 after husband's (@I11@) death on 2017-11-12 00:00:00 
 ERROR: FAMILY : US06 : @I7@ : Divorced 2000-01-21 00:00:00 after husband's (@I7@) death on 1998-02-23 00:00:00 
-ERROR: INDIVIDUAL: us07: 219: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-02 17:26:47.626402 
+ERROR: INDIVIDUAL: us07: 219: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-02 20:14:55.660390 
 Error: INDIVIDUAL: US08: id -> @I11@, Birth 9 months after divorce of parents 
 Error: INDIVIDUAL: US08: id -> @I13@, Birth 9 months after divorce of parents 
 Error: INDIVIDUAL: US08: id -> @I14@, Birth 9 months after divorce of parents 

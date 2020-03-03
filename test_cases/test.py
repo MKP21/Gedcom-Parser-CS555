@@ -12,6 +12,7 @@ class TestCases(unittest.TestCase):
     gedcom_error = "../My-Family-27-Jan-2020-330.ged"
     d = fileParser(gedcom_error)
 
+
     def test_us01(self):
         f = open("test.txt", "w+")
         value = us01(self.d[0], self.d[1], f)
