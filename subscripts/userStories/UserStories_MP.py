@@ -49,4 +49,14 @@ def us08(indi, fam, f):
                 flag = False
 
     print("US 08 Completed")
-    return flag;
+    return flag
+
+
+# helper function 1
+def getIndiByID(indi, iD):
+    return next((dictionary for dictionary in indi if dictionary['INDI'] == iD), None)
+
+
+# helper function 2
+def getFamByID(fam, iD):
+    return next((dictionary for dictionary in fam if dictionary["FAM"] == iD), None)
