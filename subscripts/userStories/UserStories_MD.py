@@ -75,29 +75,34 @@ def us07(indi, fam, f):
         print("User Story 7 Completed")
         return False
 
-    # Multiple births <= 5
 
-
+# Multiple births <= 5
 def us14(indi, fam, f):
     flag = False
     print("User Story 14 - Multiple births <= 5, Running")
     for families in fam:
+        # If number of children in a family is NA or <= 5 then continue
         if families['CHIL'] == 'NA' or len(families['CHIL']) <= 5:
             continue
         else:
-            birthDates = []
+            # if number of children in a family is more than 5
+
+            # List to store birthdates of all children
+            birthdates = []
             count = 1
             for child in families['CHIL']:
                 for indv in indi:
                     if child == indv['INDI']:
-                        birthDates.append(indv['BIRT'])
+                        birthdates.append(indv['BIRT'])
 
-            for sib in range(len(birthDates) - 1):
-                if birthDates[sib] == birthDates[sib + 1]:
+            for sib in range(len(birthdates) - 1):
+                if birthdates[sib] == birthdates[sib + 1]:
                     count += 1
             if count > 5:
                 print(
-                    f"family with id {families['FAM']}has more than 5 siblings who were born on the same date and time")
+                    f"ERROR: FAMILY: US14: LINENUMBER: {families['FAM']}: has more than 5 siblings: {families['CHILD']}: who were born on the same date and time {birthdates}")
+                f.write(
+                    f"ERROR: FAMILY: US14: LINENUMBER: {families['FAM']}: has more than 5 siblings: {families['CHILD']}: who were born on the same date and time {birthdates}")
                 flag = False
     # End of for loop
 
@@ -108,3 +113,25 @@ def us14(indi, fam, f):
         print("User Story 14 Completed")
         return False
 
+
+# Parents should not marry any of their children
+def us17(indi, fam, f):
+    parents = dict()
+    for families in fam:
+        if families['CHIL'] != 'NA':
+            for children in families['CHIL']:
+                parents[children] = (families['HUSB'], families['WIFE'])
+
+    for families in fam:
+        # if huband is parent of his wife
+        if parents.__contains__(families['WIFE']) == True and families['HUSB'] in parents[families["WIFE"]]:
+            print(
+                f"ERROR: FAMILY: US17: LINENUMBER: {families['FAM']}: Husband {families['HUSB']} is married to the child {children}")
+            f.write(
+                f"ERROR: FAMILY: US17: LINENUMBER: {families['FAM']}: Husband {families['HUSB']} is married to the child {children}")
+        # if wife is parent of her husband
+        elif parents.__contains__(families['HUSB']) == True and families['WIFE'] in parents[families['HUSB']]:
+            print(
+                f"ERROR: FAMILY: US17: LINENUMBER: {families['FAM']}: Wife {families['WIFE']} is married to the child {children}")
+            f.write(
+                f"ERROR: FAMILY: US17: LINENUMBER: {families['FAM']}: Wife {families['WIFE']} is married to the child {children}")
