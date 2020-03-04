@@ -1,8 +1,8 @@
 from datetime import datetime
 from datetime import timedelta
 
-
 # Birth before death
+from subscripts.outputDisplay import calculateage
 
 
 def us03(indi, fam, f):
@@ -35,8 +35,10 @@ def us08(indi, fam, f):
 
             if childobj and childobj["BIRT"] > marriagedate:
                 if family["DIV"] != "NA" and childobj["BIRT"] > family["DIV"] + timedelta(days=273.93188):
-                    print(f" Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth 9 months after divorce of parents")
-                    f.write(f"Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth 9 months after divorce of "f"parents \n")
+                    print(
+                        f" Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth 9 months after divorce of parents")
+                    f.write(
+                        f"Error: INDIVIDUAL: US08: id -> {childobj['INDI']}, Birth 9 months after divorce of "f"parents \n")
                     flag = False
                 continue
             elif childobj["BIRT"] < marriagedate:
@@ -93,6 +95,99 @@ def us18(indi, fam, f):
 
     print("User Story 18 Completed")
     return flag
+
+
+# User Story 23, unique name and birthdate
+# No more than one individual with the same name and birth date should appear in a GEDCOM file
+def us23(indi, fam, f):
+    flag = True
+    print("User Story 23 - unique name and birthdate, running")
+    people = set()
+    for individual in indi:
+        if (individual["NAME"], individual["BIRT"]) in people:
+            print(
+                f'Error: INDIVIDUAL: US23: multiple people with the name {individual["NAME"]} and birthdate {individual["BIRT"]} exist')
+            f.write(
+                f'Error: INDIVIDUAL: US23: multiple people with the name {individual["NAME"]} and birthdate {individual["BIRT"]} exist')
+            flag = False
+        else:
+            people.add((individual["NAME"], individual["BIRT"]))
+    print("User Story 23 Completed")
+    return flag
+
+
+# User Story 28, order siblings by age
+# List siblings in families by decreasing age, i.e. oldest siblings first
+def us28(indi, fam, f):
+    print("User Story 28 - order siblings by age, running")
+    output = list()
+    for family in fam:
+        children_Ids = family["CHIL"]
+        if 0 <= len(children_Ids) < 2 or children_Ids == "NA":
+            continue
+
+        children_dicts = list()
+        for i in children_Ids:
+            child = getIndiByID(indi, i)
+            details = (child["NAME"], child["BIRT"])
+            children_dicts.append(details)
+
+        children_dicts = sorted(children_dicts, key=lambda j: j[1])
+        output.append(children_dicts)
+
+    print("User Story 28 Completed")
+    return output
+
+
+# User Story 33, List orphans
+# List all orphaned children (both parents dead and child < 18 years old) in a GEDCOM file
+def us33(indi, fam, f):
+    print("User Story 33 - List orphans, running")
+    orphans = list()
+    for family in fam:
+        husb = getIndiByID(indi, family["HUSB"])
+        wife = getIndiByID(indi, family["WIFE"])
+        if husb["DEAT"] == "NA" or wife["DEAT"] == "NA":
+            continue
+
+        # both parents are dead
+        children_ids = family["CHIL"]
+        if children_ids == "NA":
+            continue
+
+        for i in children_ids:
+            child = getIndiByID(indi, i)
+            if child["DEAT"] != "NA":
+                continue
+
+            # child is alive
+            if int(calculateage(child["BIRT"], "NA")) < 18:
+                orphans.append(child)
+
+    print("User Story 33 Completed")
+    return orphans
+
+
+# US38
+# List upcoming birthdays
+# List all living people in a GEDCOM file whose birthdays occur in the next 30 days
+def us38(indi, fam, f):
+    print("User Story 38 - List upcoming birthdays, running")
+    upcoming_birthdays = list()
+    for individual in indi:
+        if individual["DEAT"] != "NA":
+            continue
+
+        # isAlive
+        todays_date = datetime.today()
+        birth_day = individual["BIRT"]
+        birth_day = birth_day.replace(year=todays_date.year)
+
+        if 0 < (birth_day - todays_date).days <= 30:
+            upcoming_birthdays.append(individual)
+
+    print("User Story 33 Completed")
+    return upcoming_birthdays
 
 
 # helper function 1
