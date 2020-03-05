@@ -123,7 +123,7 @@ def us17(indi, fam, f):
                 parents[children] = (family['HUSB'], family['WIFE'])
 
     for family in fam:
-        # if huband is parent of his wife
+        # if husband is parent of his wife
         if parents.__contains__(family['WIFE']) == True and family['HUSB'] in parents[family["WIFE"]]:
             print(
                 f"ERROR: FAMILY: US17: LINENUMBER: {family['FAM']}: Husband {family['HUSB']} is married to the child {children}")

@@ -2,9 +2,10 @@
 # Returns true only if every story checks out, or returns false
 from subscripts.userStories.UserStories_Pratik_Deo import us01, us10
 from subscripts.userStories.UserStories_MP import us03, us08, us13, us18
-from subscripts.userStories.UserStories_MD import us04, us07
+from subscripts.userStories.UserStories_MD import us04, us07, us14, us17
 from subscripts.userStories.UserStories_DK import us02, us09
 from subscripts.userStories.UserStories_AS import us05, us06
+
 
 
 def objectvalid(indi, fam):
@@ -22,5 +23,7 @@ def objectvalid(indi, fam):
     us10(indi, fam, f)
     us13(indi, fam, f)
     us18(indi, fam, f)
+    us14(indi, fam, f)
+    us17(indi, fam, f)
     f.close()
     return True
