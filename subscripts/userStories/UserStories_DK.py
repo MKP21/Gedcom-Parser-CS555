@@ -166,5 +166,5 @@ def us39(indi, fam, f):
                 upcoming_anniversary.append(husband)
                 upcoming_anniversary.append(wife)
 
-    print("User Story 33 Completed")
+    print("User Story 39 Completed")
     return upcoming_anniversary
