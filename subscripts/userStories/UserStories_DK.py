@@ -118,13 +118,13 @@ def us19(indi, fam, f):
                 if grandfather["FAMC"] != 'NA':
                     grandfatherfamc = getFamByID(fam, grandfather["FAMC"][0])
                 else:
-                    grandfatherfamc=0
+                    grandfatherfamc = 0
             if husbandfamc["WIFE"] != 'NA':
                 grandmother = getIndiByID(indi, husbandfamc["WIFE"])
                 if grandmother["FAMC"] != 'NA':
                     grandmotherfamc = getFamByID(fam, grandmother["FAMC"][0])
                 else:
-                    grandmotherfamc=1
+                    grandmotherfamc = 1
         wife = getIndiByID(indi, family["WIFE"])
         if wife["FAMC"] != 'NA':
             wifefamc = getFamByID(fam, wife["FAMC"][0])
@@ -133,15 +133,15 @@ def us19(indi, fam, f):
                 if wgrandfather["FAMC"] != 'NA':
                     wgrandfatherfamc = getFamByID(fam, wgrandfather["FAMC"][0])
                 else:
-                    wgrandfatherfamc=2
+                    wgrandfatherfamc = 2
             if wifefamc["WIFE"] != 'NA':
                 wgrandmother = getIndiByID(indi, wifefamc["WIFE"])
                 if wgrandmother["FAMC"] != 'NA':
                     wgrandmotherfamc = getFamByID(fam, wgrandmother["FAMC"][0])
                 else:
-                    wgrandmotherfamc=3
+                    wgrandmotherfamc = 3
 
-            if wgrandfatherfamc == grandfatherfamc  or wgrandfatherfamc == grandmotherfamc or wgrandmotherfamc == grandmotherfamc or wgrandmotherfamc == grandfatherfamc:
+            if wgrandfatherfamc == grandfatherfamc or wgrandfatherfamc == grandmotherfamc or wgrandmotherfamc == grandmotherfamc or wgrandmotherfamc == grandfatherfamc:
                 print(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins')
                 f.write(f'Error: FAMILY: US10: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins')
                 flag = False
@@ -153,17 +153,18 @@ def us19(indi, fam, f):
 def us39(indi, fam, f):
     print("User Story 39 - List upcoming Anniversary, running")
     upcoming_anniversary = list()
-    for individual in indi:
-        if individual["DEAT"] != "NA":
-            continue
+    for families in fam:
+        husband = getIndiByID(indi, families["HUSB"])
+        wife = getIndiByID(indi, families["WIFE"])
+        if wife["DEAT"] == "NA" and husband["DEAT"] == "NA":
+            # isAlive
+            todays_date = datetime.today()
+            aniversary = families["MARR"]
+            aniversary = aniversary.replace(year=todays_date.year)
 
-        # isAlive
-        todays_date = datetime.today()
-        birth_day = individual["BIRT"]
-        birth_day = birth_day.replace(year=todays_date.year)
-
-        if 0 < (birth_day - todays_date).days <= 30:
-            upcoming_birthdays.append(individual)
+            if 0 < (aniversary - todays_date).days <= 30:
+                upcoming_anniversary.append(husband)
+                upcoming_anniversary.append(wife)
 
     print("User Story 33 Completed")
-    return upcoming_birthdays
+    return upcoming_anniversary
