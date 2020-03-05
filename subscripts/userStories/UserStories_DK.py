@@ -14,7 +14,7 @@ def us02(indi, fam, f):
                 if person['BIRT'] == 'NA':
                     print("NO BIRTHDATE FOUND")
                     f.write(
-                        f"Error: INDIVIDUAL: US02: { person['INDI']} {person['NAME']} birthdate not found \n")
+                        f"Error: INDIVIDUAL: US02: {person['INDI']} {person['NAME']} birthdate not found \n")
                     flag = False
                 # SETTING M = BIRTHDATE
                 m = person['BIRT']
@@ -30,6 +30,7 @@ def us02(indi, fam, f):
         return True
     else:
         return False
+
 
 # Birth before death of parents
 
@@ -61,6 +62,41 @@ def us09(indi, fam, f):
                             f"Indi id -> {childobj['INDI']}, Birth after death of parents")
                         f.write(
                             f"Error: INDIVIDUAL: US09: {childobj['INDI']} {childobj['NAME']} Birth after death of parents  \n")
+                        flag = False
+    if flag:
+        print("User Story 9 Completed")
+        return True
+    else:
+        return False
+
+
+# Parents should not be too old User Story 12
+
+def us12(indi, fam, f):
+    print("User Story 12 - Parents  not too old , Running")
+    flag = True
+    for family in fam:
+        fatherbirth = 'NA'
+        motherbirth = 'NA'
+        # CHECKING FOR BIRTH DATES OF MOTHER AND FATHER
+        for person in indi:
+            if family["HUSB"] == person["INDI"]:
+                if person["BIRT"] != 'NA':
+                    fatherbirth = person["BIRT"] + timedelta(weeks=4171.43)
+            if family["WIFE"] == person["INDI"]:
+                if person["BIRT"] != 'NA':
+                    motherbirth = person["BIRT"] + timedelta(weeks=3128.57)
+        if family["CHIL"] != 'NA':
+            for child in family["CHIL"]:
+                childobj = next(
+                    (item for item in indi if item["INDI"] == child), False)
+                if childobj != "NA" and fatherbirth != "NA" and motherbirth != "NA":
+                    # checking if child is born after death of parents
+                    if childobj["BIRT"] < motherbirth or childobj["BIRT"] < fatherbirth:
+                        print(
+                            f"Indi id -> {childobj['INDI']}, Parents are too old")
+                        f.write(
+                            f"Error: INDIVIDUAL: US09: {childobj['INDI']} {childobj['NAME']} Parents are too old\n")
                         flag = False
     if flag:
         print("User Story 9 Completed")
