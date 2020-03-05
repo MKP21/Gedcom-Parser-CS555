@@ -34,16 +34,16 @@
 | @F8@ | 12 Nov 2018 | 15 Mar 2005 |   @I11@    | Donald /Trump Jr./ |  @I12@  |  Vanessa /Haydon/  |                    NA                    |
 +------+-------------+-------------+------------+--------------------+---------+--------------------+------------------------------------------+
  
-Error: INDIVIDUAL: US01: Marriage date after current date 2949-07-20 2020-03-04
+Error: INDIVIDUAL: US01: Marriage date after current date 2949-07-20 2020-03-05
 Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
 Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
 Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
 Error: INDIVIDUAL: US03: @I16@ Tiffany /Trump/ were born before they died 
-ERROR: FAMILY: us04 219: @F2@: divorce 1970-08-24 00:00:00 before marriage 1977-04-16 00:00:00 
-ERROR: FAMILY: us04 219: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
+ERROR: FAMILY: us04: @F2@: divorce 1970-08-24 00:00:00 before marriage 1977-04-16 00:00:00 
+ERROR: FAMILY: us04: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
 ERROR: INDIVIDUAL : US05 : @I11@ : Married 2018-11-12 00:00:00 after husband's (@I11@) death on 2017-11-12 00:00:00 
 ERROR: FAMILY : US06 : @I7@ : Divorced 2000-01-21 00:00:00 after husband's (@I7@) death on 1998-02-23 00:00:00 
-ERROR: INDIVIDUAL: us07: 219: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-04 16:25:18.044619 
+ERROR: INDIVIDUAL: us07: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-05 10:52:14.236190 
 Error: INDIVIDUAL: US08: id -> @I11@, Birth 9 months after divorce of parents 
 Error: INDIVIDUAL: US08: id -> @I13@, Birth 9 months after divorce of parents 
 Error: INDIVIDUAL: US08: id -> @I14@, Birth 9 months after divorce of parents 
@@ -54,3 +54,6 @@ Error: INDIVIDUAL: US10: Too young for marriage @I17@ 1976-01-22 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1976-01-22 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1977-04-16 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1993-12-20 00:00:00
+Error: FAM: US 16: Single family has two or more last name @F1@
+Error: FAM: US 16: Single family has two or more last name @F2@
+Error: FAM: US 16: Single family has two or more last name @F4@

@@ -81,8 +81,55 @@ def us10(indi, fam, f):
         return True
         print("US 10 completed")
     else:
-        return False 
-    
+        return False
+
+# User story 15 - Fewer than 15 siblings
+def us15(indi, fam,f):
+    print("US 15 - Fewer than 15 sublings - Running")
+    flag = True
+    list_of_siblings = []
+    for i in fam:
+        if(len(i["CHIL"]) >= 15):
+            list_of_siblings.append(i["FAM"])
+
+    if(len(list_of_siblings) == 0):
+        pass
+    else:
+        print("Error: FAM: US15: More than 15 siblings in a family" + str(i["FAM"]))
+        f.write("Error: FAM: US15: More than 15 siblings in a family" + str(i["FAM"])+ "\n")
+        flag = False
+    if(flag):
+        print("US 15 completed")
+        return True
+    else: return False
+
+#User Story 16
+
+
+def us16(indi, fam, f):
+    print("US 16 - All last names of men in family should be same - Running")
+    flag = True
+    for j in fam:
+        names = []
+        names.append(getLastNamebyId(indi, j["HUSB"]))
+        if(j["CHIL"] != []):
+            for h in j["CHIL"]:
+                if(getSexByid(indi, h ) == 'M'):
+                    names.append(getLastNamebyId(indi, h))
+
+        if(len(set(names)) != 1):
+            print("Error: FAM: US 16: Single family has two or more last name" + str(j["FAM"]))
+            f.write("Error: FAM: US 16: Single family has two or more last name " + str(j["FAM"])+"\n")
+            flag = False
+        elif (len(set(names)) == 1):
+            pass
+
+    if(flag):
+        return True
+        print("US 16 completed")
+    else:
+        return False
+
 
 #Helper functions
 def getLastNamebyId(indi, Id):
