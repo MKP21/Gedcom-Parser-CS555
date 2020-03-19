@@ -1,6 +1,8 @@
+from array import array
 from datetime import datetime
 from datetime import timedelta
 from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
+from subscripts.userStories.UserStories_Pratik_Deo import getAgeById
 
 
 # Birth before Marriage
@@ -148,6 +150,31 @@ def us19(indi, fam, f):
 
     print("User Story 19 Completed")
     return flag
+
+
+def us30(indi, fam, f):
+    print("User Story 30 - List all living married, running")
+    living_married = list()
+    for individual in indi:
+        if individual["DEAT"] == "NA":
+            if individual["FAMS"] != "NA":
+                living_married.append(individual)
+
+    print("User Story 30 Completed")
+    return living_married
+
+
+def us35(indi, fam, f):
+    recent_birth = list()
+    print("User Story 35-List recent births")
+    for individuals in indi:
+        todays_date = datetime.today()
+        age = individuals["BIRT"]
+        if 0 < (todays_date - age).days <= 30:
+            recent_birth.append(individuals)
+
+    print("User Story 35 Completed")
+    return recent_birth
 
 
 def us39(indi, fam, f):
