@@ -1,4 +1,3 @@
-
 from datetime import datetime
 from datetime import timedelta
 from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
@@ -112,7 +111,7 @@ def us19(indi, fam, f):
     flag = True
     print("User Story 19 - First cousins should not marry, running")
     for family in fam:
-        husband = getIndiByID(indi, family["HUSB"]) # Getting Husband Data
+        husband = getIndiByID(indi, family["HUSB"])  # Getting Husband Data
         if husband["FAMC"] != 'NA':
             husbandfamc = getFamByID(fam, husband["FAMC"][0])
             # Getting Husband family child id
@@ -173,6 +172,20 @@ def us30(indi, fam, f):
 
     print("User Story 30 Completed")
     return living_married
+
+
+def us32(us32p, f):
+    # Listing multiple births in parser itself so just passing the list
+    flag = True
+    if len(us32p) != 0:
+        for mulbirth in us32p:
+            print(
+                f"Indi id -> {mulbirth}, has multiple births")
+            f.write(
+                f"Error: INDIVIDUAL: US32: {mulbirth}, has multiple births\n")
+            flag = False
+    print("User Story 32 Completed")
+    return flag
 
 
 def us35(indi, fam, f):

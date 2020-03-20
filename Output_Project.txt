@@ -11,7 +11,7 @@
 | @I17@ |    Melania /Knavs/    |   F    | 26 Apr 1970 |  49 |  TRUE |      NA     |    NA    |         ['@F1@']         |
 | @I18@ |     Barron /Trump/    |   M    | 20 Mar 2006 |  14 |  TRUE |      NA     | ['@F1@'] |            NA            |
 | @I19@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78 |  TRUE |      NA     |    NA    |         ['@F5@']         |
-|  @I1@ |   Donald /Trump Sr./  |   M    | 14 Jun 2019 |  0  |  TRUE |      NA     | ['@F4@'] | ['@F1@', '@F2@', '@F3@'] |
+|  @I1@ |   Donald /Trump Sr./  |   M    | 13 Jun 2019 |  0  |  TRUE |      NA     | ['@F4@'] | ['@F1@', '@F2@', '@F3@'] |
 |  @I2@ |   Frederick /Trump/   |   M    | 11 Oct 1905 |  38 | FALSE | 19 Jan 1944 |    NA    |         ['@F4@']         |
 |  @I3@ |      Mary /Trump/     |   F    | 12 May 1912 |  28 | FALSE | 07 Aug 1940 |    NA    |         ['@F4@']         |
 |  @I4@ |    Maryanne /Trump/   |   F    | 05 Apr 1937 |  82 |  TRUE |      NA     | ['@F4@'] |            NA            |
@@ -43,7 +43,7 @@ ERROR: FAMILY: us04: @F2@: divorce 1970-08-24 00:00:00 before marriage 1977-04-1
 ERROR: FAMILY: us04: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
 ERROR: INDIVIDUAL : US05 : @I11@ : Married 2018-11-12 00:00:00 after husband's (@I11@) death on 2017-11-12 00:00:00 
 ERROR: FAMILY : US06 : @I7@ : Divorced 2000-01-21 00:00:00 after husband's (@I7@) death on 1998-02-23 00:00:00 
-ERROR: INDIVIDUAL: us07: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-20 13:56:58.550498 
+ERROR: INDIVIDUAL: us07: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-20 15:14:08.666827 
 Error: INDIVIDUAL: US08: id -> @I11@, Birth 9 months after divorce of parents 
 Error: INDIVIDUAL: US08: id -> @I13@, Birth 9 months after divorce of parents 
 Error: INDIVIDUAL: US08: id -> @I14@, Birth 9 months after divorce of parents 
@@ -66,3 +66,4 @@ Error: INDIVIDUAL: US09: @I8@ Robert /Trump/ Parents are too old
 Error: FAM: US 16: Single family has two or more last name @F1@
 Error: FAM: US 16: Single family has two or more last name @F2@
 Error: FAM: US 16: Single family has two or more last name @F4@
+Error: INDIVIDUAL: US32: @I1@, has multiple births
