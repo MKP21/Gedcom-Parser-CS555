@@ -31,6 +31,7 @@ def inddetails(obj, v):
             obj[v[1]] = None
         else:
             print(f" {v[1]} second birth")
+            obj["us32"] = True
             obj[v[1]] = None
 
     elif v[1] == "DATE":
@@ -40,7 +41,7 @@ def inddetails(obj, v):
         elif obj["BIRT"] is None:
             obj["BIRT"] = datetime.datetime.strptime(v[2], "%d %b %Y")
         else:
-            print()
+            print("A Date exists without proper gedcom grammar")
 
     # other tags : INDI, NAME, SEX
     else:

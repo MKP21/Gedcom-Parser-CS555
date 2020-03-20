@@ -9,6 +9,7 @@ def fileParser(filename):
     currtag = None  # The tag being processed currently
     indi = list()  # list of INDI objects
     fam = list()  # list of FAM objects
+    us32_ids = list()
 
     for line in f:
         elems = line.split()
@@ -23,6 +24,15 @@ def fileParser(filename):
             if currtag is not None:
                 # add object to correct list
                 if 'INDI' in obj:
+                    # added us32 code here, because parser already caught the error
+                    # changing structure would have lead to refactoring 80% of code
+                    if "us32" in obj:
+                        us32_ids.append(obj["INDI"])
+                        try:
+                            obj.pop("us32")
+                        except KeyError:
+                            print("Key not found")
+
                     indi.append(obj)
                 else:
                     fam.append(obj)
@@ -56,5 +66,4 @@ def fileParser(filename):
     indi = sorted(indi, key=lambda i: i["INDI"])
     fam = sorted(fam, key=lambda i: i["FAM"])
 
-    return [indi, fam]
-
+    return [indi, fam, us32_ids]
