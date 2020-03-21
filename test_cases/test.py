@@ -106,7 +106,7 @@ class TestCases(unittest.TestCase):
         f = open("test.txt", "a")
         value = us17(self.d[0], self.d[1], f)
         f.close()
-        self.assertEqual(value, "ERROR: FAMILY: US17: @F19@: Wife @I14@ is married to the child @I60@")
+        self.assertFalse(value)
 
     def test_us18(self):
         f = open("test.txt", "a")

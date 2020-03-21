@@ -130,7 +130,7 @@ def us17(indi, fam, f):
             f.write(
                 f"ERROR: FAMILY: US17: {family['FAM']}: Husband {family['HUSB']} is married to the child {family['WIFE']}\n")
             print("Userstory 17 Completed")
-            return f"ERROR: FAMILY: US17: {family['FAM']}: Husband {family['HUSB']} is married to the child {family['WIFE']}"
+            return False
         # if wife is parent of her husband
         elif parents.__contains__(family['HUSB']) == True and family['WIFE'] in parents[family['HUSB']]:
             print(
@@ -138,7 +138,8 @@ def us17(indi, fam, f):
             f.write(
                 f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}\n")
             print("Userstory 17 Completed")
-            return f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}"
+            return False
+    return  True
 
 
 
