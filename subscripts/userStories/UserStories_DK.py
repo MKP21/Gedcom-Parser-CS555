@@ -94,7 +94,7 @@ def us12(indi, fam, f):
                     (item for item in indi if item["INDI"] == child), False)
                 if childobj != "NA" and fatherbirth != "NA" and motherbirth != "NA":
                     # checking if child is born after death of parents
-                    if childobj["BIRT"] < motherbirth or childobj["BIRT"] < fatherbirth:
+                    if childobj["BIRT"] > motherbirth or childobj["BIRT"] > fatherbirth:
                         print(
                             f"Indi id -> {childobj['INDI']}, Parents are too old")
                         f.write(

@@ -1,13 +1,13 @@
-Error: INDIVIDUAL: US01: Marriage date after current date 2949-07-20 2020-03-02
+Error: INDIVIDUAL: US01: Marriage date after current date 2949-07-20 2020-03-20
 Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
 Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
 Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
 Error: INDIVIDUAL: US03: @I16@ Tiffany /Trump/ were born before they died 
-ERROR: FAMILY: us04 219: @F2@: divorce 1970-08-24 00:00:00 before marriage 1977-04-16 00:00:00 
-ERROR: FAMILY: us04 219: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
+ERROR: FAMILY: us04: @F2@: divorce 1970-08-24 00:00:00 before marriage 1977-04-16 00:00:00 
+ERROR: FAMILY: us04: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
 ERROR: INDIVIDUAL : US05 : @I11@ : Married 2018-11-12 00:00:00 after husband's (@I11@) death on 2017-11-12 00:00:00 
 ERROR: FAMILY : US06 : @I7@ : Divorced 2000-01-21 00:00:00 after husband's (@I7@) death on 1998-02-23 00:00:00 
-ERROR: INDIVIDUAL: us07: 219: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-02 20:14:55.660390 
+ERROR: INDIVIDUAL: us07: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-20 17:52:02.392519 
 Error: INDIVIDUAL: US08: id -> @I11@, Birth 9 months after divorce of parents 
 Error: INDIVIDUAL: US08: id -> @I13@, Birth 9 months after divorce of parents 
 Error: INDIVIDUAL: US08: id -> @I14@, Birth 9 months after divorce of parents 
@@ -18,3 +18,64 @@ Error: INDIVIDUAL: US10: Too young for marriage @I17@ 1976-01-22 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1976-01-22 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1977-04-16 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1993-12-20 00:00:00
+Error: INDIVIDUAL: US09: @I18@ Barron /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I11@ Donald /Trump Jr./ Parents are too old
+Error: INDIVIDUAL: US09: @I13@ Ivanka /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I14@ Eric /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I16@ Tiffany /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I4@ Maryanne /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I5@ Frederick /Trump Jr./ Parents are too old
+Error: INDIVIDUAL: US09: @I6@ Elizabeth /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I8@ Robert /Trump/ Parents are too old
+Error: FAMILY: US10: spouses @I11@ and @I20@ are first cousinsError: FAMILY: US10: spouses @I29@ and @I28@ are first cousinsError: FAMILY: US10: spouses @I35@ and @I32@ are first cousinsError: FAMILY: US10: spouses @I8@ and @I7@ are first cousinsError: FAMILY: US10: spouses @I9@ and @I7@ are first cousinsError: FAMILY: US10: spouses @I13@ and @I14@ are first cousinsError: INDIVIDUAL: US09: @I25@ Padme /Skywalker/ Parents are too old
+Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Parents are too old
+Error: INDIVIDUAL: US09: @I28@ Leia /Skywalker/ Parents are too old
+Error: INDIVIDUAL: US09: @I38@ Yoda /Skywaler/ Parents are too old
+Error: INDIVIDUAL: US09: @I35@ Dinesh /Skywalker/ Parents are too old
+Error: INDIVIDUAL: US09: @I30@ Ben /Solo/ Parents are too old
+Error: INDIVIDUAL: US09: @I32@ Hope /Solo/ Parents are too old
+Error: INDIVIDUAL: US09: @I37@ Monalisa /Solo/ Parents are too old
+Error: INDIVIDUAL: US09: @I33@ Kylian /Mbappe/ Parents are too old
+Error: INDIVIDUAL: US09: @I39@ Summer /Palpatine/ Parents are too old
+Error: INDIVIDUAL: US09: @I20@ Barron /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I13@ Donald /Trump Jr./ Parents are too old
+Error: INDIVIDUAL: US09: @I16@ Ivanka /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I17@ Eric /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I19@ Tiffany /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I1@ Donald /Trump Sr./ Parents are too old
+Error: INDIVIDUAL: US09: @I5@ Maryanne /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I6@ Frederick /Trump Jr./ Parents are too old
+Error: INDIVIDUAL: US09: @I7@ Elizabeth /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I10@ Robert /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I4@ Mary /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I23@ Lohri /Singh/ Parents are too old
+Error: INDIVIDUAL: US09: @I14@ Whos Dagabru /Grau/ Parents are too old
+Error: INDIVIDUAL: US09: @I25@ Padme /Skywalker/ Parents are too old
+Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Parents are too old
+Error: INDIVIDUAL: US09: @I28@ Leia /Skywalker/ Parents are too old
+Error: INDIVIDUAL: US09: @I38@ Yoda /Skywaler/ Parents are too old
+Error: INDIVIDUAL: US09: @I35@ Dinesh /Skywalker/ Parents are too old
+Error: INDIVIDUAL: US09: @I30@ Ben /Solo/ Parents are too old
+Error: INDIVIDUAL: US09: @I32@ Hope /Solo/ Parents are too old
+Error: INDIVIDUAL: US09: @I37@ Monalisa /Solo/ Parents are too old
+Error: INDIVIDUAL: US09: @I33@ Kylian /Mbappe/ Parents are too old
+Error: INDIVIDUAL: US09: @I39@ Summer /Palpatine/ Parents are too old
+Error: INDIVIDUAL: US09: @I20@ Barron /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I13@ Donald /Trump Jr./ Parents are too old
+Error: INDIVIDUAL: US09: @I16@ Ivanka /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I17@ Eric /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I19@ Tiffany /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I1@ Donald /Trump Sr./ Parents are too old
+Error: INDIVIDUAL: US09: @I5@ Maryanne /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I6@ Frederick /Trump Jr./ Parents are too old
+Error: INDIVIDUAL: US09: @I7@ Elizabeth /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I10@ Robert /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I4@ Mary /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I23@ Lohri /Singh/ Parents are too old
+Error: INDIVIDUAL: US09: @I14@ Whos Dagabru /Grau/ Parents are too old
+Error: INDIVIDUAL: US09: @I1@ Donald /Trump Sr./ Parents are too old
+Error: INDIVIDUAL: US09: @I5@ Maryanne /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I6@ Frederick /Trump Jr./ Parents are too old
+Error: INDIVIDUAL: US09: @I7@ Elizabeth /Trump/ Parents are too old
+Error: INDIVIDUAL: US09: @I10@ Robert /Trump/ Parents are too old
+Error: FAMILY: US10: spouses @I29@ and @I28@ are first cousinsError: FAMILY: US10: spouses @I35@ and @I32@ are first cousinsError: FAMILY: US10: spouses @I8@ and @I7@ are first cousinsError: FAMILY: US10: spouses @I9@ and @I7@ are first cousinsError: FAMILY: US10: spouses @I13@ and @I14@ are first cousins
