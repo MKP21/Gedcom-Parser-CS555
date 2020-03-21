@@ -52,6 +52,9 @@
 | @I54@ |     Dimple /Vohra/    |   F    | 07 Mar 1935 |  85  |  TRUE |      NA     | ['@F17@'] |            NA            |
 | @I55@ |    Abhishek /Vohra/   |   M    | 18 May 1937 |  82  |  TRUE |      NA     | ['@F17@'] |            NA            |
 | @I56@ |     Guddu /Vohra/     |   M    | 19 Feb 1940 |  80  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I57@ |     Miami /Patel/     |   M    | 03 Jan 1955 |  65  |  TRUE |      NA     | ['@F11@'] |        ['@F18@']         |
+| @I58@ |     Rinky /Gupta/     |   F    | 07 Feb 1956 |  20  | FALSE | 17 Feb 1976 |     NA    |        ['@F18@']         |
+| @I59@ |     Bulbul /Patel/    |   M    | 03 Feb 1977 |  43  |  TRUE |      NA     | ['@F18@'] |            NA            |
 |  @I5@ |    Maryanne /Trump/   |   F    | 05 Apr 1937 |  82  |  TRUE |      NA     |  ['@F4@'] |            NA            |
 |  @I6@ | Frederick /Trump Jr./ |   M    | 14 Oct 1938 |  42  | FALSE | 06 Sep 1981 |  ['@F4@'] |            NA            |
 |  @I7@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  77  |  TRUE |      NA     |  ['@F4@'] |     ['@F6@', '@F7@']     |
@@ -62,13 +65,14 @@
 |   ID  |   MARRIED   |   DIVORCED  | HUSBAND ID |    HUSBAND NAME    | WIFE ID |     WIFE NAME      |                                                                     CHILDREN                                                                     |
 +-------+-------------+-------------+------------+--------------------+---------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 | @F10@ | 08 Feb 1919 |      NA     |   @I23@    | Loday /Skywalker/  |  @I22@  |   Lohri /Singh/    |                                                                    ['@I24@']                                                                     |
-| @F11@ | 03 Dec 1940 |      NA     |   @I25@    | Anakin /Skwalker/  |  @I24@  | Padme /Skywalker/  |                                                           ['@I26@', '@I28@', '@I37@']                                                            |
+| @F11@ | 03 Dec 1940 |      NA     |   @I25@    | Anakin /Skwalker/  |  @I24@  | Padme /Skywalker/  |                                                       ['@I26@', '@I28@', '@I37@', '@I57@']                                                       |
 | @F12@ | 10 Jul 1975 |      NA     |   @I26@    |  Luke /Skywalker/  |  @I27@  | Malika /Sherawat/  |                                                                    ['@I34@']                                                                     |
 | @F13@ | 05 May 1975 |      NA     |   @I29@    |    Haan /Solo/     |  @I28@  |  Leia /Skywalker/  |                                                                ['@I30@', '@I33@']                                                                |
 | @F14@ | 14 Dec 2013 |      NA     |   @I30@    |     Ben /Solo/     |  @I31@  |    Roma /Solo/     |                                                                    ['@I36@']                                                                     |
 | @F15@ | 17 Oct 2000 | 16 May 2010 |   @I30@    |     Ben /Solo/     |  @I32@  |  Ray /Palpatine/   |                                                                ['@I35@', '@I38@']                                                                |
 | @F16@ | 18 Feb 2000 |      NA     |   @I34@    | Dinesh /Skywalker/ |  @I33@  |    Hope /Solo/     |                                                                        NA                                                                        |
 | @F17@ | 20 May 1918 |      NA     |   @I40@    |   Kiran /Vohra/    |  @I39@  |   Jigna /Singh/    | ['@I41@', '@I42@', '@I43@', '@I44@', '@I45@', '@I46@', '@I47@', '@I48@', '@I49@', '@I50@', '@I51@', '@I52@', '@I53@', '@I54@', '@I55@', '@I56@'] |
+| @F18@ | 03 Apr 1970 |      NA     |   @I57@    |   Miami /Patel/    |  @I58@  |   Rinky /Gupta/    |                                                                    ['@I59@']                                                                     |
 |  @F1@ | 22 Jan 2005 |      NA     |    @I1@    | Donald /Trump Sr./ |   @I2@  |  Melania /Knavs/   |                                                                    ['@I19@']                                                                     |
 |  @F2@ | 20 Dec 1993 | 08 Jun 1999 |    @I1@    | Donald /Trump Sr./ |  @I17@  |   Marla /Maples/   |                                                                    ['@I18@']                                                                     |
 |  @F3@ | 16 Apr 1977 | 24 Aug 1990 |    @I1@    | Donald /Trump Sr./ |  @I12@  | Ivana /Zelnickova/ |                                                           ['@I13@', '@I15@', '@I16@']                                                            |
@@ -85,9 +89,11 @@ Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
 Error: INDIVIDUAL: US03: @I43@ Drashti /Vohra/ were born before they died 
 Error: INDIVIDUAL: US08: -> @I18@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
+Error: INDIVIDUAL: US09: @I59@ Bulbul /Patel/ Birth after death of parents  
 Error: INDIVIDUAL: US10: Too young for marriage @I22@ 1919-02-08 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I23@ 1919-02-08 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I27@ 1975-07-10 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I58@ 1970-04-03 00:00:00
 Error: INDIVIDUAL: US12: @I43@ Drashti /Vohra/ Parents are too old
 Error: FAMILY: US13: children (@I35@) and (@I38@) are born inside 2 days to 8 months of one anotherError: FAM: US15: More than 15 siblings in a family@F9@
 Error: FAM: US 16: Single family has two or more last name @F11@

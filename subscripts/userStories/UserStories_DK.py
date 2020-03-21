@@ -57,14 +57,22 @@ def us09(indi, fam, f):
             for child in family["CHIL"]:
                 childobj = next(
                     (item for item in indi if item["INDI"] == child), False)
-                if childobj != "NA" and fatherdeath != "NA" and motherdeath != "NA":
-                    # checking if child is born after death of parents
-                    if childobj["BIRT"] > motherdeath or childobj["BIRT"] > fatherdeath:
-                        print(
-                            f"Indi id -> {childobj['INDI']}, Birth after death of parents")
-                        f.write(
-                            f"Error: INDIVIDUAL: US09: {childobj['INDI']} {childobj['NAME']} Birth after death of parents  \n")
-                        flag = False
+                if childobj != "NA":
+                    if fatherdeath != "NA":
+                        # checking if child is born after death of parents
+                        if childobj["BIRT"] > fatherdeath:
+                            print(
+                                f"Indi id -> {childobj['INDI']}, Birth after death of parents")
+                            f.write(
+                                f"Error: INDIVIDUAL: US09: {childobj['INDI']} {childobj['NAME']} Birth after death of parents  \n")
+                            flag = False
+                    if motherdeath != "NA":
+                        if childobj["BIRT"] > motherdeath:
+                            print(
+                                f"Indi id -> {childobj['INDI']}, Birth after death of parents")
+                            f.write(
+                                f"Error: INDIVIDUAL: US09: {childobj['INDI']} {childobj['NAME']} Birth after death of parents  \n")
+                            flag = False
     if flag:
         print("User Story 9 Completed")
         return True
