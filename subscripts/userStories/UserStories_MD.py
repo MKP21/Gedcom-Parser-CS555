@@ -99,9 +99,9 @@ def us14(indi, fam, f):
                     count += 1
             if count > 5:
                 print(
-                    f"ERROR: FAMILY: US14: LINENUMBER: {families['FAM']}: has more than 5 siblings: {families['CHILD']}: who were born on the same date and time {birthdates}")
+                    f"ERROR: FAMILY: US14: {families['FAM']}: has more than 5 siblings: {families['CHIL']}: who were born on the same date and time {birthdates}")
                 f.write(
-                    f"ERROR: FAMILY: US14: LINENUMBER: {families['FAM']}: has more than 5 siblings: {families['CHILD']}: who were born on the same date and time {birthdates}")
+                    f"ERROR: FAMILY: US14: {families['FAM']}: has more than 5 siblings: {families['CHIL']}: who were born on the same date and time {birthdates}")
                 flag = False
     # End of for loop
 
@@ -126,17 +126,21 @@ def us17(indi, fam, f):
         # if husband is parent of his wife
         if parents.__contains__(family['WIFE']) == True and family['HUSB'] in parents[family["WIFE"]]:
             print(
-                f"ERROR: FAMILY: US17: LINENUMBER: {family['FAM']}: Husband {family['HUSB']} is married to the child {children}")
+                f"ERROR: FAMILY: US17: {family['FAM']}: Husband {family['HUSB']} is married to the child {family['WIFE']}")
             f.write(
-                f"ERROR: FAMILY: US17: LINENUMBER: {family['FAM']}: Husband {family['HUSB']} is married to the child {children}")
+                f"ERROR: FAMILY: US17: {family['FAM']}: Husband {family['HUSB']} is married to the child {family['WIFE']}")
+            print("Userstory 17 Completed")
+            return f"ERROR: FAMILY: US17: {family['FAM']}: Husband {family['HUSB']} is married to the child {family['WIFE']}"
         # if wife is parent of her husband
         elif parents.__contains__(family['HUSB']) == True and family['WIFE'] in parents[family['HUSB']]:
             print(
-                f"ERROR: FAMILY: US17: LINENUMBER: {family['FAM']}: Wife {family['WIFE']} is married to the child {children}")
+                f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}")
             f.write(
-                f"ERROR: FAMILY: US17: LINENUMBER: {family['FAM']}: Wife {family['WIFE']} is married to the child {children}")
+                f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}")
+            print("Userstory 17 Completed")
+            return f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}"
 
-    print("Userstory 17 Completed")
+
 
 
 # Unique families by spouses

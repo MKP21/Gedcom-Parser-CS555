@@ -1,20 +1,13 @@
-Error: INDIVIDUAL: US01: Marriage date after current date 2949-07-20 2020-03-02
-Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
-Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
-Error: INDIVIDUAL: US02: @I1@ Donald /Trump Sr./ was born after marriage
-Error: INDIVIDUAL: US03: @I16@ Tiffany /Trump/ were born before they died 
-ERROR: FAMILY: us04 219: @F2@: divorce 1970-08-24 00:00:00 before marriage 1977-04-16 00:00:00 
-ERROR: FAMILY: us04 219: @F8@: divorce 2005-03-15 00:00:00 before marriage 2018-11-12 00:00:00 
-ERROR: INDIVIDUAL : US05 : @I11@ : Married 2018-11-12 00:00:00 after husband's (@I11@) death on 2017-11-12 00:00:00 
-ERROR: FAMILY : US06 : @I7@ : Divorced 2000-01-21 00:00:00 after husband's (@I7@) death on 1998-02-23 00:00:00 
-ERROR: INDIVIDUAL: us07: 219: @I12@: birth 1800-12-18 00:00:00 before 150 years from current date 2020-03-02 20:14:55.660390 
-Error: INDIVIDUAL: US08: id -> @I11@, Birth 9 months after divorce of parents 
-Error: INDIVIDUAL: US08: id -> @I13@, Birth 9 months after divorce of parents 
-Error: INDIVIDUAL: US08: id -> @I14@, Birth 9 months after divorce of parents 
-Error: INDIVIDUAL: US09: @I1@ Donald /Trump Sr./ Birth after death of parents  
-Error: INDIVIDUAL: US09: @I6@ Elizabeth /Trump/ Birth after death of parents  
-Error: INDIVIDUAL: US09: @I8@ Robert /Trump/ Birth after death of parents  
-Error: INDIVIDUAL: US10: Too young for marriage @I17@ 1976-01-22 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1976-01-22 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1977-04-16 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I1@ 1993-12-20 00:00:00
+Error: INDIVIDUAL: US01: Birth date after current date@I43@ Drashti /Vohra/ 2922-01-15
+Error: INDIVIDUAL: US03: @I43@ Drashti /Vohra/ were born before they died 
+Error: INDIVIDUAL: US08: -> @I18@, Birth before marriage of parents 
+Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
+Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
+Error: FAMILY: US19: spouses @I34@ and @I33@ are first cousinsError: INDIVIDUAL: US12: @I43@ Drashti /Vohra/ Parents are too old
+Error: FAMILY: US19: spouses @I34@ and @I33@ are first cousinsError: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
+Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
+Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
+Error: INDIVIDUAL: US09: @I59@ Bulbul /Patel/ Birth after death of parents  
+Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
+Error: INDIVIDUAL: US12: @I43@ Drashti /Vohra/ Parents are too old
+Error: FAMILY: US19: spouses @I34@ and @I33@ are first cousins
