@@ -1,7 +1,7 @@
 from subscripts.parseFile import fileParser
 from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16
 from subscripts.userStories.UserStories_MP import us03, us08
-from subscripts.userStories.UserStories_MD import us04, us07
+from subscripts.userStories.UserStories_MD import us04, us07, us14, us17
 from subscripts.userStories.UserStories_DK import us02, us09, us12, us19
 from subscripts.userStories.UserStories_AS import us05, us06
 
@@ -79,6 +79,12 @@ class TestCases(unittest.TestCase):
         f.close()
         self.assertFalse(value)
 
+    def test_us14(self):
+        f = open("test.txt", "a")
+        value = us14(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
+
     def test_us15(self):
         f = open("test.txt", "a")
         value = us15(self.d[0], self.d[1], f)
@@ -90,6 +96,12 @@ class TestCases(unittest.TestCase):
         value = us16(self.d[0], self.d[1], f)
         f.close()
         self.assertFalse(value)
+
+    def test_us17(self):
+        f = open("test.txt", "a")
+        value = us17(self.d[0], self.d[1], f)
+        f.close()
+        self.assertEqual(value,"ERROR: FAMILY: US17: @F19@: Wife @I14@ is married to the child @I60@")
 
     def test_us19(self):
         f = open("test.txt", "a")
