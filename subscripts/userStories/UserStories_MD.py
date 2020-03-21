@@ -101,7 +101,7 @@ def us14(indi, fam, f):
                 print(
                     f"ERROR: FAMILY: US14: {families['FAM']}: has more than 5 siblings: {families['CHIL']}: who were born on the same date and time {birthdates}")
                 f.write(
-                    f"ERROR: FAMILY: US14: {families['FAM']}: has more than 5 siblings: {families['CHIL']}: who were born on the same date and time {birthdates}")
+                    f"ERROR: FAMILY: US14: {families['FAM']}: has more than 5 siblings: {families['CHIL']}: who were born on the same date and time {birthdates}\n")
                 flag = False
     # End of for loop
 
@@ -128,7 +128,7 @@ def us17(indi, fam, f):
             print(
                 f"ERROR: FAMILY: US17: {family['FAM']}: Husband {family['HUSB']} is married to the child {family['WIFE']}")
             f.write(
-                f"ERROR: FAMILY: US17: {family['FAM']}: Husband {family['HUSB']} is married to the child {family['WIFE']}")
+                f"ERROR: FAMILY: US17: {family['FAM']}: Husband {family['HUSB']} is married to the child {family['WIFE']}\n")
             print("Userstory 17 Completed")
             return f"ERROR: FAMILY: US17: {family['FAM']}: Husband {family['HUSB']} is married to the child {family['WIFE']}"
         # if wife is parent of her husband
@@ -136,7 +136,7 @@ def us17(indi, fam, f):
             print(
                 f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}")
             f.write(
-                f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}")
+                f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}\n")
             print("Userstory 17 Completed")
             return f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}"
 

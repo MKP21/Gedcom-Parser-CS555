@@ -1,13 +1,49 @@
-Error: INDIVIDUAL: US01: Birth date after current date@I43@ Drashti /Vohra/ 2922-01-15
-Error: INDIVIDUAL: US03: @I43@ Drashti /Vohra/ were born before they died 
-Error: INDIVIDUAL: US08: -> @I18@, Birth before marriage of parents 
+Error: INDIVIDUAL: US01: Birth date after current date@I44@ Drashti /Vohra/ 2922-01-15
+Error: INDIVIDUAL: US02: @I28@ Malika /Sherawat/ was born before marriage
+Error: INDIVIDUAL: US03: @I44@ Drashti /Vohra/ were born before they died 
+ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-01 00:00:00 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-21 18:53:46.994309 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
-Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
-Error: FAMILY: US19: spouses @I34@ and @I33@ are first cousinsError: INDIVIDUAL: US12: @I43@ Drashti /Vohra/ Parents are too old
-Error: FAMILY: US19: spouses @I34@ and @I33@ are first cousinsError: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
-Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
-Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
-Error: INDIVIDUAL: US09: @I59@ Bulbul /Patel/ Birth after death of parents  
-Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
-Error: INDIVIDUAL: US12: @I43@ Drashti /Vohra/ Parents are too old
-Error: FAMILY: US19: spouses @I34@ and @I33@ are first cousins
+Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
+Error: INDIVIDUAL: US09: @I60@ Bulbul /Patel/ Birth after death of parents  
+Error: INDIVIDUAL: US10: Too young for marriage @I15@ 2019-11-12 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I23@ 1919-02-08 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I24@ 1919-02-08 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I28@ 1975-07-10 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I36@ 2020-01-03 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I39@ 2020-01-03 00:00:00
+Error: INDIVIDUAL: US10: Too young for marriage @I59@ 1970-04-03 00:00:00
+Error: INDIVIDUAL: US12: @I44@ Drashti /Vohra/ Parents are too old
+Error: FAMILY: US13: children (@I36@) and (@I39@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I15@) and (@I61@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I15@) and (@I62@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I15@) and (@I63@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I15@) and (@I64@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I15@) and (@I65@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I15@) and (@I66@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I61@) and (@I62@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I61@) and (@I63@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I61@) and (@I64@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I61@) and (@I65@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I61@) and (@I66@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I62@) and (@I63@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I62@) and (@I64@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I62@) and (@I65@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I62@) and (@I66@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I63@) and (@I64@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I63@) and (@I65@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I63@) and (@I66@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I64@) and (@I65@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I64@) and (@I66@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I65@) and (@I66@) are born inside 2 days to 8 months of one another 
+ERROR: FAMILY: US14: @F9@: has more than 5 siblings: ['@I15@', '@I61@', '@I62@', '@I63@', '@I64@', '@I65@', '@I66@']: who were born on the same date and time [datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0)]
+Error: FAM: US15: More than 15 siblings in a family@F9@
+Error: FAM: US 16: Single family has two or more last name @F12@
+Error: FAM: US 16: Single family has two or more last name @F16@
+Error: FAM: US 16: Single family has two or more last name @F1@
+Error: FAM: US 16: Single family has two or more last name @F2@
+Error: FAM: US 16: Single family has two or more last name @F4@
+Error: FAM: US 16: Single family has two or more last name @F9@
+ERROR: FAMILY: US17: @F10@: Wife @I14@ is married to the child @I15@
+Error: FAMILY: US18: spouses @I36@ and @I39@ are siblingsError: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
+Error: FAMILY: US19: spouses @I36@ and @I39@ are first cousins

@@ -23,9 +23,9 @@ def us02(indi, fam, f):
                 # COMPARING MARRIAGE DATE TO BIRTHDATE
                 if families['MARR'] < m:
                     print(
-                        f" User Story 02  Error: {person['INDI']} {person['NAME']} was born after marriage")
+                        f" User Story 02  Error: {person['INDI']} {person['NAME']} was born before marriage")
                     f.write(
-                        f"Error: INDIVIDUAL: US02: {person['INDI']} {person['NAME']} was born after marriage\n")
+                        f"Error: INDIVIDUAL: US02: {person['INDI']} {person['NAME']} was born before marriage\n")
                     flag = False
     if flag:
         print("User Story 2 Completed")
@@ -161,7 +161,7 @@ def us19(indi, fam, f):
 
             if wgrandfatherfamc == grandfatherfamc or wgrandfatherfamc == grandmotherfamc or wgrandmotherfamc == grandmotherfamc or wgrandmotherfamc == grandfatherfamc:
                 print(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins')
-                f.write(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins')
+                f.write(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins\n')
                 flag = False
 
     print("User Story 19 Completed")

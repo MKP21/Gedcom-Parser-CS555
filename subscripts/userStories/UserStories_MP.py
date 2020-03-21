@@ -74,7 +74,7 @@ def us13(indi, fam, f):
                     print(f'Error: FAMILY: US13: child ({child1["INDI"]}) and child ({child2["INDI"]}) are born '
                           f'inside 2 days to 8 months of one another')
                     f.write(f'Error: FAMILY: US13: children ({child1["INDI"]}) and ({child2["INDI"]}) are born '
-                            f'inside 2 days to 8 months of one another')
+                            f'inside 2 days to 8 months of one another \n')
                     flag = False
 
     print("User Story 13 Completed")
