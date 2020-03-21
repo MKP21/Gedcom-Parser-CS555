@@ -1,75 +1,98 @@
-+-------+-----------------------+--------+-------------+-----+-------+-------------+-----------+--------------------------+
-|   ID  |          NAME         | GENDER |   BIRTHDAY  | AGE | ALIVE |    DEATH    |   CHILD   |          SPOUSE          |
-+-------+-----------------------+--------+-------------+-----+-------+-------------+-----------+--------------------------+
-| @I10@ |     Robert /Trump/    |   M    | 26 Aug 1948 |  71 |  TRUE |      NA     |  ['@F4@'] |         ['@F8@']         |
-| @I11@ |    Martha /Blaine/    |   F    | 07 Mar 1950 |  70 |  TRUE |      NA     |     NA    |         ['@F8@']         |
-| @I12@ |   Ivana /Zelnickova/  |   F    | 20 Feb 1949 |  71 |  TRUE |      NA     |     NA    |         ['@F2@']         |
-| @I13@ |   Donald /Trump Jr./  |   M    | 31 Dec 1971 |  48 |  TRUE |      NA     |  ['@F2@'] |    ['@F9@', '@F10@']     |
-| @I14@ |    Vanessa /Haydon/   |   F    | 18 Dec 1977 |  42 |  TRUE |      NA     |     NA    |        ['@F10@']         |
-| @I15@ |     Ivanka /Trump/    |   F    | 30 Oct 1981 |  38 |  TRUE |      NA     |  ['@F2@'] |            NA            |
-| @I16@ |      Eric /Trump/     |   M    | 06 Jan 1984 |  36 |  TRUE |      NA     |  ['@F2@'] |            NA            |
-| @I17@ |     Marla /Maples/    |   F    | 27 Oct 1963 |  56 |  TRUE |      NA     |     NA    |         ['@F3@']         |
-| @I18@ |    Tiffany /Trump/    |   F    | 13 Oct 1993 |  26 |  TRUE |      NA     |  ['@F3@'] |            NA            |
-| @I19@ |     Barron /Trump/    |   M    | 20 Mar 2006 |  14 |  TRUE |      NA     |  ['@F1@'] |            NA            |
-|  @I1@ |   Donald /Trump Sr./  |   M    | 14 Jun 1946 |  73 |  TRUE |      NA     |  ['@F4@'] | ['@F1@', '@F2@', '@F3@'] |
-| @I20@ |     Aneri /Singh/     |   F    | 15 Mar 1880 |  40 | FALSE | 18 Nov 1920 |     NA    |         ['@F5@']         |
-| @I21@ |     Milkha /Singh/    |   M    | 06 Oct 1881 |  39 | FALSE | 27 Oct 1920 |     NA    |         ['@F5@']         |
-| @I22@ |     Lohri /Singh/     |   F    | 09 Jul 1910 |  59 | FALSE | 02 Feb 1970 |  ['@F5@'] |        ['@F11@']         |
-| @I23@ |   Loday /Skywalker/   |   M    | 01 Jul 1909 |  81 | FALSE | 01 Oct 1990 |     NA    |        ['@F11@']         |
-| @I24@ |   Padme /Skywalker/   |   F    | 09 Feb 1922 |  33 | FALSE | 04 May 1955 | ['@F11@'] |        ['@F12@']         |
-| @I25@ |   Anakin /Skwalker/   |   M    | 13 May 1920 |  49 | FALSE | 02 Apr 1970 |     NA    |        ['@F12@']         |
-| @I26@ |    Luke /Skywalker/   |   M    | 04 Mar 1949 |  50 | FALSE | 01 Jan 2000 | ['@F12@'] |        ['@F13@']         |
-| @I27@ |   Malika /Sherawat/   |   F    | 16 Oct 1980 |  20 | FALSE | 11 Oct 2001 |     NA    |        ['@F13@']         |
-| @I28@ |    Leia /Skywalker/   |   F    | 04 Feb 1950 |  52 | FALSE | 03 Jul 2002 | ['@F12@'] |        ['@F14@']         |
-| @I29@ |      Haan /Solo/      |   M    | 04 Jan 1950 |  51 | FALSE | 14 Mar 2001 |     NA    |        ['@F14@']         |
-|  @I2@ |    Melania /Knavs/    |   F    | 26 Apr 1970 |  49 |  TRUE |      NA     |     NA    |         ['@F1@']         |
-| @I30@ |       Ben /Solo/      |   M    | 04 Aug 1980 |  39 |  TRUE |      NA     | ['@F14@'] |    ['@F15@', '@F16@']    |
-| @I31@ |      Roma /Solo/      |   F    | 09 Apr 1985 |  34 |  TRUE |      NA     |     NA    |        ['@F15@']         |
-| @I32@ |    Ray /Palpatine/    |   F    | 07 Jun 1981 |  38 |  TRUE |      NA     |     NA    |        ['@F16@']         |
-| @I33@ |      Hope /Solo/      |   F    | 12 Sep 1983 |  36 |  TRUE |      NA     | ['@F14@'] |        ['@F17@']         |
-| @I34@ |   Dinesh /Skywalker/  |   NA   | 17 Jun 1977 |  42 |  TRUE |      NA     | ['@F13@'] |        ['@F17@']         |
-| @I35@ |    Kylian /Mbappe/    |   M    | 11 Mar 2008 |  12 |  TRUE |      NA     | ['@F16@'] |            NA            |
-| @I36@ |    Monalisa /Solo/    |   F    | 14 Apr 2015 |  4  |  TRUE |      NA     | ['@F15@'] |            NA            |
-| @I37@ |    Yoda /Skywaler/    |   M    | 17 Nov 1953 |  7  | FALSE | 17 Nov 1960 | ['@F12@'] |            NA            |
-| @I38@ |   Summer /Palpatine/  |   F    | 11 Mar 2008 |  12 |  TRUE |      NA     | ['@F16@'] |            NA            |
-|  @I3@ |   Frederick /Trump/   |   M    | 11 Oct 1905 |  93 | FALSE | 25 Jun 1999 |     NA    |         ['@F4@']         |
-|  @I4@ |      Mary /Trump/     |   F    | 12 May 1912 |  88 | FALSE | 07 Aug 2000 |  ['@F5@'] |         ['@F4@']         |
-|  @I5@ |    Maryanne /Trump/   |   F    | 05 Apr 1937 |  82 |  TRUE |      NA     |  ['@F4@'] |            NA            |
-|  @I6@ | Frederick /Trump Jr./ |   M    | 14 Oct 1938 |  42 | FALSE | 06 Sep 1981 |  ['@F4@'] |            NA            |
-|  @I7@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  77 |  TRUE |      NA     |  ['@F4@'] |     ['@F6@', '@F7@']     |
-|  @I8@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78 |  TRUE |      NA     |     NA    |         ['@F6@']         |
-|  @I9@ |      James /Grau/     |   M    | 29 Dec 1939 |  58 | FALSE | 23 Feb 1998 |     NA    |         ['@F7@']         |
-+-------+-----------------------+--------+-------------+-----+-------+-------------+-----------+--------------------------+
-+-------+-------------+-------------+------------+--------------------+---------+--------------------+-------------------------------------------+
-|   ID  |   MARRIED   |   DIVORCED  | HUSBAND ID |    HUSBAND NAME    | WIFE ID |     WIFE NAME      |                  CHILDREN                 |
-+-------+-------------+-------------+------------+--------------------+---------+--------------------+-------------------------------------------+
-| @F10@ | 12 Nov 2005 | 15 Mar 2018 |   @I13@    | Donald /Trump Jr./ |  @I14@  |  Vanessa /Haydon/  |                     NA                    |
-| @F11@ | 08 Feb 1919 |      NA     |   @I23@    | Loday /Skywalker/  |  @I22@  |   Lohri /Singh/    |                 ['@I24@']                 |
-| @F12@ | 03 Dec 1940 |      NA     |   @I25@    | Anakin /Skwalker/  |  @I24@  | Padme /Skywalker/  |        ['@I26@', '@I28@', '@I37@']        |
-| @F13@ | 10 Jul 1975 |      NA     |   @I26@    |  Luke /Skywalker/  |  @I27@  | Malika /Sherawat/  |                 ['@I34@']                 |
-| @F14@ | 05 May 1975 |      NA     |   @I29@    |    Haan /Solo/     |  @I28@  |  Leia /Skywalker/  |             ['@I30@', '@I33@']            |
-| @F15@ | 14 Dec 2013 |      NA     |   @I30@    |     Ben /Solo/     |  @I31@  |    Roma /Solo/     |                 ['@I36@']                 |
-| @F16@ | 17 Oct 2000 | 16 May 2010 |   @I30@    |     Ben /Solo/     |  @I32@  |  Ray /Palpatine/   |             ['@I35@', '@I38@']            |
-| @F17@ | 18 Feb 2000 |      NA     |   @I34@    | Dinesh /Skywalker/ |  @I33@  |    Hope /Solo/     |                     NA                    |
-|  @F1@ | 22 Jan 2005 |      NA     |    @I1@    | Donald /Trump Sr./ |   @I2@  |  Melania /Knavs/   |                 ['@I19@']                 |
-|  @F2@ | 16 Apr 1977 | 24 Aug 1990 |    @I1@    | Donald /Trump Sr./ |  @I12@  | Ivana /Zelnickova/ |        ['@I13@', '@I15@', '@I16@']        |
-|  @F3@ | 20 Dec 1993 | 08 Jun 1999 |    @I1@    | Donald /Trump Sr./ |  @I17@  |   Marla /Maples/   |                 ['@I18@']                 |
-|  @F4@ | 08 Feb 1936 |      NA     |    @I3@    | Frederick /Trump/  |   @I4@  |    Mary /Trump/    | ['@I1@', '@I5@', '@I6@', '@I7@', '@I10@'] |
-|  @F5@ | 02 Jul 1900 |      NA     |   @I21@    |   Milkha /Singh/   |  @I20@  |   Aneri /Singh/    |             ['@I4@', '@I22@']             |
-|  @F6@ | 20 Jul 2000 |      NA     |    @I8@    |  Thomas /Stevens/  |   @I7@  | Elizabeth /Trump/  |                     NA                    |
-|  @F7@ | 26 Dec 1959 |      NA     |    @I9@    |    James /Grau/    |   @I7@  | Elizabeth /Trump/  |                     NA                    |
-|  @F8@ | 01 Oct 1975 | 11 May 1990 |   @I10@    |   Robert /Trump/   |  @I11@  |  Martha /Blaine/   |                     NA                    |
-|  @F9@ | 15 Aug 2019 |      NA     |   @I13@    | Donald /Trump Jr./ |    NA   |         NA         |                     NA                    |
-+-------+-------------+-------------+------------+--------------------+---------+--------------------+-------------------------------------------+
++-------+-----------------------+--------+-------------+------+-------+-------------+-----------+--------------------------+
+|   ID  |          NAME         | GENDER |   BIRTHDAY  | AGE  | ALIVE |    DEATH    |   CHILD   |          SPOUSE          |
++-------+-----------------------+--------+-------------+------+-------+-------------+-----------+--------------------------+
+| @I10@ |     Robert /Trump/    |   M    | 26 Aug 1948 |  71  |  TRUE |      NA     |  ['@F4@'] |         ['@F8@']         |
+| @I11@ |    Martha /Blaine/    |   F    | 07 Mar 1950 |  70  |  TRUE |      NA     |     NA    |         ['@F8@']         |
+| @I12@ |   Ivana /Zelnickova/  |   F    | 20 Feb 1949 |  71  |  TRUE |      NA     |     NA    |         ['@F3@']         |
+| @I13@ |   Donald /Trump Jr./  |   M    | 31 Dec 1971 |  48  |  TRUE |      NA     |  ['@F3@'] |         ['@F9@']         |
+| @I14@ |    Vanessa /Haydon/   |   F    | 18 Dec 1977 |  42  |  TRUE |      NA     |     NA    |         ['@F9@']         |
+| @I15@ |     Ivanka /Trump/    |   F    | 30 Oct 1981 |  38  |  TRUE |      NA     |  ['@F3@'] |            NA            |
+| @I16@ |      Eric /Trump/     |   M    | 06 Jan 1984 |  36  |  TRUE |      NA     |  ['@F3@'] |            NA            |
+| @I17@ |     Marla /Maples/    |   F    | 27 Oct 1963 |  56  |  TRUE |      NA     |     NA    |         ['@F2@']         |
+| @I18@ |    Tiffany /Trump/    |   F    | 13 Oct 1993 |  26  |  TRUE |      NA     |  ['@F2@'] |            NA            |
+| @I19@ |     Barron /Trump/    |   M    | 20 Mar 2006 |  14  |  TRUE |      NA     |  ['@F1@'] |            NA            |
+|  @I1@ |   Donald /Trump Sr./  |   M    | 14 Jun 1946 |  73  |  TRUE |      NA     |  ['@F4@'] | ['@F1@', '@F2@', '@F3@'] |
+| @I20@ |     Aneri /Singh/     |   F    | 15 Mar 1880 |  40  | FALSE | 18 Nov 1920 |     NA    |         ['@F5@']         |
+| @I21@ |     Milkha /Singh/    |   M    | 06 Oct 1881 |  39  | FALSE | 27 Oct 1920 |     NA    |         ['@F5@']         |
+| @I22@ |     Lohri /Singh/     |   F    | 09 Jul 1910 |  59  | FALSE | 02 Feb 1970 |  ['@F5@'] |        ['@F10@']         |
+| @I23@ |   Loday /Skywalker/   |   M    | 01 Jul 1909 |  81  | FALSE | 01 Oct 1990 |     NA    |        ['@F10@']         |
+| @I24@ |   Padme /Skywalker/   |   F    | 09 Feb 1922 |  33  | FALSE | 04 May 1955 | ['@F10@'] |        ['@F11@']         |
+| @I25@ |   Anakin /Skwalker/   |   M    | 13 May 1920 |  49  | FALSE | 02 Apr 1970 |     NA    |        ['@F11@']         |
+| @I26@ |    Luke /Skywalker/   |   M    | 04 Mar 1949 |  50  | FALSE | 01 Jan 2000 | ['@F11@'] |        ['@F12@']         |
+| @I27@ |   Malika /Sherawat/   |   F    | 16 Oct 1980 |  20  | FALSE | 11 Oct 2001 |     NA    |        ['@F12@']         |
+| @I28@ |    Leia /Skywalker/   |   F    | 04 Feb 1950 |  52  | FALSE | 03 Jul 2002 | ['@F11@'] |        ['@F13@']         |
+| @I29@ |      Haan /Solo/      |   M    | 04 Jan 1950 |  51  | FALSE | 14 Mar 2001 |     NA    |        ['@F13@']         |
+|  @I2@ |    Melania /Knavs/    |   F    | 26 Apr 1970 |  49  |  TRUE |      NA     |     NA    |         ['@F1@']         |
+| @I30@ |       Ben /Solo/      |   M    | 04 Aug 1980 |  39  |  TRUE |      NA     | ['@F13@'] |    ['@F14@', '@F15@']    |
+| @I31@ |      Roma /Solo/      |   F    | 09 Apr 1985 |  34  |  TRUE |      NA     |     NA    |        ['@F14@']         |
+| @I32@ |    Ray /Palpatine/    |   F    | 07 Jun 1981 |  38  |  TRUE |      NA     |     NA    |        ['@F15@']         |
+| @I33@ |      Hope /Solo/      |   F    | 12 Sep 1983 |  36  |  TRUE |      NA     | ['@F13@'] |        ['@F16@']         |
+| @I34@ |   Dinesh /Skywalker/  |   NA   | 17 Jun 1977 |  42  |  TRUE |      NA     | ['@F12@'] |        ['@F16@']         |
+| @I35@ |    Kylian /Mbappe/    |   M    | 11 Mar 2008 |  12  |  TRUE |      NA     | ['@F15@'] |            NA            |
+| @I36@ |    Monalisa /Solo/    |   F    | 14 Apr 2015 |  4   |  TRUE |      NA     | ['@F14@'] |            NA            |
+| @I37@ |    Yoda /Skywaler/    |   M    | 17 Nov 1953 |  7   | FALSE | 17 Nov 1960 | ['@F11@'] |            NA            |
+| @I38@ |   Summer /Palpatine/  |   F    | 11 Mar 2008 |  12  |  TRUE |      NA     | ['@F15@'] |            NA            |
+| @I39@ |     Jigna /Singh/     |   F    | 11 Mar 1901 | 119  |  TRUE |      NA     |  ['@F5@'] |        ['@F17@']         |
+|  @I3@ |   Frederick /Trump/   |   M    | 11 Oct 1905 |  93  | FALSE | 25 Jun 1999 |     NA    |         ['@F4@']         |
+| @I40@ |     Kiran /Vohra/     |   M    | 06 Feb 1900 | 120  |  TRUE |      NA     |     NA    |        ['@F17@']         |
+| @I41@ |     Akash /Vohra/     |   M    | 04 Dec 1919 | 100  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I42@ |     Jinal /Vohra/     |   F    | 12 Nov 1920 |  99  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I43@ |    Drashti /Vohra/    |   F    | 15 Jan 2922 | -901 |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I44@ |     Monil /Vohra/     |   M    | 06 Feb 1923 |  97  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I45@ |    Darshak /Vohra/    |   M    | 19 Mar 1924 |  96  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I46@ |     Pratik /Vohra/    |   M    | 07 May 1925 |  94  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I47@ |     Jigar /Vohra/     |   M    | 10 Jun 1926 |  93  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I48@ |     Sanket /Vohra/    |   M    | 14 Jul 1927 |  92  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I49@ |     Pooja /Vohra/     |   F    | 16 Aug 1928 |  91  |  TRUE |      NA     | ['@F17@'] |            NA            |
+|  @I4@ |      Mary /Trump/     |   F    | 12 May 1912 |  88  | FALSE | 07 Aug 2000 |  ['@F5@'] |         ['@F4@']         |
+| @I50@ |     Kalpit /Vohra/    |   M    | 14 Jan 1930 |  90  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I51@ |     Rushab /Vohra/    |   M    | 05 Apr 1931 |  88  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I52@ |      Diti /Vohra/     |   F    | 18 Jun 1932 |  87  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I53@ |     Hetal /Vohra/     |   F    | 05 Aug 1933 |  86  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I54@ |     Dimple /Vohra/    |   F    | 07 Mar 1935 |  85  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I55@ |    Abhishek /Vohra/   |   M    | 18 May 1937 |  82  |  TRUE |      NA     | ['@F17@'] |            NA            |
+| @I56@ |     Guddu /Vohra/     |   M    | 19 Feb 1940 |  80  |  TRUE |      NA     | ['@F17@'] |            NA            |
+|  @I5@ |    Maryanne /Trump/   |   F    | 05 Apr 1937 |  82  |  TRUE |      NA     |  ['@F4@'] |            NA            |
+|  @I6@ | Frederick /Trump Jr./ |   M    | 14 Oct 1938 |  42  | FALSE | 06 Sep 1981 |  ['@F4@'] |            NA            |
+|  @I7@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  77  |  TRUE |      NA     |  ['@F4@'] |     ['@F6@', '@F7@']     |
+|  @I8@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78  |  TRUE |      NA     |     NA    |         ['@F6@']         |
+|  @I9@ |      James /Grau/     |   M    | 29 Dec 1939 |  58  | FALSE | 23 Feb 1998 |     NA    |         ['@F7@']         |
++-------+-----------------------+--------+-------------+------+-------+-------------+-----------+--------------------------+
++-------+-------------+-------------+------------+--------------------+---------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+|   ID  |   MARRIED   |   DIVORCED  | HUSBAND ID |    HUSBAND NAME    | WIFE ID |     WIFE NAME      |                                                                     CHILDREN                                                                     |
++-------+-------------+-------------+------------+--------------------+---------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+| @F10@ | 08 Feb 1919 |      NA     |   @I23@    | Loday /Skywalker/  |  @I22@  |   Lohri /Singh/    |                                                                    ['@I24@']                                                                     |
+| @F11@ | 03 Dec 1940 |      NA     |   @I25@    | Anakin /Skwalker/  |  @I24@  | Padme /Skywalker/  |                                                           ['@I26@', '@I28@', '@I37@']                                                            |
+| @F12@ | 10 Jul 1975 |      NA     |   @I26@    |  Luke /Skywalker/  |  @I27@  | Malika /Sherawat/  |                                                                    ['@I34@']                                                                     |
+| @F13@ | 05 May 1975 |      NA     |   @I29@    |    Haan /Solo/     |  @I28@  |  Leia /Skywalker/  |                                                                ['@I30@', '@I33@']                                                                |
+| @F14@ | 14 Dec 2013 |      NA     |   @I30@    |     Ben /Solo/     |  @I31@  |    Roma /Solo/     |                                                                    ['@I36@']                                                                     |
+| @F15@ | 17 Oct 2000 | 16 May 2010 |   @I30@    |     Ben /Solo/     |  @I32@  |  Ray /Palpatine/   |                                                                ['@I35@', '@I38@']                                                                |
+| @F16@ | 18 Feb 2000 |      NA     |   @I34@    | Dinesh /Skywalker/ |  @I33@  |    Hope /Solo/     |                                                                        NA                                                                        |
+| @F17@ | 20 May 1918 |      NA     |   @I40@    |   Kiran /Vohra/    |  @I39@  |   Jigna /Singh/    | ['@I41@', '@I42@', '@I43@', '@I44@', '@I45@', '@I46@', '@I47@', '@I48@', '@I49@', '@I50@', '@I51@', '@I52@', '@I53@', '@I54@', '@I55@', '@I56@'] |
+|  @F1@ | 22 Jan 2005 |      NA     |    @I1@    | Donald /Trump Sr./ |   @I2@  |  Melania /Knavs/   |                                                                    ['@I19@']                                                                     |
+|  @F2@ | 20 Dec 1993 | 08 Jun 1999 |    @I1@    | Donald /Trump Sr./ |  @I17@  |   Marla /Maples/   |                                                                    ['@I18@']                                                                     |
+|  @F3@ | 16 Apr 1977 | 24 Aug 1990 |    @I1@    | Donald /Trump Sr./ |  @I12@  | Ivana /Zelnickova/ |                                                           ['@I13@', '@I15@', '@I16@']                                                            |
+|  @F4@ | 08 Feb 1936 |      NA     |    @I3@    | Frederick /Trump/  |   @I4@  |    Mary /Trump/    |                                                    ['@I1@', '@I5@', '@I6@', '@I7@', '@I10@']                                                     |
+|  @F5@ | 02 Jul 1900 |      NA     |   @I21@    |   Milkha /Singh/   |  @I20@  |   Aneri /Singh/    |                                                            ['@I4@', '@I22@', '@I39@']                                                            |
+|  @F6@ | 20 Jul 2000 |      NA     |    @I8@    |  Thomas /Stevens/  |   @I7@  | Elizabeth /Trump/  |                                                                        NA                                                                        |
+|  @F7@ | 26 Dec 1959 |      NA     |    @I9@    |    James /Grau/    |   @I7@  | Elizabeth /Trump/  |                                                                        NA                                                                        |
+|  @F8@ | 01 Oct 1975 | 11 May 1990 |   @I10@    |   Robert /Trump/   |  @I11@  |  Martha /Blaine/   |                                                                        NA                                                                        |
+|  @F9@ | 12 Nov 2005 |      NA     |   @I13@    | Donald /Trump Jr./ |  @I14@  |  Vanessa /Haydon/  |                                                                        NA                                                                        |
++-------+-------------+-------------+------------+--------------------+---------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
  
+Error: INDIVIDUAL: US01: Birth date after current date@I43@ Drashti /Vohra/ 2922-01-15
 Error: INDIVIDUAL: US02: @I27@ Malika /Sherawat/ was born after marriage
-Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
+Error: INDIVIDUAL: US03: @I43@ Drashti /Vohra/ were born before they died 
 Error: INDIVIDUAL: US08: -> @I18@, Birth before marriage of parents 
+Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US10: Too young for marriage @I22@ 1919-02-08 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I23@ 1919-02-08 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I27@ 1975-07-10 00:00:00
-Error: FAMILY: US13: children (@I35@) and (@I38@) are born inside 2 days to 8 months of one anotherError: FAM: US 16: Single family has two or more last name @F12@
-Error: FAM: US 16: Single family has two or more last name @F16@
+Error: INDIVIDUAL: US12: @I43@ Drashti /Vohra/ Parents are too old
+Error: FAMILY: US13: children (@I35@) and (@I38@) are born inside 2 days to 8 months of one anotherError: FAM: US15: More than 15 siblings in a family@F9@
+Error: FAM: US 16: Single family has two or more last name @F11@
+Error: FAM: US 16: Single family has two or more last name @F15@
 Error: FAM: US 16: Single family has two or more last name @F1@
-Error: FAM: US 16: Single family has two or more last name @F2@
+Error: FAM: US 16: Single family has two or more last name @F3@
 Error: FAM: US 16: Single family has two or more last name @F4@
+Error: FAMILY: US19: spouses @I34@ and @I33@ are first cousins

@@ -98,7 +98,7 @@ def us12(indi, fam, f):
                         print(
                             f"Indi id -> {childobj['INDI']}, Parents are too old")
                         f.write(
-                            f"Error: INDIVIDUAL: US09: {childobj['INDI']} {childobj['NAME']} Parents are too old\n")
+                            f"Error: INDIVIDUAL: US12: {childobj['INDI']} {childobj['NAME']} Parents are too old\n")
                         flag = False
     if flag:
         print("User Story 9 Completed")
@@ -111,6 +111,8 @@ def us19(indi, fam, f):
     flag = True
     print("User Story 19 - First cousins should not marry, running")
     for family in fam:
+        grandfatherfamc = 0
+        grandmotherfamc = 1
         husband = getIndiByID(indi, family["HUSB"])  # Getting Husband Data
         if husband["FAMC"] != 'NA':
             husbandfamc = getFamByID(fam, husband["FAMC"][0])
@@ -151,7 +153,7 @@ def us19(indi, fam, f):
 
             if wgrandfatherfamc == grandfatherfamc or wgrandfatherfamc == grandmotherfamc or wgrandmotherfamc == grandmotherfamc or wgrandmotherfamc == grandfatherfamc:
                 print(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins')
-                f.write(f'Error: FAMILY: US10: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins')
+                f.write(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins')
                 flag = False
 
     print("User Story 19 Completed")

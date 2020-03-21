@@ -78,4 +78,5 @@ Error: INDIVIDUAL: US09: @I5@ Maryanne /Trump/ Parents are too old
 Error: INDIVIDUAL: US09: @I6@ Frederick /Trump Jr./ Parents are too old
 Error: INDIVIDUAL: US09: @I7@ Elizabeth /Trump/ Parents are too old
 Error: INDIVIDUAL: US09: @I10@ Robert /Trump/ Parents are too old
-Error: FAMILY: US10: spouses @I29@ and @I28@ are first cousinsError: FAMILY: US10: spouses @I35@ and @I32@ are first cousinsError: FAMILY: US10: spouses @I8@ and @I7@ are first cousinsError: FAMILY: US10: spouses @I9@ and @I7@ are first cousinsError: FAMILY: US10: spouses @I13@ and @I14@ are first cousins
+Error: FAMILY: US10: spouses @I29@ and @I28@ are first cousinsError: FAMILY: US10: spouses @I35@ and @I32@ are first cousinsError: FAMILY: US10: spouses @I8@ and @I7@ are first cousinsError: FAMILY: US10: spouses @I9@ and @I7@ are first cousinsError: FAMILY: US10: spouses @I13@ and @I14@ are first cousinsError: INDIVIDUAL: US09: @I43@ Drashti /Vohra/ Parents are too old
+Error: FAMILY: US10: spouses @I34@ and @I33@ are first cousinsError: FAMILY: US19: spouses @I34@ and @I33@ are first cousinsError: INDIVIDUAL: US12: @I43@ Drashti /Vohra/ Parents are too old
