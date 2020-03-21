@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
 
 # Marriage before death
 def us05(indi, fam, f):
@@ -65,4 +65,52 @@ def us06(indi, fam, f):
                         flag = False
 
     print("User Story 6 Completed")
+    return flag
+
+def us20(indi, fam, f):
+    print("User Story 20 - Aunts and Uncles should not marry their nieces and nephews , Running")
+    flag = True
+  
+    for family in fam:
+        if family['CHIL'] and family['CHIL']!='NA':
+            if family['HUSB'] in family['CHIL']:
+                for family2 in fam:
+                    if family2['HUSB'] != family['HUSB'] and fam['HUSB'] in family2['CHIL']:
+                        f.write(
+                            f"ERROR: FAMILY : US20 : Aunts married   \n")
+                        flag = False
+            if family['WIFE'] in family['CHIL']:
+                for family2 in fam:
+                    if family2['WIFE'] != family['WIFE'] and fam['WIFE'] in family2['CHIL']:
+                        f.write(
+                            f"ERROR: FAMILY : US20 :  \n")
+                        flag = False
+    print("User Story 20 Completed")
+    return flag
+
+
+def us11(indi, fam, f):
+    print("User Story 11 - Marriage should not occur during marriage to another spouse, Running")
+    flag = True            
+    for individuals in indi:      
+        list_t = []
+        for family in fam:
+                if family['HUSB'] == individuals['INDI']:
+                    if family['DIV']:
+                        break
+                    elif family['HUSB'] in list_t:
+                        f.write(
+                            f"ERROR: FAMILY : US20 :  \n")
+                    else:
+                        list_t.append(family['HUSB'])
+                if family['WIFE'] == individuals['INDI']:
+                    if family['DIV']:
+                        break
+                    elif family['WIFE'] in list_t:
+                        f.write(
+                            f"ERROR: FAMILY : US20 :  \n")
+                    else:
+                        list_t.append(family['WIFE'])
+
+    print("User Story 11 Completed")
     return flag
