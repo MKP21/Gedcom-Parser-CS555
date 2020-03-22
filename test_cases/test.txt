@@ -47,3 +47,12 @@ Error: FAM: US 16: Single family has two or more last name @F9@
 ERROR: FAMILY: US17: @F10@: Wife @I14@ is married to the child @I15@
 Error: FAMILY: US18: spouses @I36@ and @I39@ are siblingsError: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
 Error: FAMILY: US19: spouses @I36@ and @I39@ are first cousins
+Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
+Error: FAMILY: US19: spouses @I36@ and @I39@ are first cousins
+Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
+Error: FAMILY: US19: spouses @I36@ and @I39@ are first cousins
+Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
+Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
+Error: INDIVIDUAL: US12: @I44@ Drashti /Vohra/ Parents are too old
+Error: INDIVIDUAL: US02: @I28@ Malika /Sherawat/ was born before marriage
+Error: INDIVIDUAL: US09: @I60@ Bulbul /Patel/ Birth after death of parents  
