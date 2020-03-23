@@ -108,8 +108,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-23 16:19:25.031304 
-ERROR: INDIVIDUAL: us07: @I68@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-03-23 16:19:25.031398 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-23 16:51:53.849185 
+ERROR: INDIVIDUAL: us07: @I68@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-03-23 16:51:53.849185 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -133,28 +133,6 @@ ERROR: FAMILY : US11 : @I1@ : Individual is in mutliple families at once
 Error: INDIVIDUAL: US12: @I44@ Drashti /Vohra/ Parents are too old
 Error: INDIVIDUAL: US12: @I69@ Kol /Singh/ Parents are too old
 Error: FAMILY: US13: children (@I29@) and (@I67@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I36@) and (@I37@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I15@) and (@I61@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I15@) and (@I62@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I15@) and (@I63@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I15@) and (@I64@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I15@) and (@I65@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I15@) and (@I66@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I61@) and (@I62@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I61@) and (@I63@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I61@) and (@I64@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I61@) and (@I65@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I61@) and (@I66@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I62@) and (@I63@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I62@) and (@I64@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I62@) and (@I65@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I62@) and (@I66@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I63@) and (@I64@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I63@) and (@I65@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I63@) and (@I66@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I64@) and (@I65@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I64@) and (@I66@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I65@) and (@I66@) are born inside 2 days to 8 months of one another 
 ERROR: FAMILY: US14: @F9@: has more than 5 siblings: ['@I15@', '@I61@', '@I62@', '@I63@', '@I64@', '@I65@', '@I66@']: who were born on the same date and time [datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0)]
 Error: FAM: US15: More than 15 siblings in a family@F9@
 Error: FAM: US 16: Single family has two or more last name @F12@
@@ -164,5 +142,6 @@ Error: FAM: US 16: Single family has two or more last name @F3@
 Error: FAM: US 16: Single family has two or more last name @F4@
 Error: FAM: US 16: Single family has two or more last name @F9@
 ERROR: FAMILY: US17: @F10@: Wife @I14@ is married to the child @I15@
-Error: FAMILY: US18: spouses @I36@ and @I37@ are siblingsError: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
+Error: FAMILY: US18: spouses @I36@ and @I37@ are siblings 
+Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
 Error: US 20 Individual @I69@ has married their aunt/uncle @I70@

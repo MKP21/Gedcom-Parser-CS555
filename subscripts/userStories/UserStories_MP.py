@@ -62,13 +62,12 @@ def us13(indi, fam, f):
         if family["CHIL"] is "NA" or len(family["CHIL"]) is 1:
             continue
         len_children = len(family["CHIL"])
-        for x in range(len_children):
+        for x in range(0,len_children):
             child1 = getIndiByID(indi, family["CHIL"][x])
-
             for child_2_Index in range(x + 1, len_children):
                 child2 = getIndiByID(indi, family["CHIL"][child_2_Index])
                 difference = (child1["BIRT"] - child2["BIRT"]).days.__abs__()
-                if 2 < difference and difference > 243.334:
+                if difference < 2 or difference > 243.334:
                     continue
                 else:
                     print(f'Error: FAMILY: US13: child ({child1["INDI"]}) and child ({child2["INDI"]}) are born '
