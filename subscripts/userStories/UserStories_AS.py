@@ -1,6 +1,7 @@
 from datetime import datetime
 from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
 
+
 # Marriage before death
 def us05(indi, fam, f):
     print("User Story 5 - Marriage before death, Running")
@@ -15,7 +16,8 @@ def us05(indi, fam, f):
                 if m != 'NA':
                     # checking for marriage date greater than the individual's death date
                     if families['MARR'] > m:
-                        f.write(f"ERROR: INDIVIDUAL : US05 : {individuals['INDI']} : Married {families['MARR']} after husband's ({individuals['INDI']}) death on {individuals['DEAT']} \n")
+                        f.write(
+                            f"ERROR: INDIVIDUAL : US05 : {individuals['INDI']} : Married {families['MARR']} after husband's ({individuals['INDI']}) death on {individuals['DEAT']} \n")
                         flag = False
 
             # checking for wife id is equal to individual id
@@ -67,50 +69,85 @@ def us06(indi, fam, f):
     print("User Story 6 Completed")
     return flag
 
-def us20(indi, fam, f):
-    print("User Story 20 - Aunts and Uncles should not marry their nieces and nephews , Running")
-    flag = True
-  
-    for family in fam:
-        if family['CHIL'] and family['CHIL']!='NA':
-            if family['HUSB'] in family['CHIL']:
-                for family2 in fam:
-                    if family2['HUSB'] != family['HUSB'] and fam['HUSB'] in family2['CHIL']:
-                        f.write(
-                            f"ERROR: FAMILY : US20 : Aunts married   \n")
-                        flag = False
-            if family['WIFE'] in family['CHIL']:
-                for family2 in fam:
-                    if family2['WIFE'] != family['WIFE'] and fam['WIFE'] in family2['CHIL']:
-                        f.write(
-                            f"ERROR: FAMILY : US20 :  \n")
-                        flag = False
-    print("User Story 20 Completed")
-    return flag
-
 
 def us11(indi, fam, f):
     print("User Story 11 - Marriage should not occur during marriage to another spouse, Running")
-    flag = True            
-    for individuals in indi:      
-        list_t = []
-        for family in fam:
-                if family['HUSB'] == individuals['INDI']:
-                    if family['DIV']:
-                        break
-                    elif family['HUSB'] in list_t:
-                        f.write(
-                            f"ERROR: FAMILY : US20 :  \n")
-                    else:
-                        list_t.append(family['HUSB'])
-                if family['WIFE'] == individuals['INDI']:
-                    if family['DIV']:
-                        break
-                    elif family['WIFE'] in list_t:
-                        f.write(
-                            f"ERROR: FAMILY : US20 :  \n")
-                    else:
-                        list_t.append(family['WIFE'])
-
+    flag = True
+    for individual in indi:
+        if individual["FAMS"] != 'NA':
+            if len(individual["FAMS"]) > 1:
+                spouse = list()
+                for sp in individual["FAMS"]:
+                    s = getFamByID(fam, sp)
+                    spouse.append(s)
+                for sp1 in spouse:
+                    check = sp1['DIV']
+                    for sp2 in spouse:
+                        if sp1 != sp2:
+                            if sp2["MARR"] != 'NA':
+                                if check != 'NA':
+                                    if sp1["MARR"] < sp2["MARR"]:
+                                        if sp2["MARR"] < check:
+                                            f.write(
+                                                f"ERROR: FAMILY : US11 : {individual['INDI']} : Individual is in mutliple families at once  \n")
+                                            flag = False
+                if individual["SEX"] == 'F':
+                    spouse2 = list()
+                    for sp3 in individual["FAMS"]:
+                        s = getFamByID(fam, sp3)
+                        infoindi = getIndiByID(indi, s["HUSB"])
+                        spouse2.append(infoindi)
+                    for sp1 in spouse:
+                        for sp2 in spouse2:
+                            if sp1["HUSB"] != sp2["INDI"]:
+                                if sp2["DEAT"] != 'NA':
+                                    if sp1["MARR"] < sp2["DEAT"]:
+                                        f.write(
+                                            f"ERROR: FAMILY : US11 : {individual['INDI']} : Individual is in mutliple families at once  \n")
+                                        flag = False
+                if individual["SEX"] == 'M':
+                    spouse2 = list()
+                    for sp3 in individual["FAMS"]:
+                        s = getFamByID(fam, sp3)
+                        infoindi = getIndiByID(indi, s["WIFE"])
+                        spouse2.append(infoindi)
+                    for sp1 in spouse:
+                        for sp2 in spouse2:
+                            if sp1["WIFE"] != sp2["INDI"]:
+                                if sp2["DEAT"] != 'NA':
+                                    if sp1["MARR"] < sp2["DEAT"]:
+                                        f.write(
+                                            f"ERROR: FAMILY : US11 : {individual['INDI']} : Individual is in mutliple families at once  \n")
+                                        flag = False
     print("User Story 11 Completed")
+    return flag
+
+
+def us20(indi, fam, f):
+    print("User Story 20 - Aunts and Uncles should not marry their nieces and nephews , Running")
+    flag = True
+    family_childs = {}
+    family_uncles_aunts = {}
+    for family in fam:
+        family_childs[family['FAM']] = family['CHIL']
+    for family, childs in family_childs.items():
+        for child in childs:
+            for family1 in fam:
+                if child in family1['CHIL']:
+                    family_uncles_aunts[family] = family1['CHIL']
+    for family, childs in family_childs.items():
+        for child in childs:
+            for f1 in fam:
+                if child == str(f1['HUSB']) or child == str(f['WIFE']):
+                    husband = str(f1['HUSB'])
+                    wife = str(f1['WIFE'])
+                    if husband in family_uncles_aunts[family]:
+                        f.write(
+                            f"ERROR: FAMILY : US20: {fam['FAM']} : Individual {fam['HUSB']} shares a family partner with {fam['FAM']} and that's makes him the uncle \n")
+                        flag = False
+                    elif wife in family_uncles_aunts[family]:
+                        f.write(
+                            f"ERROR: FAMILY : US20: {fam['FAM']} : Individual {fam['WIFE']} shares a family partner with {fam['FAM']} and that's makes her the aunt \n")
+                        flag = False
+    print("User Story 20 Completed")
     return flag
