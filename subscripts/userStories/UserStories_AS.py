@@ -126,28 +126,36 @@ def us11(indi, fam, f):
 def us20(indi, fam, f):
     print("User Story 20 - Aunts and Uncles should not marry their nieces and nephews , Running")
     flag = True
-    family_childs = {}
-    family_uncles_aunts = {}
-    for family in fam:
-        family_childs[family['FAM']] = family['CHIL']
-    for family, childs in family_childs.items():
-        for child in childs:
-            for family1 in fam:
-                if child in family1['CHIL']:
-                    family_uncles_aunts[family] = family1['CHIL']
-    for family, childs in family_childs.items():
-        for child in childs:
-            for f1 in fam:
-                if child == str(f1['HUSB']) or child == str(f1['WIFE']):
-                    husband = str(f1['HUSB'])
-                    wife = str(f1['WIFE'])
-                    if husband in family_uncles_aunts[family]:
-                        f.write(
-                            f"ERROR: FAMILY : US20: {f1['FAM']} : Individual {f1['HUSB']} shares a family partner with {f1['FAM']} and that's makes him the uncle \n")
-                        flag = False
-                    elif wife in family_uncles_aunts[family]:
-                        f.write(
-                            f"ERROR: FAMILY : US20: {f1['FAM']} : Individual {f1['WIFE']} shares a family partner with {f1['FAM']} and that's makes her the aunt \n")
-                        flag = False
+    for individual in indi:
+        if individual["FAMC"] == "NA" or individual["FAMS"] == "NA":
+            continue
+        # get parents of spouses for an individual
+        parents_of_spouses = list()
+        spouse_gender = "HUSB"
+        if individual["SEX"] == "M":
+            spouse_gender = "WIFE"
+        for family_id in individual["FAMS"]:
+            family = getFamByID(fam, family_id)
+            spouse = getIndiByID(indi, family[spouse_gender])
+            if spouse["FAMC"] == "NA":
+                continue
+            else:
+                famc_spouse = getFamByID(fam, spouse["FAMC"][0])
+                parents_of_spouses.append((spouse["INDI"], famc_spouse["HUSB"]))
+                parents_of_spouses.append((spouse["INDI"], famc_spouse["WIFE"]))
+        if len(parents_of_spouses) == 0:
+            continue
+
+        # for an individual check in "FAMC", if siblings are present as parents of spouses
+        famc_individual = getFamByID(fam, individual["FAMC"][0])
+        for child in famc_individual["CHIL"]:
+            if child == individual["INDI"]:
+                continue
+            for spouse, parent in parents_of_spouses:
+                if child == parent:
+                    flag = False
+                    print(f"Error: US 20 Individual {spouse} has married their aunt/uncle {individual['INDI']}")
+                    f.write(f"Error: US 20 Individual {spouse} has married their aunt/uncle {individual['INDI']}")
+
     print("User Story 20 Completed")
     return flag
