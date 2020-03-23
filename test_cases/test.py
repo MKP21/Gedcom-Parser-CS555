@@ -3,7 +3,7 @@ from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16
 from subscripts.userStories.UserStories_MP import us03, us08, us13, us18
 from subscripts.userStories.UserStories_MD import us04, us07, us14, us17
 from subscripts.userStories.UserStories_DK import us02, us09, us12, us19
-from subscripts.userStories.UserStories_AS import us05, us06
+from subscripts.userStories.UserStories_AS import us05, us06, us11, us20
 
 import unittest
 
@@ -72,6 +72,12 @@ class TestCases(unittest.TestCase):
         f.close()
         self.assertFalse(value)
 
+    def test_us11(self):
+        f = open("test.txt", "a")
+        value = us11(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
+
     def test_us12(self):
         f = open("test.txt", "a")
         value = us12(self.d[0], self.d[1], f)
@@ -119,3 +125,13 @@ class TestCases(unittest.TestCase):
         value = us19(self.d[0], self.d[1], f)
         f.close()
         self.assertFalse(value)
+
+    def test_us20(self):
+        f = open("test.txt", "a")
+        value = us20(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
+
+
+if __name__ == '__main__':
+    unittest.main(exit=False, verbosity=2)

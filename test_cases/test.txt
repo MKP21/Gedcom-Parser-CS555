@@ -1,10 +1,16 @@
 Error: INDIVIDUAL: US01: Birth date after current date@I44@ Drashti /Vohra/ 2922-01-15
 Error: INDIVIDUAL: US02: @I28@ Malika /Sherawat/ was born before marriage
+Error: INDIVIDUAL: US03: @I26@ Anakin /Skwalker/ were born before they died 
 Error: INDIVIDUAL: US03: @I44@ Drashti /Vohra/ were born before they died 
 ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-01 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-21 18:53:46.994309 
+ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-23 12:38:26.108944 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
+Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I29@ Leia /Skywalker/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I38@ Yoda /Skywaler/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I58@ Miami /Patel/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I60@ Bulbul /Patel/ Birth after death of parents  
 Error: INDIVIDUAL: US10: Too young for marriage @I15@ 2019-11-12 00:00:00
 Error: INDIVIDUAL: US10: Too young for marriage @I23@ 1919-02-08 00:00:00
