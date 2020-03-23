@@ -90,7 +90,7 @@ def us18(indi, fam, f):
         wife = getIndiByID(indi, family["WIFE"])
         if husb["FAMC"] == wife["FAMC"] and husb["FAMC"] != "NA" and wife["FAMC"] != "NA":
             print(f'Error: FAMILY: US18: spouses {family["HUSB"]} and {family["WIFE"]} are siblings')
-            f.write(f'Error: FAMILY: US18: spouses {family["HUSB"]} and {family["WIFE"]} are siblings')
+            f.write(f'Error: FAMILY: US18: spouses {family["HUSB"]} and {family["WIFE"]} are siblings \n')
             flag = False
 
     print("User Story 18 Completed")
