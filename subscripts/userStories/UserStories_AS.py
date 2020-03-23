@@ -138,16 +138,16 @@ def us20(indi, fam, f):
     for family, childs in family_childs.items():
         for child in childs:
             for f1 in fam:
-                if child == str(f1['HUSB']) or child == str(f['WIFE']):
+                if child == str(f1['HUSB']) or child == str(f1['WIFE']):
                     husband = str(f1['HUSB'])
                     wife = str(f1['WIFE'])
                     if husband in family_uncles_aunts[family]:
                         f.write(
-                            f"ERROR: FAMILY : US20: {fam['FAM']} : Individual {fam['HUSB']} shares a family partner with {fam['FAM']} and that's makes him the uncle \n")
+                            f"ERROR: FAMILY : US20: {f1['FAM']} : Individual {f1['HUSB']} shares a family partner with {f1['FAM']} and that's makes him the uncle \n")
                         flag = False
                     elif wife in family_uncles_aunts[family]:
                         f.write(
-                            f"ERROR: FAMILY : US20: {fam['FAM']} : Individual {fam['WIFE']} shares a family partner with {fam['FAM']} and that's makes her the aunt \n")
+                            f"ERROR: FAMILY : US20: {f1['FAM']} : Individual {f1['WIFE']} shares a family partner with {f1['FAM']} and that's makes her the aunt \n")
                         flag = False
     print("User Story 20 Completed")
     return flag
