@@ -158,11 +158,12 @@ def us19(indi, fam, f):
                 else:
                     # if match not found setting random value
                     wgrandmotherfamc = 3
-
-            if wgrandfatherfamc == grandfatherfamc or wgrandfatherfamc == grandmotherfamc or wgrandmotherfamc == grandmotherfamc or wgrandmotherfamc == grandfatherfamc:
-                print(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins')
-                f.write(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins\n')
-                flag = False
+            # Preventing the case if siblings are married
+            if wife["FAMC"] != husband["FAMC"]:
+                if wgrandfatherfamc == grandfatherfamc or wgrandfatherfamc == grandmotherfamc or wgrandmotherfamc == grandmotherfamc or wgrandmotherfamc == grandfatherfamc:
+                    print(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins')
+                    f.write(f'Error: FAMILY: US19: spouses {family["HUSB"]} and {family["WIFE"]} are first cousins\n')
+                    flag = False
 
     print("User Story 19 Completed")
     return flag
