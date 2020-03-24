@@ -174,3 +174,52 @@ def getNamebyId(indi, Id):
             name = i["NAME"]
 
     return name
+
+# sprint 3
+
+def us21(indi,fam, f):
+    print("US 21 - Correct gender for roles ")
+    flag = True
+    genderRole = []
+    for j in fam:
+        male = getSexByid(indi, j["HUSB"])
+        female = getSexByid(indi, j["WIFE"])
+        if(female != 'F'):
+            genderRole.append(j["WIFE"])
+            flag = False
+            print("Incorrect gender role for a female in the family" + str(j["FAM"]))
+            f.write("Error: INDI: US 21: Not correct gender for the role wife: " + str(j["WIFE"]) + "in family "+ str(j["FAM"]) +"\n")
+
+        if(male != 'M'):
+            genderRole.append(j["HUSB"])
+            flag = False
+            print("Incorrect gender role for a male in the family" + str(j["FAM"]))
+            f.write("Error: INDI: US 21: Not correct gender for the role husband: " + str(j["HUSB"])+ "in family "+str(j["FAM"]) +"\n")
+
+    if (flag):
+        print("US 21: Completed")
+        return True
+    else:
+        return False
+
+
+def us22(indi, fam, f):
+    print("US 22: Unique IDs Running")
+
+    flag = True
+    ids_indi = []
+    ids_fam = []
+    for i in indi:
+        ids_indi.append(i["INDI"])
+
+    for j in fam:
+        ids_fam.append(j["FAM"])
+
+    if ((len(ids_indi) == len(set(ids_indi))) and (len(ids_fam) == len(set(ids_fam)))):
+        print("US 22: completed")
+        return flag
+    else:
+        flag = False
+        print("There is a repeating id in individual")
+        f.write("Error: INDI: US 22: Duplicate ids " + "\n")
+        return flag

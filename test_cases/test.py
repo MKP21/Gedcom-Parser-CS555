@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from subscripts.parseFile import fileParser
-from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16
+from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16, us21, us22
 from subscripts.userStories.UserStories_MP import us03, us08, us13, us18, us23, us28
 from subscripts.userStories.UserStories_MD import us04, us07, us14, us17
 from subscripts.userStories.UserStories_DK import us02, us09, us12, us19
@@ -131,6 +131,18 @@ class TestCases(unittest.TestCase):
     def test_us20(self):
         f = open("test.txt", "a")
         value = us20(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
+
+    def test_us21(self):
+        f = open("test.txt", "a")
+        value = us21(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
+
+    def test_us22(self):
+        f = open("test.txt", "a")
+        value = us22(self.d[0], self.d[1], f)
         f.close()
         self.assertFalse(value)
 
