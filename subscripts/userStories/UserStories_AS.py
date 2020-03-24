@@ -158,5 +158,5 @@ def us20(indi, fam, f):
                     f.write(f"Error: US 20 Individual {spouse} has married their aunt/uncle {individual['INDI']} \n ")
 
     print("User Story 20 Completed \n \n")
-    print("---------------- SPRINT @ COMPLETED -------------------\n \n")
+    print("---------------- SPRINT 2 COMPLETED -------------------\n \n")
     return flag

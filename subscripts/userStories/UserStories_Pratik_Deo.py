@@ -82,11 +82,8 @@ def us10(indi, fam, f):
 
                     flag = False
 
-    if (flag):
-        return True
         print("US 10 completed \n \n")
-        print("---------------- SPRINT @ COMPLETED -------------------\n \n")
-    else:
+        print("---------------- SPRINT 1 COMPLETED -------------------\n \n")
         return False
 
 
