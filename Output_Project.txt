@@ -3,18 +3,18 @@
 +-------+-----------------------+--------+-------------+------+-------+-------------+-----------+--------------------------+
 | @I10@ |     Robert /Trump/    |   M    | 26 Aug 1948 |  71  |  TRUE |      NA     |  ['@F4@'] |         ['@F8@']         |
 | @I11@ |    Martha /Blaine/    |   F    | 07 Mar 1850 | 170  |  TRUE |      NA     |     NA    |         ['@F8@']         |
-| @I12@ |   Ivana /Zelnickova/  |   F    | 20 Feb 1949 |  71  |  TRUE |      NA     |     NA    |         ['@F3@']         |
-| @I13@ |   Donald /Trump Jr./  |   M    | 31 Dec 1971 |  48  |  TRUE |      NA     |  ['@F3@'] |         ['@F9@']         |
+| @I12@ |   Ivana /Zelnickova/  |   F    | 20 Feb 1949 |  71  |  TRUE |      NA     |     NA    |         ['@F2@']         |
+| @I13@ |   Donald /Trump Jr./  |   M    | 31 Dec 1971 |  48  |  TRUE |      NA     |  ['@F2@'] |         ['@F9@']         |
 | @I14@ |    Vanessa /Haydon/   |   F    | 18 Dec 1977 |  42  |  TRUE |      NA     |     NA    |    ['@F9@', '@F10@']     |
 | @I15@ |      Meet /Trump/     |   M    | 04 Feb 2010 |  10  |  TRUE |      NA     |  ['@F9@'] |        ['@F10@']         |
-| @I16@ |     Ivanka /Trump/    |   F    | 30 Oct 1981 |  38  |  TRUE |      NA     |  ['@F3@'] |            NA            |
-| @I17@ |      Eric /Trump/     |   M    | 06 Jan 1984 |  36  |  TRUE |      NA     |  ['@F3@'] |            NA            |
-| @I18@ |     Marla /Maples/    |   F    | 27 Oct 1963 |  56  |  TRUE |      NA     |     NA    |         ['@F2@']         |
-| @I19@ |    Tiffany /Trump/    |   F    | 13 Oct 1993 |  26  |  TRUE |      NA     |  ['@F2@'] |            NA            |
+| @I16@ |     Ivanka /Trump/    |   F    | 30 Oct 1981 |  38  |  TRUE |      NA     |  ['@F2@'] |            NA            |
+| @I17@ |      Eric /Trump/     |   M    | 06 Jan 1984 |  36  |  TRUE |      NA     |  ['@F2@'] |            NA            |
+| @I18@ |     Marla /Maples/    |   F    | 27 Oct 1963 |  56  |  TRUE |      NA     |     NA    |         ['@F3@']         |
+| @I19@ |    Tiffany /Trump/    |   F    | 13 Oct 1993 |  26  |  TRUE |      NA     |  ['@F3@'] |            NA            |
 |  @I1@ |   Donald /Trump Sr./  |   M    | 14 Jun 1946 |  73  |  TRUE |      NA     |  ['@F4@'] | ['@F1@', '@F2@', '@F3@'] |
 | @I20@ |     Barron /Trump/    |   M    | 20 Mar 2006 |  14  |  TRUE |      NA     |  ['@F1@'] |            NA            |
 | @I21@ |     Aneri /Singh/     |   F    | 15 Mar 1880 |  40  | FALSE | 18 Nov 1920 |     NA    |         ['@F5@']         |
-| @I22@ |     Milkha /Singh/    |   M    | 06 Oct 1881 |  39  | FALSE | 27 Oct 1920 |     NA    |         ['@F5@']         |
+| @I22@ |     Milkha /Singh/    |   M    | 04 Feb 1970 | -49  | FALSE | 27 Oct 1920 |     NA    |         ['@F5@']         |
 | @I23@ |     Lohri /Singh/     |   F    | 09 Jul 1910 |  59  | FALSE | 02 Feb 1970 |  ['@F5@'] |        ['@F11@']         |
 | @I24@ |   Loday /Skywalker/   |   M    | 01 Jul 1909 |  81  | FALSE | 01 Oct 1990 |     NA    |        ['@F11@']         |
 | @I25@ |   Padme /Skywalker/   |   F    | 09 Feb 1922 |  33  | FALSE | 04 May 1955 | ['@F11@'] |        ['@F12@']         |
@@ -69,6 +69,7 @@
 |  @I6@ | Frederick /Trump Jr./ |   M    | 14 Oct 1938 |  42  | FALSE | 06 Sep 1981 |  ['@F4@'] |            NA            |
 | @I70@ |     Meetu /Singh/     |   M    | 03 Mar 1960 |  60  |  TRUE |      NA     | ['@F12@'] |        ['@F22@']         |
 | @I71@ |    Yoda /Skywalker/   |   M    | 17 Nov 1953 |  26  | FALSE | 05 Jul 1980 |  ['@F7@'] |            NA            |
+| @I72@ |    Bhadresh /Singh/   |   M    | 05 Mar 1995 |  25  |  TRUE |      NA     |  ['@F5@'] |            NA            |
 |  @I7@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  77  |  TRUE |      NA     |  ['@F4@'] |     ['@F6@', '@F7@']     |
 |  @I8@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78  |  TRUE |      NA     |     NA    |         ['@F6@']         |
 |  @I9@ |      James /Grau/     |   M    | 29 Dec 1939 |  58  | FALSE | 23 Feb 1998 |     NA    |         ['@F7@']         |
@@ -90,10 +91,10 @@
 | @F20@ | 03 Apr 1970 |      NA     |   @I58@    |   Miami /Patel/    |  @I59@  |   Rinky /Gupta/    |                                                                    ['@I60@']                                                                     |
 | @F21@ | 02 Mar 1980 |      NA     |   @I67@    |    Deep /Singh/    |  @I68@  |  Manisha /Singh/   |                                                                    ['@I69@']                                                                     |
 | @F22@ | 03 Mar 1980 |      NA     |   @I70@    |   Meetu /Singh/    |  @I69@  |    Kol /Singh/     |                                                                        NA                                                                        |
-|  @F2@ | 20 Dec 1993 | 08 Jun 1999 |    @I1@    | Donald /Trump Sr./ |  @I18@  |   Marla /Maples/   |                                                                    ['@I19@']                                                                     |
-|  @F3@ | 16 Apr 1977 | 24 Aug 1990 |    @I1@    | Donald /Trump Sr./ |  @I12@  | Ivana /Zelnickova/ |                                                           ['@I13@', '@I16@', '@I17@']                                                            |
+|  @F2@ | 16 Apr 1977 | 24 Aug 1990 |    @I1@    | Donald /Trump Sr./ |  @I12@  | Ivana /Zelnickova/ |                                                           ['@I13@', '@I16@', '@I17@']                                                            |
+|  @F3@ | 20 Dec 1993 | 08 Jun 1999 |    @I1@    | Donald /Trump Sr./ |  @I18@  |   Marla /Maples/   |                                                                    ['@I19@']                                                                     |
 |  @F4@ | 08 Feb 1936 |      NA     |    @I3@    | Frederick /Trump/  |   @I4@  |    Mary /Trump/    |                                                    ['@I1@', '@I5@', '@I6@', '@I7@', '@I10@']                                                     |
-|  @F5@ | 02 Jul 1900 |      NA     |   @I22@    |   Milkha /Singh/   |  @I21@  |   Aneri /Singh/    |                                                            ['@I4@', '@I23@', '@I40@']                                                            |
+|  @F5@ | 02 Jul 1900 |      NA     |   @I22@    |   Milkha /Singh/   |  @I21@  |   Aneri /Singh/    |                                                       ['@I4@', '@I23@', '@I40@', '@I72@']                                                        |
 |  @F6@ | 20 Jul 2000 |      NA     |    @I8@    |  Thomas /Stevens/  |   @I7@  | Elizabeth /Trump/  |                                                                        NA                                                                        |
 |  @F7@ | 26 Dec 1959 |      NA     |    @I9@    |    James /Grau/    |   @I7@  | Elizabeth /Trump/  |                                                                    ['@I71@']                                                                     |
 |  @F8@ | 01 Oct 1975 | 11 May 1974 |   @I10@    |   Robert /Trump/   |  @I11@  |  Martha /Blaine/   |                                                                        NA                                                                        |
@@ -103,16 +104,18 @@
 Error: INDIVIDUAL: US01: Birth date after current date@I44@ Drashti /Vohra/ 2922-01-15
 Error: INDIVIDUAL: US02: @I28@ Malika /Sherawat/ was born before marriage
 Error: INDIVIDUAL: US02: @I69@ Kol /Singh/ was born before marriage
+Error: INDIVIDUAL: US02: @I22@ Milkha /Singh/ was born before marriage
+Error: INDIVIDUAL: US03: @I22@ Milkha /Singh/ were born before they died 
 Error: INDIVIDUAL: US03: @I26@ Anakin /Skwalker/ were born before they died 
 Error: INDIVIDUAL: US03: @I44@ Drashti /Vohra/ were born before they died 
 ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-01 00:00:00 
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-24 13:30:25.318715 
-ERROR: INDIVIDUAL: us07: @I68@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-03-24 13:30:25.318715 
-Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-24 14:51:59.749410 
+ERROR: INDIVIDUAL: us07: @I68@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-03-24 14:51:59.749514 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
+Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I71@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I29@ Leia /Skywalker/ Birth after death of parents  
@@ -122,25 +125,20 @@ Error: INDIVIDUAL: US09: @I67@ Deep /Singh/ Birth after death of parents
 Error: INDIVIDUAL: US09: @I70@ Meetu /Singh/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I70@ Meetu /Singh/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I60@ Bulbul /Patel/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I72@ Bhadresh /Singh/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I72@ Bhadresh /Singh/ Birth after death of parents  
 Error: INDIVIDUAL: US10: Too young for marriage @I15@ 2019-11-12 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I23@ 1919-02-08 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I24@ 1919-02-08 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I28@ 1975-07-10 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I36@ 2020-01-03 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I37@ 2020-01-03 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I2@ 1978-01-22 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I59@ 1970-04-03 00:00:00
-Error: INDIVIDUAL: US10: Too young for marriage @I69@ 1980-03-03 00:00:00
 ERROR: FAMILY : US11 : @I1@ : Individual is in mutliple families at once  
 Error: INDIVIDUAL: US12: @I44@ Drashti /Vohra/ Parents are too old
 Error: INDIVIDUAL: US12: @I69@ Kol /Singh/ Parents are too old
+Error: INDIVIDUAL: US12: @I72@ Bhadresh /Singh/ Parents are too old
 Error: FAMILY: US13: children (@I29@) and (@I67@) are born inside 2 days to 8 months of one another 
 ERROR: FAMILY: US14: @F9@: has more than 5 siblings: ['@I15@', '@I61@', '@I62@', '@I63@', '@I64@', '@I65@', '@I66@']: who were born on the same date and time [datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0), datetime.datetime(2010, 2, 4, 0, 0)]
 Error: FAM: US15: More than 15 siblings in a family@F9@
 Error: FAM: US 16: Single family has two or more last name @F12@
 Error: FAM: US 16: Single family has two or more last name @F16@
 Error: FAM: US 16: Single family has two or more last name @F1@
-Error: FAM: US 16: Single family has two or more last name @F3@
+Error: FAM: US 16: Single family has two or more last name @F2@
 Error: FAM: US 16: Single family has two or more last name @F4@
 Error: FAM: US 16: Single family has two or more last name @F7@
 Error: FAM: US 16: Single family has two or more last name @F9@
@@ -148,4 +146,5 @@ ERROR: FAMILY: US17: @F10@: Wife @I14@ is married to the child @I15@
 Error: FAMILY: US18: spouses @I36@ and @I37@ are siblings 
 Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
 Error: US 20 Individual @I69@ has married their aunt/uncle @I70@ 
-Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
+ Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
+Error: INDIVIDUAL: US32: @I72@, has multiple births
