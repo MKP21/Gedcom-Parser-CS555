@@ -187,6 +187,7 @@ def us30(indi, fam, f):
 
 def us32(us32p, f):
     # Listing multiple births in parser itself so just passing the list
+    print("User Story 32 - Listing multiple births")
     flag = True
     if len(us32p) != 0:
         for mulbirth in us32p:
