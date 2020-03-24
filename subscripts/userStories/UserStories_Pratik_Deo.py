@@ -184,7 +184,7 @@ def getNamebyId(indi, Id):
             name = i["NAME"]
 
     return name
-<<<<<<< HEAD
+
 
 # sprint 3
 
@@ -234,5 +234,4 @@ def us22(indi, fam, f):
         print("There is a repeating id in individual")
         f.write("Error: INDI: US 22: Duplicate ids " + "\n")
         return flag
-=======
->>>>>>> a05982f3e750cb52fb3becc96beb73715660acb4
+
