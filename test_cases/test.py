@@ -1,6 +1,8 @@
+from datetime import datetime
+
 from subscripts.parseFile import fileParser
 from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16
-from subscripts.userStories.UserStories_MP import us03, us08, us13, us18
+from subscripts.userStories.UserStories_MP import us03, us08, us13, us18, us23, us28
 from subscripts.userStories.UserStories_MD import us04, us07, us14, us17
 from subscripts.userStories.UserStories_DK import us02, us09, us12, us19
 from subscripts.userStories.UserStories_AS import us05, us06, us11, us20
@@ -9,7 +11,7 @@ import unittest
 
 
 class TestCases(unittest.TestCase):
-    gedcom_error = "../sprint_02.ged"
+    gedcom_error = "../sprint_03.ged"
     d = fileParser(gedcom_error)
 
     def test_us01(self):
@@ -131,6 +133,31 @@ class TestCases(unittest.TestCase):
         value = us20(self.d[0], self.d[1], f)
         f.close()
         self.assertFalse(value)
+
+    def test_us23(self):
+        f = open("test.txt", "a")
+        value = us23(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
+
+    def test_us28(self):
+        # test will fail if output list is not sorted by age
+        f = open("test.txt", "a")
+        value = us28(self.d[0], self.d[1], f)
+        f.close()
+        # us returns a list
+        # will have to check if the list satisfies user story
+        flag = True
+        for family in value:
+            lowest_date = datetime.min
+            for child,birth in family:
+                if lowest_date > birth:
+                    flag = False
+                    break
+                lowest_date = birth
+            if flag is False:
+                break
+        self.assertTrue(flag)
 
 
 if __name__ == '__main__':

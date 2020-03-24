@@ -154,8 +154,8 @@ def us20(indi, fam, f):
             for spouse, parent in parents_of_spouses:
                 if child == parent:
                     flag = False
-                    print(f"Error: US 20 Individual {spouse} has married their aunt/uncle {individual['INDI']}")
-                    f.write(f"Error: US 20 Individual {spouse} has married their aunt/uncle {individual['INDI']}")
+                    print(f"Error: US 20 Individual {spouse} has married their aunt/uncle {individual['INDI']} \n")
+                    f.write(f"Error: US 20 Individual {spouse} has married their aunt/uncle {individual['INDI']} \n")
 
     print("User Story 20 Completed")
     return flag

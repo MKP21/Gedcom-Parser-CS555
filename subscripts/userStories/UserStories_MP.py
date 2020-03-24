@@ -107,7 +107,7 @@ def us23(indi, fam, f):
             print(
                 f'Error: INDIVIDUAL: US23: multiple people with the name {individual["NAME"]} and birthdate {individual["BIRT"]} exist')
             f.write(
-                f'Error: INDIVIDUAL: US23: multiple people with the name {individual["NAME"]} and birthdate {individual["BIRT"]} exist')
+                f'Error: INDIVIDUAL: US23: multiple people with the name {individual["NAME"]} and birthdate {individual["BIRT"]} exist \n')
             flag = False
         else:
             people.add((individual["NAME"], individual["BIRT"]))

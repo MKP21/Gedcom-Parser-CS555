@@ -1,8 +1,8 @@
 0 HEAD
 1 SOUR Family Echo
 2 WWW http://www.familyecho.com/
-1 FILE Family 6
-1 DATE 23 MAR 2020
+1 FILE My Family
+1 DATE 24 MAR 2020
 1 DEST ANSTFILE
 1 GEDC
 2 VERS 5.5.1
@@ -384,9 +384,9 @@
 2 DATE 14 APR 2015
 1 FAMC @F15@
 0 @I39@ INDI
-1 NAME Yoda /Skywaler/
+1 NAME Yoda /Skywalker/
 2 GIVN Yoda
-2 SURN Skywaler
+2 SURN Skywalker
 1 SEX F
 1 BIRT
 2 DATE 17 NOV 1953
@@ -678,6 +678,16 @@
 2 DATE 3 MAR 1960
 1 FAMS @F22@
 1 FAMC @F12@
+0 @I71@ INDI
+1 NAME Yoda /Skywalker/
+2 GIVN Yoda
+2 SURN Skywalker
+1 SEX M
+1 BIRT
+2 DATE 17 NOV 1953
+1 DEAT Y
+2 DATE 5 JUL 1980
+1 FAMC @F7@
 0 @F1@ FAM
 1 HUSB @I1@
 1 WIFE @I2@
@@ -734,6 +744,7 @@
 0 @F7@ FAM
 1 HUSB @I9@
 1 WIFE @I7@
+1 CHIL @I71@
 1 MARR
 2 DATE 26 DEC 1959
 1 EVEN

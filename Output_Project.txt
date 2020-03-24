@@ -32,7 +32,7 @@
 | @I36@ |    Kylian /Mbappe/    |   M    | 11 Mar 2008 |  12  |  TRUE |      NA     | ['@F16@'] |        ['@F18@']         |
 | @I37@ |   Summer /Palpatine/  |   F    | 11 Mar 2008 |  12  |  TRUE |      NA     | ['@F16@'] |        ['@F18@']         |
 | @I38@ |    Monalisa /Solo/    |   F    | 14 Apr 2015 |  4   |  TRUE |      NA     | ['@F15@'] |            NA            |
-| @I39@ |    Yoda /Skywaler/    |   F    | 17 Nov 1953 |  16  | FALSE | 17 Nov 1970 | ['@F12@'] |            NA            |
+| @I39@ |    Yoda /Skywalker/   |   F    | 17 Nov 1953 |  16  | FALSE | 17 Nov 1970 | ['@F12@'] |            NA            |
 |  @I3@ |   Frederick /Trump/   |   M    | 11 Oct 1905 |  93  | FALSE | 25 Jun 1999 |     NA    |         ['@F4@']         |
 | @I40@ |     Jigna /Singh/     |   F    | 11 Mar 1901 | 119  |  TRUE |      NA     |  ['@F5@'] |        ['@F19@']         |
 | @I41@ |     Kiran /Vohra/     |   M    | 06 Feb 1900 | 120  |  TRUE |      NA     |     NA    |        ['@F19@']         |
@@ -68,6 +68,7 @@
 | @I69@ |      Kol /Singh/      |   F    | 05 Apr 1985 |  34  |  TRUE |      NA     | ['@F21@'] |        ['@F22@']         |
 |  @I6@ | Frederick /Trump Jr./ |   M    | 14 Oct 1938 |  42  | FALSE | 06 Sep 1981 |  ['@F4@'] |            NA            |
 | @I70@ |     Meetu /Singh/     |   M    | 03 Mar 1960 |  60  |  TRUE |      NA     | ['@F12@'] |        ['@F22@']         |
+| @I71@ |    Yoda /Skywalker/   |   M    | 17 Nov 1953 |  26  | FALSE | 05 Jul 1980 |  ['@F7@'] |            NA            |
 |  @I7@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  77  |  TRUE |      NA     |  ['@F4@'] |     ['@F6@', '@F7@']     |
 |  @I8@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78  |  TRUE |      NA     |     NA    |         ['@F6@']         |
 |  @I9@ |      James /Grau/     |   M    | 29 Dec 1939 |  58  | FALSE | 23 Feb 1998 |     NA    |         ['@F7@']         |
@@ -94,7 +95,7 @@
 |  @F4@ | 08 Feb 1936 |      NA     |    @I3@    | Frederick /Trump/  |   @I4@  |    Mary /Trump/    |                                                    ['@I1@', '@I5@', '@I6@', '@I7@', '@I10@']                                                     |
 |  @F5@ | 02 Jul 1900 |      NA     |   @I22@    |   Milkha /Singh/   |  @I21@  |   Aneri /Singh/    |                                                            ['@I4@', '@I23@', '@I40@']                                                            |
 |  @F6@ | 20 Jul 2000 |      NA     |    @I8@    |  Thomas /Stevens/  |   @I7@  | Elizabeth /Trump/  |                                                                        NA                                                                        |
-|  @F7@ | 26 Dec 1959 |      NA     |    @I9@    |    James /Grau/    |   @I7@  | Elizabeth /Trump/  |                                                                        NA                                                                        |
+|  @F7@ | 26 Dec 1959 |      NA     |    @I9@    |    James /Grau/    |   @I7@  | Elizabeth /Trump/  |                                                                    ['@I71@']                                                                     |
 |  @F8@ | 01 Oct 1975 | 11 May 1974 |   @I10@    |   Robert /Trump/   |  @I11@  |  Martha /Blaine/   |                                                                        NA                                                                        |
 |  @F9@ | 12 Nov 2005 | 14 Apr 2015 |   @I13@    | Donald /Trump Jr./ |  @I14@  |  Vanessa /Haydon/  |                                         ['@I15@', '@I61@', '@I62@', '@I63@', '@I64@', '@I65@', '@I66@']                                          |
 +-------+-------------+-------------+------------+--------------------+---------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -108,13 +109,14 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-23 16:51:53.849185 
-ERROR: INDIVIDUAL: us07: @I68@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-03-23 16:51:53.849185 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-24 13:30:25.318715 
+ERROR: INDIVIDUAL: us07: @I68@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-03-24 13:30:25.318715 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
+Error: INDIVIDUAL: US08: -> @I71@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I29@ Leia /Skywalker/ Birth after death of parents  
-Error: INDIVIDUAL: US09: @I39@ Yoda /Skywaler/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I39@ Yoda /Skywalker/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I58@ Miami /Patel/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I67@ Deep /Singh/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I70@ Meetu /Singh/ Birth after death of parents  
@@ -140,8 +142,10 @@ Error: FAM: US 16: Single family has two or more last name @F16@
 Error: FAM: US 16: Single family has two or more last name @F1@
 Error: FAM: US 16: Single family has two or more last name @F3@
 Error: FAM: US 16: Single family has two or more last name @F4@
+Error: FAM: US 16: Single family has two or more last name @F7@
 Error: FAM: US 16: Single family has two or more last name @F9@
 ERROR: FAMILY: US17: @F10@: Wife @I14@ is married to the child @I15@
 Error: FAMILY: US18: spouses @I36@ and @I37@ are siblings 
 Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
-Error: US 20 Individual @I69@ has married their aunt/uncle @I70@
+Error: US 20 Individual @I69@ has married their aunt/uncle @I70@ 
+Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 

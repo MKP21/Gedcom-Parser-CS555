@@ -10,7 +10,7 @@ def main() -> None:
     # please select the file by inserting name here
     # filename = "Project01.ged"
 
-    filename = "sprint_02.ged"
+    filename = "sprint_03.ged"
     gedcom_list = fileParser(filename)
 
     # print the table and output a text file
