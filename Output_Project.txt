@@ -114,8 +114,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-24 16:21:27.265570 
-ERROR: INDIVIDUAL: us07: @I68@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-03-24 16:21:27.265637 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-03-24 16:50:32.100045 
+ERROR: INDIVIDUAL: us07: @I68@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-03-24 16:50:32.100120 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I71@, Birth before marriage of parents 
@@ -147,5 +147,5 @@ Error: FAMILY: US18: spouses @I36@ and @I37@ are siblings
 Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
 Error: US 20 Individual @I69@ has married their aunt/uncle @I70@ 
  Error: INDI: US 21: Not correct gender for the role husband: @I35@in family @F17@
-Error: INDI: US 22: Duplicate ids 
+Error: INDI: US 22: Duplicate ids {'@I73@'}
 Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
