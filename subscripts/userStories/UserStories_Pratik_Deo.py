@@ -84,7 +84,7 @@ def us10(indi, fam, f):
 
         print("US 10 completed \n \n")
         print("---------------- SPRINT 1 COMPLETED -------------------\n \n")
-        return False
+        return flag
 
 
 # User story 15 - Fewer than 15 siblings
