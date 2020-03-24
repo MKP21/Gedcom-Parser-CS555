@@ -11,7 +11,7 @@ import unittest
 
 
 class TestCases(unittest.TestCase):
-    gedcom_error = "../sprint_03.ged"
+    gedcom_error = "../sprint_03_v1.ged"
     d = fileParser(gedcom_error)
 
     def test_us01(self):
