@@ -226,12 +226,18 @@ def us22(indi, fam, f):
     for j in fam:
         ids_fam.append(j["FAM"])
 
+    l = set([x for x in ids_indi if ids_indi.count(x)>1])
+    fa = set([x for x in ids_indi if ids_fam.count(x)>1])
     if ((len(ids_indi) == len(set(ids_indi))) and (len(ids_fam) == len(set(ids_fam)))):
         print("US 22: completed")
         return flag
     else:
         flag = False
-        print("There is a repeating id in individual")
-        f.write("Error: INDI: US 22: Duplicate ids " + "\n")
-        return flag
-
+        if(len(l) > 0):
+            print("There is a repeating id in individual" + str(l))
+            f.write("Error: INDI: US 22: Duplicate ids " + str(l)+  "\n")
+            return flag
+        elif (len(fa)> 0 ):
+            print("There is a repeating id in Fam" + str(fa))
+            f.write("Error: FAM: US 22: Duplicate ids " + str(fa) + "\n")
+            return flag
