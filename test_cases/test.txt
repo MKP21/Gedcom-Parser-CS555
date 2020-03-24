@@ -43,3 +43,4 @@ Error: US 20 Individual @I69@ has married their aunt/uncle @I70@
 Error: INDI: US 22: Duplicate ids 
 Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
 Error: INDI: US 22: Duplicate ids 
+Error: INDI: US 22: Duplicate ids 
