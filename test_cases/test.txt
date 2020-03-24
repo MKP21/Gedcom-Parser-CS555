@@ -42,5 +42,3 @@ Error: US 20 Individual @I69@ has married their aunt/uncle @I70@
  Error: INDI: US 21: Not correct gender for the role husband: @I35@in family @F17@
 Error: INDI: US 22: Duplicate ids 
 Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
-Error: INDIVIDUAL: US32: @I76@, has multiple births
-Error: INDIVIDUAL: US32: @I76@, has multiple births
