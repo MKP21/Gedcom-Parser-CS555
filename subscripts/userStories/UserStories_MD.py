@@ -1,5 +1,7 @@
 from datetime import datetime
 from datetime import timedelta
+from time import strftime
+
 from subscripts.outputDisplay import calculateage
 from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
 
@@ -92,7 +94,7 @@ def us14(indi, fam, f):
             for child in families['CHIL']:
                 for indv in indi:
                     if child == indv['INDI']:
-                        birthdates.append(indv['BIRT'])
+                        birthdates.append(str(indv['BIRT']))
 
             for sib in range(len(birthdates) - 1):
                 if birthdates[sib] == birthdates[sib + 1]:
@@ -139,45 +141,60 @@ def us17(indi, fam, f):
                 f"ERROR: FAMILY: US17: {family['FAM']}: Wife {family['WIFE']} is married to the child {family['HUSB']}\n")
             print("Userstory 17 Completed")
             return False
-    return  True
-
-
+    return True
 
 
 # Unique families by spouses
 def us24(indi, fam, f):
     print("Userstory 24 Running")
     famlist = list()
-
+    flag = True
     for family in fam:
         current_fam_id = family['FAM']
-        currList = [family['HUSB'], family['WIFE'], family['MARR']]
+        husband = getIndiByID(indi, family['HUSB'])['NAME']
+        wife = getIndiByID(indi, family['WIFE'])['NAME']
+        currList = [husband, wife, family['MARR']]
         if famlist.__contains__(currList):
             print(
-                f"ERROR: FAMILY: US24: LINENUMBER: {family['FAM']}: has same named spouses and marriage date with more than one family")
+                f"ERROR: FAMILY: US24: LINENUMBER: {family['FAM']}: has same named spouses {husband}, {wife} and marriage date {family['MARR']} with more than one family")
+            f.write(
+                f"ERROR: FAMILY: US24: LINENUMBER: {family['FAM']}: has same named spouses {husband}, {wife} and marriage date {family['MARR']} with more than one family")
+            flag = False
         elif not famlist.__contains__(currList):
             famlist.append(currList)
-    print("Userstory 24 Completed")
+    print("User Story 24 Completed")
+    if flag:
+        return True
+    else:
+        return False
+
+
 
 
 # Include individual ages
 def us27(indi, fam, f):
     print("Userstory 27 Running")
     list_of_age = list()
+    flag = True
     for person in indi:
         if person['BIRT'] == 'NA':
 
             print(f"ERROR: INDIVIDUAL US24: no birth date found for {person['INDI']}")
-            # f.write(f"ERROR: INDIVIDUAL US24: no birth date found for {person['INDI']}")
+            f.write(f"ERROR: INDIVIDUAL US24: no birth date found for {person['INDI']}")
+            flag = False
         else:
             b_date = person['BIRT']
             d_date = person['DEAT']
 
             person_age = calculateage(b_date, d_date)
             list_of_age.append([person['INDI'], person['NAME'], person_age])
-
+    for l in list_of_age:
+        print(l)
     print("Userstory 27 Completed")
-    return list_of_age
+    if flag:
+        return True
+    else:
+        return False
 
 
 # List large age differences
