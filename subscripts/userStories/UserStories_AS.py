@@ -217,7 +217,7 @@ def us26(indi, fam, f):
     if missed_ind:
         for ind in missed_ind:
             f.write(
-                f'ERROR: INDIVIDUAL: US26:  {ind} cannot find corresponding families.')
+                f'ERROR: INDIVIDUAL: US26:  {ind} cannot find corresponding families. \n')
             results.append(
                 f'ERROR: INDIVIDUAL: US26:  {ind} cannot find corresponding families.')
             flag = False
