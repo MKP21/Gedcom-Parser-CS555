@@ -188,8 +188,8 @@ def us27(indi, fam, f):
 
             person_age = calculateage(b_date, d_date)
             list_of_age.append([person['INDI'], person['NAME'], person_age])
-    for l in list_of_age:
-        print(l)
+    # for l in list_of_age:
+    #     print(l)
     print("Userstory 27 Completed")
     if flag:
         return True
