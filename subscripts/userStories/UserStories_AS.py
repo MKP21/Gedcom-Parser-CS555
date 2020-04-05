@@ -222,6 +222,5 @@ def us26(indi, fam, f):
                 f'ERROR: INDIVIDUAL: US26:  {ind} cannot find corresponding families.')
             flag = False
     print("User Story 26 Completed")
-    if results:
-        return flag
+    return flag
 

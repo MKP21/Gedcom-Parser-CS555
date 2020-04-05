@@ -72,10 +72,10 @@
 | @I72@ |    Yoda /Skywalker/   |   M    | 17 Nov 1953 |  26  | FALSE | 05 Jul 1980 |  ['@F7@'] |            NA            |
 | @I73@ |     Dhruvi /Vohra/    |   F    | 21 Dec 1937 |  82  |  TRUE |      NA     |     NA    |            NA            |
 | @I74@ |     Dakash /Vohra/    |   M    | 17 Dec 1939 |  80  |  TRUE |      NA     | ['@F20@'] |            NA            |
-| @I75@ |     Dhruvi /Vohra/    |   F    | 19 Dec 1937 |  82  |  TRUE |      NA     | ['@F19@'] |            NA            |
+| @I75@ |     Dhruvi /Vohra/    |   F    | 19 Dec 1938 |  81  |  TRUE |      NA     | ['@F19@'] |            NA            |
 | @I76@ |     Robert /Trump/    |   M    | 01 Mar 1960 |  60  |  TRUE |      NA     |  ['@F6@'] |        ['@F24@']         |
 | @I77@ |    Martha /Blaine/    |   F    | 05 Mar 1960 |  60  |  TRUE |      NA     |     NA    |        ['@F24@']         |
-| @I78@ |      Kol /Singh/      |   F    | 05 Apr 1985 |  35  |  TRUE |      NA     | ['@F22@'] |            NA            |
+| @I78@ |     Bulbul /Patel/    |   M    | 03 Feb 1977 |  43  |  TRUE |      NA     | ['@F21@'] |            NA            |
 |  @I7@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  77  |  TRUE |      NA     |  ['@F4@'] |     ['@F6@', '@F7@']     |
 |  @I8@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78  |  TRUE |      NA     |     NA    |         ['@F6@']         |
 |  @I9@ |      James /Grau/     |   M    | 29 Dec 1939 |  58  | FALSE | 23 Feb 1998 |     NA    |         ['@F7@']         |
@@ -95,8 +95,8 @@
 | @F19@ | 20 May 1918 |      NA     |   @I41@    |   Kiran /Vohra/    |  @I40@  |   Jigna /Singh/    | ['@I42@', '@I44@', '@I45@', '@I46@', '@I47@', '@I48@', '@I49@', '@I50@', '@I51@', '@I52@', '@I53@', '@I54@', '@I55@', '@I56@', '@I57@', '@I58@', '@I75@'] |
 |  @F1@ | 22 Jan 1978 |      NA     |    @I1@    | Donald /Trump Sr./ |   @I2@  |  Melania /Knavs/   |                                                                         ['@I20@']                                                                         |
 | @F20@ | 23 Sep 1935 |      NA     |   @I42@    |   Akash /Vohra/    |  @I43@  |    Tanu /Vohra/    |                                                                         ['@I74@']                                                                         |
-| @F21@ | 03 Apr 1970 |      NA     |   @I59@    |   Miami /Patel/    |  @I60@  |   Rinky /Gupta/    |                                                                         ['@I61@']                                                                         |
-| @F22@ | 02 Mar 1980 |      NA     |   @I68@    |    Deep /Singh/    |  @I69@  |  Manisha /Singh/   |                                                                     ['@I70@', '@I78@']                                                                    |
+| @F21@ | 03 Apr 1970 |      NA     |   @I59@    |   Miami /Patel/    |  @I60@  |   Rinky /Gupta/    |                                                                     ['@I61@', '@I78@']                                                                    |
+| @F22@ | 02 Mar 1980 |      NA     |   @I68@    |    Deep /Singh/    |  @I69@  |  Manisha /Singh/   |                                                                         ['@I70@']                                                                         |
 | @F23@ | 03 Mar 1980 |      NA     |   @I71@    |   Meetu /Singh/    |  @I70@  |    Kol /Singh/     |                                                                             NA                                                                            |
 | @F24@ | 01 Oct 1975 |      NA     |   @I76@    |   Robert /Trump/   |  @I77@  |  Martha /Blaine/   |                                                                             NA                                                                            |
 |  @F2@ | 16 Apr 1977 | 24 Aug 1990 |    @I1@    | Donald /Trump Sr./ |  @I12@  | Ivana /Zelnickova/ |                                                                ['@I13@', '@I16@', '@I17@']                                                                |
@@ -118,8 +118,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-05 16:52:51.392252 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-05 16:52:51.392339 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-05 17:34:36.775769 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-05 17:34:36.775838 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I76@, Birth before marriage of parents 
@@ -132,13 +132,12 @@ Error: INDIVIDUAL: US09: @I68@ Deep /Singh/ Birth after death of parents
 Error: INDIVIDUAL: US09: @I71@ Meetu /Singh/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I71@ Meetu /Singh/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I61@ Bulbul /Patel/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I78@ Bulbul /Patel/ Birth after death of parents  
 Error: INDIVIDUAL: US10: Too young for marriage @I15@ 2019-11-12 00:00:00
 ERROR: FAMILY : US11 : @I1@ : Individual is in mutliple families at once  
 Error: INDIVIDUAL: US12: @I45@ Drashti /Vohra/ Parents are too old
 Error: INDIVIDUAL: US12: @I70@ Kol /Singh/ Parents are too old
-Error: INDIVIDUAL: US12: @I78@ Kol /Singh/ Parents are too old
 Error: FAMILY: US13: children (@I29@) and (@I68@) are born inside 2 days to 8 months of one another 
-Error: FAMILY: US13: children (@I57@) and (@I75@) are born inside 2 days to 8 months of one another 
 ERROR: FAMILY: US14: @F9@: has more than 5 siblings: ['@I15@', '@I62@', '@I63@', '@I64@', '@I65@', '@I66@', '@I67@']: who were born on the same date and time ['2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00']
 Error: FAM: US15: More than 15 siblings in a family@F9@
 Error: FAM: US 16: Single family has two or more last name @F12@
@@ -155,7 +154,7 @@ Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
 Error: INDIVIDUAL US 20  @I70@ has married their aunt/uncle @I71@ 
  Error: INDI: US 21: Not correct gender for the role husband: @I35@in family @F17@
 Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
-Error: INDIVIDUAL: US23: multiple people with the name Kol /Singh/ and birthdate 1985-04-05 00:00:00 exist 
-ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one familyError: INDIVIDUAL: US25: multiple children with the name @I70@ and birthdate 1985-04-05 00:00:00 exist in a family 
-Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1985-04-05 00:00:00 exist in a family 
-ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families.
+Error: INDIVIDUAL: US23: multiple people with the name Bulbul /Patel/ and birthdate 1977-02-03 00:00:00 exist 
+ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one familyError: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 1977-02-03 00:00:00 exist in a family 
+Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1977-02-03 00:00:00 exist in a family 
+ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families.Error: INDIVIDUAL: US32: @I75@, has multiple births
