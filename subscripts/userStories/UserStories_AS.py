@@ -160,3 +160,68 @@ def us20(indi, fam, f):
     print("User Story 20 Completed \n \n")
     print("---------------- SPRINT 2 COMPLETED -------------------\n \n")
     return flag
+
+
+# User Story 25, Unique first names in families
+# no more than one child in a family should have same name and birthdate
+def us25(indi, fam, f):
+    flag = True
+    print("User Story 25 - unique name and birthdate, running")
+    for family in fam:
+        if family['CHIL'] != "NA":
+            if len(family['CHIL']) > 1:
+                check_child = list()
+                for child in family['CHIL']:
+                    check = getIndiByID(indi, child)['NAME']
+                    for child1 in family['CHIL']:
+                        if child != child1:
+                            check2 = getIndiByID(indi, child1)['NAME']
+                            if check == check2:
+                                if getIndiByID(indi, child)['BIRT'] == getIndiByID(indi, child1)['BIRT']:
+                                    check_child.append(check)
+                                    print(
+                                        f"Error: INDIVIDUAL: US25: multiple children with the name {child} and "
+                                        f"birthdate {getIndiByID(indi, child)['BIRT']} exist in a family")
+                                    f.write(
+                                        f"Error: INDIVIDUAL: US25: multiple children with the name {child} and "
+                                        f"birthdate {getIndiByID(indi, child)['BIRT']} exist in a family \n")
+                                    flag = False
+
+    print("User Story 25 Completed")
+    return flag
+
+
+# User Story 26, corresponding entries all the entries in family should be there in individual record and all the
+# entries in individual should be there in family record
+def us26(indi, fam, f):
+    flag = True
+    print("User Story 26 - Corresponding entries , running")
+
+    ind_in_fam = set()
+    ind_in_ind = set()
+    results = []
+    for family in fam:
+        ind_in_fam.add(family['WIFE'])
+        ind_in_fam.add(family['HUSB'])
+        for i in range(len(family['CHIL'])):
+            ind_in_fam.add(family['CHIL'][i])
+    for ind in indi:
+        ind_in_ind.add(ind['INDI'])
+    missed_ind = []
+    for i in ind_in_ind:
+        for j in ind_in_fam:
+            if i == j:
+                break
+        else:
+            missed_ind.append(i)
+    if missed_ind:
+        for ind in missed_ind:
+            f.write(
+                f'ERROR: INDIVIDUAL: US26:  {ind} cannot find corresponding families.')
+            results.append(
+                f'ERROR: INDIVIDUAL: US26:  {ind} cannot find corresponding families.')
+            flag = False
+    print("User Story 26 Completed")
+    if results:
+        return flag
+

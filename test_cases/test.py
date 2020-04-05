@@ -5,7 +5,7 @@ from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16
 from subscripts.userStories.UserStories_MP import us03, us08, us13, us18, us23, us28
 from subscripts.userStories.UserStories_MD import us04, us07, us14, us17, us24, us27
 from subscripts.userStories.UserStories_DK import us02, us09, us12, us19, us30, us32
-from subscripts.userStories.UserStories_AS import us05, us06, us11, us20
+from subscripts.userStories.UserStories_AS import us05, us06, us11, us20, us25, us26
 
 import unittest
 
@@ -155,6 +155,18 @@ class TestCases(unittest.TestCase):
     def test_us24(self):
         f = open("test.txt", "a")
         value = us24(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
+
+    def test_us25(self):
+        f = open("test.txt", "a")
+        value = us25(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
+
+    def test_us26(self):
+        f = open("test.txt", "a")
+        value = us26(self.d[0], self.d[1], f)
         f.close()
         self.assertFalse(value)
 
