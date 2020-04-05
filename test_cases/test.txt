@@ -44,3 +44,4 @@ Error: INDIVIDUAL US 20  @I70@ has married their aunt/uncle @I71@
 Error: INDI: US 22: Duplicate ids {'@I73@'}
 Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
 ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one familyError: INDIVIDUAL: US32: @I75@, has multiple births
+Error: INDIVIDUAL: US32: @I75@, has multiple births
