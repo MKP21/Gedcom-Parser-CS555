@@ -174,7 +174,7 @@ def us19(indi, fam, f):
 
 def us30(indi, fam, f):
     print("User Story 30 - List all living married, running")
-    f.write("Info: FAMILY: US28: List all living married, running \n")
+    f.write("Info: FAMILY: US30: List all living married, running \n")
     living_married = list()
     ftable = prettytable.PrettyTable()
     ftable.field_names = ["FAM ID", "NAME"]
