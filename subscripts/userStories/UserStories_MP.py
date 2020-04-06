@@ -2,6 +2,8 @@ from datetime import datetime
 from datetime import timedelta
 
 # Birth before death
+import prettytable
+
 from subscripts.outputDisplay import calculateage
 
 
@@ -119,7 +121,13 @@ def us23(indi, fam, f):
 # List siblings in families by decreasing age, i.e. oldest siblings first
 def us28(indi, fam, f):
     print("User Story 28 - order siblings by age, running")
+    f.write("Info: FAMILY: US28: List siblings in decreasing order of age \n")
     output = list()
+    ftable = prettytable.PrettyTable()
+    # adding fieldnames
+
+    ftable.field_names = ["FAM ID", "NAME", "BIRTH DATE"]
+
     for family in fam:
         children_Ids = family["CHIL"]
         if 0 <= len(children_Ids) < 2 or children_Ids == "NA":
@@ -132,7 +140,12 @@ def us28(indi, fam, f):
             children_dicts.append(details)
 
         children_dicts = sorted(children_dicts, key=lambda j: j[1])
+        for child in children_dicts:
+            ftable.add_row([family["FAM"], child[0], child[1]])
+
         output.append(children_dicts)
+
+    f.write(f"{str(ftable)} \n")
 
     print("User Story 28 Completed")
     return output
