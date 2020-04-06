@@ -7,8 +7,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-06 13:53:08.807812 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-06 13:53:08.808012 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-06 16:07:46.304247 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-06 16:07:46.304590 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -45,4 +45,175 @@ ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Ma
 Error: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 1977-02-03 00:00:00 exist in a family 
 Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1977-02-03 00:00:00 exist in a family 
 ERROR: INDIVIDUAL: US26:  @I72@ cannot find corresponding families. 
+ERROR: INDIVIDUAL US24: list of individual's age : 
++---------+-----------------------+------+
+| INDI ID |          NAME         | AGE  |
++---------+-----------------------+------+
+|  @I10@  |     Robert /Trump/    |  71  |
+|  @I11@  |    Martha /Blaine/    | 170  |
+|  @I12@  |   Ivana /Zelnickova/  |  71  |
+|  @I13@  |   Donald /Trump Jr./  |  48  |
+|  @I14@  |    Vanessa /Haydon/   |  42  |
+|  @I15@  |      Meet /Trump/     |  10  |
+|  @I16@  |     Ivanka /Trump/    |  38  |
+|  @I17@  |      Eric /Trump/     |  36  |
+|  @I18@  |     Marla /Maples/    |  56  |
+|  @I19@  |    Tiffany /Trump/    |  26  |
+|   @I1@  |   Donald /Trump Sr./  |  73  |
+|  @I20@  |     Barron /Trump/    |  14  |
+|  @I21@  |     Aneri /Singh/     |  40  |
+|  @I22@  |     Milkha /Singh/    |  39  |
+|  @I23@  |     Lohri /Singh/     |  59  |
+|  @I24@  |   Loday /Skywalker/   |  81  |
+|  @I25@  |   Padme /Skywalker/   |  33  |
+|  @I26@  |   Anakin /Skwalker/   |  0   |
+|  @I27@  |    Luke /Skywalker/   |  50  |
+|  @I28@  |   Malika /Sherawat/   |  20  |
+|  @I29@  |    Leia /Skywalker/   |  52  |
+|   @I2@  |    Melania /Knavs/    |  49  |
+|  @I30@  |      Haan /Solo/      |  51  |
+|  @I31@  |       Ben /Solo/      |  39  |
+|  @I32@  |      Roma /Solo/      |  34  |
+|  @I33@  |    Ray /Palpatine/    |  38  |
+|  @I34@  |      Hope /Solo/      |  36  |
+|  @I35@  |   Dinesh /Skywalker/  |  42  |
+|  @I36@  |    Kylian /Mbappe/    |  12  |
+|  @I37@  |   Summer /Palpatine/  |  12  |
+|  @I38@  |    Monalisa /Solo/    |  4   |
+|  @I39@  |    Yoda /Skywalker/   |  16  |
+|   @I3@  |   Frederick /Trump/   |  93  |
+|  @I40@  |     Jigna /Singh/     | 119  |
+|  @I41@  |     Kiran /Vohra/     | 120  |
+|  @I42@  |     Akash /Vohra/     | 100  |
+|  @I43@  |      Tanu /Vohra/     |  99  |
+|  @I44@  |     Jinal /Vohra/     |  99  |
+|  @I45@  |    Drashti /Vohra/    | -901 |
+|  @I46@  |     Monil /Vohra/     |  97  |
+|  @I47@  |    Darshak /Vohra/    |  96  |
+|  @I48@  |     Pratik /Vohra/    |  94  |
+|  @I49@  |     Jigar /Vohra/     |  93  |
+|   @I4@  |      Mary /Trump/     |  88  |
+|  @I50@  |     Sanket /Vohra/    |  92  |
+|  @I51@  |     Pooja /Vohra/     |  91  |
+|  @I52@  |     Kalpit /Vohra/    |  90  |
+|  @I53@  |     Rushab /Vohra/    |  89  |
+|  @I54@  |      Diti /Vohra/     |  87  |
+|  @I55@  |     Hetal /Vohra/     |  86  |
+|  @I56@  |     Dimple /Vohra/    |  85  |
+|  @I57@  |    Abhishek /Vohra/   |  82  |
+|  @I58@  |     Guddu /Vohra/     |  80  |
+|  @I59@  |     Miami /Patel/     |  65  |
+|   @I5@  |    Maryanne /Trump/   |  83  |
+|  @I60@  |     Rinky /Gupta/     |  20  |
+|  @I61@  |     Bulbul /Patel/    |  43  |
+|  @I62@  |     Laila /Trump/     |  10  |
+|  @I63@  |     Hardik /Trump/    |  10  |
+|  @I64@  |     Jaitul /Trump/    |  10  |
+|  @I65@  |    Varshil /Trump/    |  10  |
+|  @I66@  |     Dolby /Trump/     |  10  |
+|  @I67@  |     Pixar /Trump/     |  10  |
+|  @I68@  |      Deep /Singh/     |  69  |
+|  @I69@  |    Manisha /Singh/    | 2001 |
+|   @I6@  | Frederick /Trump Jr./ |  42  |
+|  @I70@  |      Kol /Singh/      |  35  |
+|  @I71@  |     Meetu /Singh/     |  60  |
+|  @I72@  |    Yoda /Skywalker/   |  26  |
+|  @I74@  |     Dhruvi /Vohra/    |  82  |
+|  @I74@  |     Dakash /Vohra/    |  80  |
+|  @I75@  |     Dhruvi /Vohra/    |  81  |
+|  @I76@  |     Robert /Trump/    |  60  |
+|  @I77@  |    Martha /Blaine/    |  60  |
+|  @I78@  |     Bulbul /Patel/    |  43  |
+|   @I7@  |   Elizabeth /Trump/   |  77  |
+|   @I8@  |    Thomas /Stevens/   |  78  |
+|   @I9@  |      James /Grau/     |  58  |
++---------+-----------------------+------+ 
+Info: FAMILY: US28: List siblings in decreasing order of age 
++--------+-----------------------+---------------------+
+| FAM ID |          NAME         |      BIRTH DATE     |
++--------+-----------------------+---------------------+
+| @F12@  |    Luke /Skywalker/   | 1949-03-04 00:00:00 |
+| @F12@  |    Leia /Skywalker/   | 1950-02-04 00:00:00 |
+| @F12@  |      Deep /Singh/     | 1950-06-08 00:00:00 |
+| @F12@  |    Yoda /Skywalker/   | 1953-11-17 00:00:00 |
+| @F12@  |     Miami /Patel/     | 1955-01-03 00:00:00 |
+| @F12@  |     Meetu /Singh/     | 1960-03-03 00:00:00 |
+| @F14@  |       Ben /Solo/      | 1980-08-04 00:00:00 |
+| @F14@  |      Hope /Solo/      | 1983-09-12 00:00:00 |
+| @F16@  |    Kylian /Mbappe/    | 2008-03-11 00:00:00 |
+| @F16@  |   Summer /Palpatine/  | 2008-03-11 00:00:00 |
+| @F19@  |     Akash /Vohra/     | 1919-12-04 00:00:00 |
+| @F19@  |     Jinal /Vohra/     | 1920-11-12 00:00:00 |
+| @F19@  |     Monil /Vohra/     | 1923-02-06 00:00:00 |
+| @F19@  |    Darshak /Vohra/    | 1924-03-19 00:00:00 |
+| @F19@  |     Pratik /Vohra/    | 1925-05-07 00:00:00 |
+| @F19@  |     Jigar /Vohra/     | 1926-06-10 00:00:00 |
+| @F19@  |     Sanket /Vohra/    | 1927-07-14 00:00:00 |
+| @F19@  |     Pooja /Vohra/     | 1928-08-16 00:00:00 |
+| @F19@  |     Kalpit /Vohra/    | 1930-01-14 00:00:00 |
+| @F19@  |     Rushab /Vohra/    | 1931-04-05 00:00:00 |
+| @F19@  |      Diti /Vohra/     | 1932-06-18 00:00:00 |
+| @F19@  |     Hetal /Vohra/     | 1933-08-05 00:00:00 |
+| @F19@  |     Dimple /Vohra/    | 1935-03-07 00:00:00 |
+| @F19@  |    Abhishek /Vohra/   | 1937-05-18 00:00:00 |
+| @F19@  |     Dhruvi /Vohra/    | 1938-12-19 00:00:00 |
+| @F19@  |     Guddu /Vohra/     | 1940-02-19 00:00:00 |
+| @F19@  |    Drashti /Vohra/    | 2922-01-15 00:00:00 |
+| @F20@  |     Dhruvi /Vohra/    | 1937-12-21 00:00:00 |
+| @F20@  |     Dhruvi /Vohra/    | 1937-12-21 00:00:00 |
+| @F21@  |     Bulbul /Patel/    | 1977-02-03 00:00:00 |
+| @F21@  |     Bulbul /Patel/    | 1977-02-03 00:00:00 |
+|  @F2@  |   Donald /Trump Jr./  | 1971-12-31 00:00:00 |
+|  @F2@  |     Ivanka /Trump/    | 1981-10-30 00:00:00 |
+|  @F2@  |      Eric /Trump/     | 1984-01-06 00:00:00 |
+|  @F4@  |    Maryanne /Trump/   | 1937-04-05 00:00:00 |
+|  @F4@  | Frederick /Trump Jr./ | 1938-10-14 00:00:00 |
+|  @F4@  |   Elizabeth /Trump/   | 1942-04-10 00:00:00 |
+|  @F4@  |   Donald /Trump Sr./  | 1946-06-14 00:00:00 |
+|  @F4@  |     Robert /Trump/    | 1948-08-26 00:00:00 |
+|  @F5@  |     Jigna /Singh/     | 1901-03-11 00:00:00 |
+|  @F5@  |     Lohri /Singh/     | 1910-07-09 00:00:00 |
+|  @F5@  |      Mary /Trump/     | 1912-05-12 00:00:00 |
+|  @F9@  |      Meet /Trump/     | 2010-02-04 00:00:00 |
+|  @F9@  |     Laila /Trump/     | 2010-02-04 00:00:00 |
+|  @F9@  |     Hardik /Trump/    | 2010-02-04 00:00:00 |
+|  @F9@  |     Jaitul /Trump/    | 2010-02-04 00:00:00 |
+|  @F9@  |    Varshil /Trump/    | 2010-02-04 00:00:00 |
+|  @F9@  |     Dolby /Trump/     | 2010-02-04 00:00:00 |
+|  @F9@  |     Pixar /Trump/     | 2010-02-04 00:00:00 |
++--------+-----------------------+---------------------+ 
+Info: FAMILY: US28: List all living married, running 
++--------+--------------------+
+| FAM ID |        NAME        |
++--------+--------------------+
+| @I10@  |   Robert /Trump/   |
+| @I11@  |  Martha /Blaine/   |
+| @I12@  | Ivana /Zelnickova/ |
+| @I13@  | Donald /Trump Jr./ |
+| @I14@  |  Vanessa /Haydon/  |
+| @I15@  |    Meet /Trump/    |
+| @I18@  |   Marla /Maples/   |
+|  @I1@  | Donald /Trump Sr./ |
+|  @I2@  |  Melania /Knavs/   |
+| @I31@  |     Ben /Solo/     |
+| @I32@  |    Roma /Solo/     |
+| @I33@  |  Ray /Palpatine/   |
+| @I34@  |    Hope /Solo/     |
+| @I35@  | Dinesh /Skywalker/ |
+| @I36@  |  Kylian /Mbappe/   |
+| @I37@  | Summer /Palpatine/ |
+| @I40@  |   Jigna /Singh/    |
+| @I41@  |   Kiran /Vohra/    |
+| @I42@  |   Akash /Vohra/    |
+| @I43@  |    Tanu /Vohra/    |
+| @I59@  |   Miami /Patel/    |
+| @I68@  |    Deep /Singh/    |
+| @I69@  |  Manisha /Singh/   |
+| @I70@  |    Kol /Singh/     |
+| @I71@  |   Meetu /Singh/    |
+| @I76@  |   Robert /Trump/   |
+| @I77@  |  Martha /Blaine/   |
+|  @I7@  | Elizabeth /Trump/  |
+|  @I8@  |  Thomas /Stevens/  |
++--------+--------------------+ 
 Error: INDIVIDUAL: US32: @I75@, has multiple births

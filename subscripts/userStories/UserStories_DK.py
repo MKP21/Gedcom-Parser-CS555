@@ -1,5 +1,7 @@
 from datetime import datetime
 from datetime import timedelta
+import prettytable
+
 from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
 from subscripts.userStories.UserStories_Pratik_Deo import getAgeById
 

@@ -118,8 +118,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-06 15:55:47.657313 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-06 15:55:47.657410 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-06 16:05:19.686897 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-06 16:05:19.686983 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -293,4 +293,38 @@ Info: FAMILY: US28: List siblings in decreasing order of age
 |  @F9@  |     Dolby /Trump/     | 2010-02-04 00:00:00 |
 |  @F9@  |     Pixar /Trump/     | 2010-02-04 00:00:00 |
 +--------+-----------------------+---------------------+ 
+Info: FAMILY: US28: List siblings in decreasing order of age 
++--------+--------------------+
+| FAM ID |        NAME        |
++--------+--------------------+
+| @I10@  |   Robert /Trump/   |
+| @I11@  |  Martha /Blaine/   |
+| @I12@  | Ivana /Zelnickova/ |
+| @I13@  | Donald /Trump Jr./ |
+| @I14@  |  Vanessa /Haydon/  |
+| @I15@  |    Meet /Trump/    |
+| @I18@  |   Marla /Maples/   |
+|  @I1@  | Donald /Trump Sr./ |
+|  @I2@  |  Melania /Knavs/   |
+| @I31@  |     Ben /Solo/     |
+| @I32@  |    Roma /Solo/     |
+| @I33@  |  Ray /Palpatine/   |
+| @I34@  |    Hope /Solo/     |
+| @I35@  | Dinesh /Skywalker/ |
+| @I36@  |  Kylian /Mbappe/   |
+| @I37@  | Summer /Palpatine/ |
+| @I40@  |   Jigna /Singh/    |
+| @I41@  |   Kiran /Vohra/    |
+| @I42@  |   Akash /Vohra/    |
+| @I43@  |    Tanu /Vohra/    |
+| @I59@  |   Miami /Patel/    |
+| @I68@  |    Deep /Singh/    |
+| @I69@  |  Manisha /Singh/   |
+| @I70@  |    Kol /Singh/     |
+| @I71@  |   Meetu /Singh/    |
+| @I76@  |   Robert /Trump/   |
+| @I77@  |  Martha /Blaine/   |
+|  @I7@  | Elizabeth /Trump/  |
+|  @I8@  |  Thomas /Stevens/  |
++--------+--------------------+ 
 Error: INDIVIDUAL: US32: @I75@, has multiple births
