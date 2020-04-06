@@ -2,6 +2,8 @@ from datetime import datetime
 from datetime import timedelta
 from time import strftime
 
+import prettytable
+
 from subscripts.outputDisplay import calculateage
 from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
 
@@ -188,8 +190,11 @@ def us27(indi, fam, f):
 
             person_age = calculateage(b_date, d_date)
             list_of_age.append([person['INDI'], person['NAME'], person_age])
-    # for l in list_of_age:
-    #     print(l)
+            ftable = prettytable.PrettyTable()
+            ftable.field_names = ["INDI ID", "NAME", "AGE"]
+    for l in list_of_age:
+        ftable.add_row([l[0],l[1],l[2]])
+    f.write(f"{str(ftable)} \n")
     print("Userstory 27 Completed")
     if flag:
         return True
