@@ -7,11 +7,10 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-05 17:42:07.998354 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-05 17:42:07.998581 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-06 13:50:05.816086 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-06 13:50:05.816302 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
-Error: INDIVIDUAL: US08: -> @I72@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I29@ Leia /Skywalker/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I39@ Yoda /Skywalker/ Birth after death of parents  
@@ -33,16 +32,17 @@ Error: FAM: US 16: Single family has two or more last name @F16@
 Error: FAM: US 16: Single family has two or more last name @F1@
 Error: FAM: US 16: Single family has two or more last name @F2@
 Error: FAM: US 16: Single family has two or more last name @F4@
-Error: FAM: US 16: Single family has two or more last name @F7@
 Error: FAM: US 16: Single family has two or more last name @F9@
 ERROR: FAMILY: US17: @F10@: Wife @I14@ is married to the child @I15@
 Error: FAMILY: US18: spouses @I36@ and @I37@ are siblings 
 Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
 Error: INDIVIDUAL US 20  @I70@ has married their aunt/uncle @I71@ 
  Error: INDI: US 21: Not correct gender for the role husband: @I35@in family @F17@
+Error: INDI: US 22: Duplicate ids {'@I74@'}
 Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
 Error: INDIVIDUAL: US23: multiple people with the name Bulbul /Patel/ and birthdate 1977-02-03 00:00:00 exist 
-ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one familyError: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 1977-02-03 00:00:00 exist in a family 
+ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one family 
+Error: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 1977-02-03 00:00:00 exist in a family 
 Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1977-02-03 00:00:00 exist in a family 
-ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families. 
+ERROR: INDIVIDUAL: US26:  @I72@ cannot find corresponding families. 
 Error: INDIVIDUAL: US32: @I75@, has multiple births

@@ -158,7 +158,7 @@ def us24(indi, fam, f):
             print(
                 f"ERROR: FAMILY: US24: LINENUMBER: {family['FAM']}: has same named spouses {husband}, {wife} and marriage date {family['MARR']} with more than one family")
             f.write(
-                f"ERROR: FAMILY: US24: LINENUMBER: {family['FAM']}: has same named spouses {husband}, {wife} and marriage date {family['MARR']} with more than one family")
+                f"ERROR: FAMILY: US24: LINENUMBER: {family['FAM']}: has same named spouses {husband}, {wife} and marriage date {family['MARR']} with more than one family \n")
             flag = False
         elif not famlist.__contains__(currList):
             famlist.append(currList)
