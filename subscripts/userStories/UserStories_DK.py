@@ -1,5 +1,6 @@
 from datetime import datetime
 from datetime import timedelta
+
 import prettytable
 
 from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
@@ -173,7 +174,10 @@ def us19(indi, fam, f):
 
 def us30(indi, fam, f):
     print("User Story 30 - List all living married, running")
+    f.write("Info: FAMILY: US28: List all living married, running \n")
     living_married = list()
+    ftable = prettytable.PrettyTable()
+    ftable.field_names = ["FAM ID", "NAME"]
     # Iterating over indi
     for individual in indi:
         # If Alive
@@ -182,9 +186,16 @@ def us30(indi, fam, f):
             if individual["FAMS"] != "NA":
                 # Append to List
                 living_married.append(individual)
+    for indi1 in living_married:
+        ftable.add_row([indi1["INDI"],indi1["NAME"]])
 
+    f.write(f"{str(ftable)} \n")
     print("User Story 30 Completed")
     return living_married
+
+
+
+
 
 
 def us32(us32p, f):
