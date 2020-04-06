@@ -197,6 +197,7 @@ def us32(us32p, f):
                 f"Error: INDIVIDUAL: US32: {mulbirth}, has multiple births\n")
             flag = False
     print("User Story 32 Completed")
+    print("\n \n ------------------ Sprint 3 Complete--------------------")
     return flag
 
 
