@@ -7,8 +7,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-06 16:07:46.304247 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-06 16:07:46.304590 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-06 20:11:02.121772 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-06 20:11:02.121772 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -25,6 +25,7 @@ ERROR: FAMILY : US11 : @I1@ : Individual is in mutliple families at once
 Error: INDIVIDUAL: US12: @I45@ Drashti /Vohra/ Parents are too old
 Error: INDIVIDUAL: US12: @I70@ Kol /Singh/ Parents are too old
 Error: FAMILY: US13: children (@I29@) and (@I68@) are born inside 2 days to 8 months of one another 
+Error: FAMILY: US13: children (@I57@) and (@I75@) are born inside 2 days to 8 months of one another 
 ERROR: FAMILY: US14: @F9@: has more than 5 siblings: ['@I15@', '@I62@', '@I63@', '@I64@', '@I65@', '@I66@', '@I67@']: who were born on the same date and time ['2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00', '2010-02-04 00:00:00']
 Error: FAM: US15: More than 15 siblings in a family@F9@
 Error: FAM: US 16: Single family has two or more last name @F12@
@@ -38,13 +39,13 @@ Error: FAMILY: US18: spouses @I36@ and @I37@ are siblings
 Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
 Error: INDIVIDUAL US 20  @I70@ has married their aunt/uncle @I71@ 
  Error: INDI: US 21: Not correct gender for the role husband: @I35@in family @F17@
-Error: INDI: US 22: Duplicate ids {'@I74@'}
 Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
 Error: INDIVIDUAL: US23: multiple people with the name Bulbul /Patel/ and birthdate 1977-02-03 00:00:00 exist 
 ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one family 
 Error: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 1977-02-03 00:00:00 exist in a family 
 Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1977-02-03 00:00:00 exist in a family 
 ERROR: INDIVIDUAL: US26:  @I72@ cannot find corresponding families. 
+ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families. 
 ERROR: INDIVIDUAL US24: list of individual's age : 
 +---------+-----------------------+------+
 | INDI ID |          NAME         | AGE  |
@@ -118,13 +119,16 @@ ERROR: INDIVIDUAL US24: list of individual's age :
 |  @I70@  |      Kol /Singh/      |  35  |
 |  @I71@  |     Meetu /Singh/     |  60  |
 |  @I72@  |    Yoda /Skywalker/   |  26  |
-|  @I74@  |     Dhruvi /Vohra/    |  82  |
+|  @I73@  |     Dhruvi /Vohra/    |  82  |
 |  @I74@  |     Dakash /Vohra/    |  80  |
-|  @I75@  |     Dhruvi /Vohra/    |  81  |
+|  @I75@  |     Dhruvi /Vohra/    |  82  |
 |  @I76@  |     Robert /Trump/    |  60  |
 |  @I77@  |    Martha /Blaine/    |  60  |
 |  @I78@  |     Bulbul /Patel/    |  43  |
+|  @I79@  |    Rama /Skywalker/   |  46  |
 |   @I7@  |   Elizabeth /Trump/   |  77  |
+|  @I80@  |     Natraj /Laal/     |  45  |
+|  @I81@  |      Popat /Laal/     |  6   |
 |   @I8@  |    Thomas /Stevens/   |  78  |
 |   @I9@  |      James /Grau/     |  58  |
 +---------+-----------------------+------+ 
@@ -132,6 +136,8 @@ Info: FAMILY: US28: List siblings in decreasing order of age
 +--------+-----------------------+---------------------+
 | FAM ID |          NAME         |      BIRTH DATE     |
 +--------+-----------------------+---------------------+
+| @F11@  |   Padme /Skywalker/   | 1922-02-09 00:00:00 |
+| @F11@  |    Rama /Skywalker/   | 1969-08-15 00:00:00 |
 | @F12@  |    Luke /Skywalker/   | 1949-03-04 00:00:00 |
 | @F12@  |    Leia /Skywalker/   | 1950-02-04 00:00:00 |
 | @F12@  |      Deep /Singh/     | 1950-06-08 00:00:00 |
@@ -156,11 +162,9 @@ Info: FAMILY: US28: List siblings in decreasing order of age
 | @F19@  |     Hetal /Vohra/     | 1933-08-05 00:00:00 |
 | @F19@  |     Dimple /Vohra/    | 1935-03-07 00:00:00 |
 | @F19@  |    Abhishek /Vohra/   | 1937-05-18 00:00:00 |
-| @F19@  |     Dhruvi /Vohra/    | 1938-12-19 00:00:00 |
+| @F19@  |     Dhruvi /Vohra/    | 1937-12-19 00:00:00 |
 | @F19@  |     Guddu /Vohra/     | 1940-02-19 00:00:00 |
 | @F19@  |    Drashti /Vohra/    | 2922-01-15 00:00:00 |
-| @F20@  |     Dhruvi /Vohra/    | 1937-12-21 00:00:00 |
-| @F20@  |     Dhruvi /Vohra/    | 1937-12-21 00:00:00 |
 | @F21@  |     Bulbul /Patel/    | 1977-02-03 00:00:00 |
 | @F21@  |     Bulbul /Patel/    | 1977-02-03 00:00:00 |
 |  @F2@  |   Donald /Trump Jr./  | 1971-12-31 00:00:00 |
@@ -182,7 +186,7 @@ Info: FAMILY: US28: List siblings in decreasing order of age
 |  @F9@  |     Dolby /Trump/     | 2010-02-04 00:00:00 |
 |  @F9@  |     Pixar /Trump/     | 2010-02-04 00:00:00 |
 +--------+-----------------------+---------------------+ 
-Info: FAMILY: US28: List all living married, running 
+Info: FAMILY: US30: List all living married, running 
 +--------+--------------------+
 | FAM ID |        NAME        |
 +--------+--------------------+
@@ -216,4 +220,19 @@ Info: FAMILY: US28: List all living married, running
 |  @I7@  | Elizabeth /Trump/  |
 |  @I8@  |  Thomas /Stevens/  |
 +--------+--------------------+ 
-Error: INDIVIDUAL: US32: @I75@, has multiple births
+Info: INDIVIDUAL: US33: List orphaned kids 
++---------+--------------+
+| INDI ID |     NAME     |
++---------+--------------+
+|  @I81@  | Popat /Laal/ |
++---------+--------------+ 
+Info: INDIVIDUAL: US38: List upcoming birthdays 
++---------+-------------------+---------------------+
+| INDI ID |        NAME       |      BIRTH DATE     |
++---------+-------------------+---------------------+
+|   @I2@  |  Melania /Knavs/  | 1970-04-26 00:00:00 |
+|  @I32@  |    Roma /Solo/    | 1985-04-09 00:00:00 |
+|  @I38@  |  Monalisa /Solo/  | 2015-04-14 00:00:00 |
+|  @I48@  |   Pratik /Vohra/  | 1925-05-07 00:00:00 |
+|   @I7@  | Elizabeth /Trump/ | 1942-04-10 00:00:00 |
++---------+-------------------+---------------------+ 

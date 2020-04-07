@@ -64,7 +64,7 @@ def us13(indi, fam, f):
         if family["CHIL"] is "NA" or len(family["CHIL"]) is 1:
             continue
         len_children = len(family["CHIL"])
-        for x in range(0,len_children):
+        for x in range(0, len_children):
             child1 = getIndiByID(indi, family["CHIL"][x])
             for child_2_Index in range(x + 1, len_children):
                 child2 = getIndiByID(indi, family["CHIL"][child_2_Index])
@@ -155,27 +155,34 @@ def us28(indi, fam, f):
 # List all orphaned children (both parents dead and child < 18 years old) in a GEDCOM file
 def us33(indi, fam, f):
     print("User Story 33 - List orphans, running")
+
+    f.write("Info: INDIVIDUAL: US33: List orphaned kids \n")
+    ftable = prettytable.PrettyTable()
+    # adding fieldnames
+    ftable.field_names = ["INDI ID", "NAME"]
+
     orphans = list()
     for family in fam:
+        children_ids = family["CHIL"]
+        if children_ids == "NA":
+            continue
         husb = getIndiByID(indi, family["HUSB"])
         wife = getIndiByID(indi, family["WIFE"])
         if husb["DEAT"] == "NA" or wife["DEAT"] == "NA":
             continue
 
         # both parents are dead
-        children_ids = family["CHIL"]
-        if children_ids == "NA":
-            continue
-
         for i in children_ids:
             child = getIndiByID(indi, i)
             if child["DEAT"] != "NA":
                 continue
 
-            # child is alive
+            a = calculateage(child["BIRT"], "NA")
             if int(calculateage(child["BIRT"], "NA")) < 18:
+                ftable.add_row([child["INDI"], child["NAME"]])
                 orphans.append(child)
 
+    f.write(str(f"{ftable} \n"))
     print("User Story 33 Completed")
     return orphans
 
@@ -185,6 +192,11 @@ def us33(indi, fam, f):
 # List all living people in a GEDCOM file whose birthdays occur in the next 30 days
 def us38(indi, fam, f):
     print("User Story 38 - List upcoming birthdays, running")
+    f.write("Info: INDIVIDUAL: US38: List upcoming birthdays \n")
+    ftable = prettytable.PrettyTable()
+    # adding fieldnames
+    ftable.field_names = ["INDI ID", "NAME", "BIRTH DATE"]
+
     upcoming_birthdays = list()
     for individual in indi:
         if individual["DEAT"] != "NA":
@@ -194,11 +206,15 @@ def us38(indi, fam, f):
         todays_date = datetime.today()
         birth_day = individual["BIRT"]
         birth_day = birth_day.replace(year=todays_date.year)
+        if birth_day < todays_date:
+            birth_day = birth_day.replace(year=todays_date.year+1)
 
         if 0 < (birth_day - todays_date).days <= 30:
             upcoming_birthdays.append(individual)
+            ftable.add_row([individual["INDI"], individual["NAME"], individual["BIRT"]])
 
-    print("User Story 33 Completed")
+    f.write(f"{str(ftable)} \n")
+    print("User Story 38 Completed")
     return upcoming_birthdays
 
 

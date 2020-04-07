@@ -1,8 +1,10 @@
 from datetime import datetime
 
+from subscripts.outputDisplay import calculateage
 from subscripts.parseFile import fileParser
 from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16, us21, us22
-from subscripts.userStories.UserStories_MP import us03, us08, us13, us18, us23, us28
+from subscripts.userStories.UserStories_MP import us03, us08, us13, us18, us23, us28, us38, us33, getIndiByID, \
+    getFamByID
 from subscripts.userStories.UserStories_MD import us04, us07, us14, us17, us24, us27
 from subscripts.userStories.UserStories_DK import us02, us09, us12, us19, us30, us32
 from subscripts.userStories.UserStories_AS import us05, us06, us11, us20, us25, us26
@@ -11,7 +13,7 @@ import unittest
 
 
 class TestCases(unittest.TestCase):
-    gedcom_error = "../sprint_03_v2.ged"
+    gedcom_error = "../sprint_04_v1.ged"
     d = fileParser(gedcom_error)
 
     def test_us01(self):
@@ -210,6 +212,43 @@ class TestCases(unittest.TestCase):
         value = us32(self.d[2], f)
         f.close()
         self.assertFalse(value)
+
+    def test_us33(self):
+        # list of orphaned kids
+        f = open("test.txt", "a")
+        value = us33(self.d[0], self.d[1], f)
+        f.close()
+        flag = True
+        if len(value) == 0:
+            flag = False
+        for individual in value:
+            if individual["DEAT"] != "NA" or int(calculateage(individual["BIRT"], "NA")) > 18:
+                flag = False
+                break
+            indi_famc = getFamByID(self.d[1], individual["FAMC"][0])
+            indi_mom = getIndiByID(self.d[0], indi_famc["WIFE"])
+            indi_dad = getIndiByID(self.d[0], indi_famc["HUSB"])
+            if indi_dad["DEAT"] == "NA" or indi_mom["DEAT"] == "NA":
+                flag = False
+                break
+
+        self.assertTrue(flag)
+
+    def test_us38(self):
+        # test will fail if a persons birthday in the list is not in the next 30 days
+        f = open("test.txt", "a")
+        value = us38(self.d[0], self.d[1], f)
+        f.close()
+        flag = True
+        for individual in value:
+            curr_date = datetime.today()
+            birth_day = individual["BIRT"]
+            birth_day = birth_day.replace(year=curr_date.year)
+            if birth_day < curr_date:
+                birth_day = birth_day.replace(year=curr_date.year + 1)
+            if (birth_day - curr_date).days > 30:
+                flag = False
+        self.assertTrue(flag)
 
 
 if __name__ == '__main__':
