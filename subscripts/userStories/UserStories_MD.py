@@ -206,6 +206,7 @@ def us27(indi, fam, f):
 # List large age differences
 def us34(indi, fam, f):
     print("Userstory 34 Running")
+    flag = True
     for family in fam:
         # getting birthdates of both spouses
         husb_bdate = getIndiByID(indi, family['HUSB'])['BIRT']
@@ -216,17 +217,26 @@ def us34(indi, fam, f):
         wife_age_at_marr = abs(int((family['MARR'] - wife_bdate).days / days_in_year))
 
         if husb_age_at_marr > wife_age_at_marr * 2:
+            flag = False
             print(
                 f"ERROR: FAMILY: US34: family with id {family['FAM']} had husband {family['HUSB']} of age {husb_age_at_marr} twice the age of his wife {family['WIFE']} of age {wife_age_at_marr} during their marriage {family['MARR']}")
+            f.write(f"ERROR: FAMILY: US34: family with id {family['FAM']} had husband {family['HUSB']} of age {husb_age_at_marr} twice the age of his wife {family['WIFE']} of age {wife_age_at_marr} during their marriage {family['MARR']}\n")
         elif wife_age_at_marr > husb_age_at_marr * 2:
+            flag = False
             print(
                 f"ERROR: FAMILY: US34: family with id {family['FAM']} had wife {family['WIFE']} of age {wife_age_at_marr} twice the age of her husband {family['HUSB']} of age {husb_age_at_marr} during their marriage {family['MARR']}")
+            f.write(f"ERROR: FAMILY: US34: family with id {family['FAM']} had wife {family['WIFE']} of age {wife_age_at_marr} twice the age of her husband {family['HUSB']} of age {husb_age_at_marr} during their marriage {family['MARR']}\n")
     print("Userstory 34 Completed")
+    if flag:
+        return True
+    else:
+        return False
 
 
 # List recent survivors
 def us37(indi, fam, f):
     print("Userstory 37 Running ")
+    # f.write("List all living spouses and descendants of people in a GEDCOM file who died in the last 30 days")
     # List of people who died in past 30 days
     dead_people_recent = list()
     # List of all the people who died
@@ -259,5 +269,17 @@ def us37(indi, fam, f):
                     for child in range(len(children_list)):
                         if not dead_people_list.__contains__(children_list[child]):
                             list_to_rtrn.append(children_list[child])
+
+    ftable = prettytable.PrettyTable()
+    ftable.field_names = ["INDI ID", "NAME"]
+    for i in range(len(list_to_rtrn)):
+        person = getIndiByID(indi, list_to_rtrn[i])
+        ftable.add_row([list_to_rtrn[i],person['NAME']])
+    f.write(f"{str(ftable)} \n")
+    print(f"{str(ftable)} \n")
     print("Userstory 37 Completed")
     return list_to_rtrn
+
+
+
+

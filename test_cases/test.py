@@ -5,7 +5,7 @@ from subscripts.parseFile import fileParser
 from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16, us21, us22
 from subscripts.userStories.UserStories_MP import us03, us08, us13, us18, us23, us28, us38, us33, getIndiByID, \
     getFamByID
-from subscripts.userStories.UserStories_MD import us04, us07, us14, us17, us24, us27
+from subscripts.userStories.UserStories_MD import us04, us07, us14, us17, us24, us27, us34, us37
 from subscripts.userStories.UserStories_DK import us02, us09, us12, us19, us30, us32
 from subscripts.userStories.UserStories_AS import us05, us06, us11, us20, us25, us26
 
@@ -233,6 +233,25 @@ class TestCases(unittest.TestCase):
                 break
 
         self.assertTrue(flag)
+
+    def test_us34(self):
+        f = open("test.txt", "a")
+        value = us34(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
+
+
+    def test_us37(self):
+        f = open("test.txt", "a")
+        value = us37(self.d[0], self.d[1], f)
+        flag = True
+        for id in value:
+            person = getIndiByID(self.d[0], id)
+            if person['DEAT']  != 'NA':
+                flag = False
+        f.close()
+        self.assertTrue(flag)
+
 
     def test_us38(self):
         # test will fail if a persons birthday in the list is not in the next 30 days

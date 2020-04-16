@@ -25,17 +25,17 @@
 |  @I2@ |    Melania /Knavs/    |   F    | 26 Apr 1970 |  49  |  TRUE |      NA     |     NA    |         ['@F1@']         |
 | @I30@ |      Haan /Solo/      |   M    | 04 Jan 1950 |  51  | FALSE | 14 Mar 2001 |     NA    |        ['@F14@']         |
 | @I31@ |       Ben /Solo/      |   M    | 04 Aug 1980 |  39  |  TRUE |      NA     | ['@F14@'] |    ['@F15@', '@F16@']    |
-| @I32@ |      Roma /Solo/      |   F    | 09 Apr 1985 |  34  |  TRUE |      NA     |     NA    |        ['@F15@']         |
+| @I32@ |      Roma /Solo/      |   F    | 09 Apr 1985 |  35  |  TRUE |      NA     |     NA    |        ['@F15@']         |
 | @I33@ |    Ray /Palpatine/    |   F    | 07 Jun 1981 |  38  |  TRUE |      NA     |     NA    |        ['@F16@']         |
 | @I34@ |      Hope /Solo/      |   F    | 12 Sep 1983 |  36  |  TRUE |      NA     | ['@F14@'] |        ['@F17@']         |
 | @I35@ |   Dinesh /Skywalker/  |   NA   | 17 Jun 1977 |  42  |  TRUE |      NA     | ['@F13@'] |        ['@F17@']         |
 | @I36@ |    Kylian /Mbappe/    |   M    | 11 Mar 2008 |  12  |  TRUE |      NA     | ['@F16@'] |        ['@F18@']         |
 | @I37@ |   Summer /Palpatine/  |   F    | 11 Mar 2008 |  12  |  TRUE |      NA     | ['@F16@'] |        ['@F18@']         |
-| @I38@ |    Monalisa /Solo/    |   F    | 14 Apr 2015 |  4   |  TRUE |      NA     | ['@F15@'] |            NA            |
+| @I38@ |    Monalisa /Solo/    |   F    | 14 Apr 2015 |  5   |  TRUE |      NA     | ['@F15@'] |            NA            |
 | @I39@ |    Yoda /Skywalker/   |   F    | 17 Nov 1953 |  16  | FALSE | 17 Nov 1970 | ['@F12@'] |            NA            |
 |  @I3@ |   Frederick /Trump/   |   M    | 11 Oct 1905 |  93  | FALSE | 25 Jun 1999 |     NA    |         ['@F4@']         |
 | @I40@ |     Jigna /Singh/     |   F    | 11 Mar 1901 | 119  |  TRUE |      NA     |  ['@F5@'] |        ['@F19@']         |
-| @I41@ |     Kiran /Vohra/     |   M    | 06 Feb 1900 | 120  |  TRUE |      NA     |     NA    |        ['@F19@']         |
+| @I41@ |     Kiran /Vohra/     |   M    | 06 Feb 1900 | 120  | FALSE | 13 Apr 2020 |     NA    |        ['@F19@']         |
 | @I42@ |     Akash /Vohra/     |   M    | 04 Dec 1919 | 100  |  TRUE |      NA     | ['@F19@'] |        ['@F20@']         |
 | @I43@ |      Tanu /Vohra/     |   F    | 18 Jul 1920 |  99  |  TRUE |      NA     |     NA    |        ['@F20@']         |
 | @I44@ |     Jinal /Vohra/     |   F    | 12 Nov 1920 |  99  |  TRUE |      NA     | ['@F19@'] |            NA            |
@@ -77,7 +77,7 @@
 | @I77@ |    Martha /Blaine/    |   F    | 05 Mar 1960 |  60  |  TRUE |      NA     |     NA    |        ['@F24@']         |
 | @I78@ |     Bulbul /Patel/    |   M    | 03 Feb 1977 |  43  |  TRUE |      NA     | ['@F21@'] |            NA            |
 | @I79@ |    Rama /Skywalker/   |   F    | 15 Aug 1969 |  46  | FALSE | 09 Sep 2015 | ['@F11@'] |        ['@F25@']         |
-|  @I7@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  77  |  TRUE |      NA     |  ['@F4@'] |     ['@F6@', '@F7@']     |
+|  @I7@ |   Elizabeth /Trump/   |   F    | 10 Apr 1942 |  78  |  TRUE |      NA     |  ['@F4@'] |     ['@F6@', '@F7@']     |
 | @I80@ |     Natraj /Laal/     |   M    | 14 Nov 1970 |  45  | FALSE | 16 Dec 2015 |     NA    |        ['@F25@']         |
 | @I81@ |      Popat /Laal/     |   M    | 15 Feb 2014 |  6   |  TRUE |      NA     | ['@F25@'] |            NA            |
 |  @I8@ |    Thomas /Stevens/   |   M    | 07 Nov 1941 |  78  |  TRUE |      NA     |     NA    |         ['@F6@']         |
@@ -122,8 +122,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-06 20:08:51.581087 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-06 20:08:51.582083 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-16 16:23:01.282422 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-16 16:23:01.282503 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -133,6 +133,7 @@ Error: INDIVIDUAL: US09: @I59@ Miami /Patel/ Birth after death of parents
 Error: INDIVIDUAL: US09: @I68@ Deep /Singh/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I71@ Meetu /Singh/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I71@ Meetu /Singh/ Birth after death of parents  
+Error: INDIVIDUAL: US09: @I45@ Drashti /Vohra/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I61@ Bulbul /Patel/ Birth after death of parents  
 Error: INDIVIDUAL: US09: @I78@ Bulbul /Patel/ Birth after death of parents  
 Error: INDIVIDUAL: US10: Too young for marriage @I15@ 2019-11-12 00:00:00
@@ -189,13 +190,13 @@ ERROR: INDIVIDUAL US24: list of individual's age :
 |   @I2@  |    Melania /Knavs/    |  49  |
 |  @I30@  |      Haan /Solo/      |  51  |
 |  @I31@  |       Ben /Solo/      |  39  |
-|  @I32@  |      Roma /Solo/      |  34  |
+|  @I32@  |      Roma /Solo/      |  35  |
 |  @I33@  |    Ray /Palpatine/    |  38  |
 |  @I34@  |      Hope /Solo/      |  36  |
 |  @I35@  |   Dinesh /Skywalker/  |  42  |
 |  @I36@  |    Kylian /Mbappe/    |  12  |
 |  @I37@  |   Summer /Palpatine/  |  12  |
-|  @I38@  |    Monalisa /Solo/    |  4   |
+|  @I38@  |    Monalisa /Solo/    |  5   |
 |  @I39@  |    Yoda /Skywalker/   |  16  |
 |   @I3@  |   Frederick /Trump/   |  93  |
 |  @I40@  |     Jigna /Singh/     | 119  |
@@ -241,7 +242,7 @@ ERROR: INDIVIDUAL US24: list of individual's age :
 |  @I77@  |    Martha /Blaine/    |  60  |
 |  @I78@  |     Bulbul /Patel/    |  43  |
 |  @I79@  |    Rama /Skywalker/   |  46  |
-|   @I7@  |   Elizabeth /Trump/   |  77  |
+|   @I7@  |   Elizabeth /Trump/   |  78  |
 |  @I80@  |     Natraj /Laal/     |  45  |
 |  @I81@  |      Popat /Laal/     |  6   |
 |   @I8@  |    Thomas /Stevens/   |  78  |
@@ -322,7 +323,6 @@ Info: FAMILY: US30: List all living married, running
 | @I36@  |  Kylian /Mbappe/   |
 | @I37@  | Summer /Palpatine/ |
 | @I40@  |   Jigna /Singh/    |
-| @I41@  |   Kiran /Vohra/    |
 | @I42@  |   Akash /Vohra/    |
 | @I43@  |    Tanu /Vohra/    |
 | @I59@  |   Miami /Patel/    |
@@ -341,13 +341,38 @@ Info: INDIVIDUAL: US33: List orphaned kids
 +---------+--------------+
 |  @I81@  | Popat /Laal/ |
 +---------+--------------+ 
+ERROR: FAMILY: US34: family with id @F10@ had wife @I14@ of age 41 twice the age of her husband @I15@ of age 9 during their marriage 2019-11-12 00:00:00
+ERROR: FAMILY: US34: family with id @F13@ had husband @I27@ of age 26 twice the age of his wife @I28@ of age 5 during their marriage 1975-07-10 00:00:00
+ERROR: FAMILY: US34: family with id @F1@ had husband @I1@ of age 31 twice the age of his wife @I2@ of age 7 during their marriage 1978-01-22 00:00:00
+ERROR: FAMILY: US34: family with id @F22@ had wife @I69@ of age 1960 twice the age of her husband @I68@ of age 29 during their marriage 1980-03-02 00:00:00
+ERROR: FAMILY: US34: family with id @F23@ had husband @I71@ of age 20 twice the age of his wife @I70@ of age 5 during their marriage 1980-03-03 00:00:00
+ERROR: FAMILY: US34: family with id @F8@ had wife @I11@ of age 125 twice the age of her husband @I10@ of age 27 during their marriage 1975-10-01 00:00:00
+List all living spouses and descendants of people in a GEDCOM file who died in the last 30 days+---------+------------------+
+| INDI ID |       NAME       |
++---------+------------------+
+|  @I40@  |  Jigna /Singh/   |
+|  @I42@  |  Akash /Vohra/   |
+|  @I44@  |  Jinal /Vohra/   |
+|  @I45@  | Drashti /Vohra/  |
+|  @I46@  |  Monil /Vohra/   |
+|  @I47@  | Darshak /Vohra/  |
+|  @I48@  |  Pratik /Vohra/  |
+|  @I49@  |  Jigar /Vohra/   |
+|  @I50@  |  Sanket /Vohra/  |
+|  @I51@  |  Pooja /Vohra/   |
+|  @I52@  |  Kalpit /Vohra/  |
+|  @I53@  |  Rushab /Vohra/  |
+|  @I54@  |   Diti /Vohra/   |
+|  @I55@  |  Hetal /Vohra/   |
+|  @I56@  |  Dimple /Vohra/  |
+|  @I57@  | Abhishek /Vohra/ |
+|  @I58@  |  Guddu /Vohra/   |
+|  @I75@  |  Dhruvi /Vohra/  |
++---------+------------------+ 
 Info: INDIVIDUAL: US38: List upcoming birthdays 
-+---------+-------------------+---------------------+
-| INDI ID |        NAME       |      BIRTH DATE     |
-+---------+-------------------+---------------------+
-|   @I2@  |  Melania /Knavs/  | 1970-04-26 00:00:00 |
-|  @I32@  |    Roma /Solo/    | 1985-04-09 00:00:00 |
-|  @I38@  |  Monalisa /Solo/  | 2015-04-14 00:00:00 |
-|  @I48@  |   Pratik /Vohra/  | 1925-05-07 00:00:00 |
-|   @I7@  | Elizabeth /Trump/ | 1942-04-10 00:00:00 |
-+---------+-------------------+---------------------+ 
++---------+-----------------+---------------------+
+| INDI ID |       NAME      |      BIRTH DATE     |
++---------+-----------------+---------------------+
+|   @I2@  | Melania /Knavs/ | 1970-04-26 00:00:00 |
+|  @I48@  |  Pratik /Vohra/ | 1925-05-07 00:00:00 |
++---------+-----------------+---------------------+ 
