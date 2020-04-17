@@ -2,7 +2,7 @@ from datetime import datetime
 
 from subscripts.outputDisplay import calculateage
 from subscripts.parseFile import fileParser
-from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16, us21, us22
+from subscripts.userStories.UserStories_Pratik_Deo import us01, us10, us15, us16, us21, us22, us29, us31
 from subscripts.userStories.UserStories_MP import us03, us08, us13, us18, us23, us28, us38, us33, getIndiByID, \
     getFamByID
 from subscripts.userStories.UserStories_MD import us04, us07, us14, us17, us24, us27, us34, us37
@@ -196,6 +196,31 @@ class TestCases(unittest.TestCase):
             if flag is False:
                 break
         self.assertTrue(flag)
+
+    def test_us29(self):
+        f = open("test.txt", "a")
+        value = us29(self.d[0], self.d[1], f)
+        flag = False
+        for id in value:
+            person = getIndiByID(self.d[0], id)
+            if person['DEAT'] != 'NA':
+                flag = True
+        f.close()
+        self.assertTrue(flag)
+
+    def test_us31(self):
+        f = open("test.txt", "a")
+        value = us31(self.d[0], self.d[1], f)
+        flag = False
+        for id in value:
+            person = getIndiByID(self.d[0], id)
+            age = calculateage(person["BIRT"], person["DEAT"])
+            if (person["DEAT"] == 'NA' and person["FAMS"] == 'NA'):
+                if (str(age) > '30'):
+                    flag = True
+        f.close()
+        self.assertTrue(flag)
+
 
     def test_us30(self):
         f = open("test.txt", "a")

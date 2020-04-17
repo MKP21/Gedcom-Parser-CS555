@@ -1,5 +1,7 @@
 from datetime import date
 from subscripts.outputDisplay import calculateage
+import prettytable
+from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
 
 today = date.today()
 dateList = []
@@ -241,3 +243,48 @@ def us22(indi, fam, f):
             print("There is a repeating id in Fam" + str(fa))
             f.write("Error: FAM: US 22: Duplicate ids " + str(fa) + "\n")
             return flag
+
+
+# US 29
+def us29(indi, fam, f):
+    print("US 29 - deceased List")
+    flag = False
+    deceasedList = []
+    for i in indi:
+        if (i["DEAT"] != 'NA'):
+            deceasedList.append(i["INDI"])
+
+
+    f.write("US 29: deceased list: "+ "\n")
+    ftable = prettytable.PrettyTable()
+    ftable.field_names = ["INDI ID", "Deceased Individual"]
+    for i in range(len(deceasedList)):
+        individual = getIndiByID(indi, deceasedList[i])
+        ftable.add_row([deceasedList[i], individual["NAME"]])
+    f.write(f"{str(ftable)} \n")
+    print(f"{str(ftable)} \n")
+    print("US 29 - completed")
+    return deceasedList
+
+# living list of singles - 31
+
+def us31(indi, fam, f):
+    single = []
+    print("US 31 - Living list of singles ")
+    for i in indi:
+        age = calculateage(i["BIRT"], i["DEAT"])
+        if (i["DEAT"] == 'NA' and i["FAMS"] == 'NA'):
+            if (str(age) > '30'):
+                single.append(str(i["INDI"]))
+
+
+    f.write("US 31: single's list: "+"\n")
+    ftable = prettytable.PrettyTable()
+    ftable.field_names = ["INDI ID", "Deceased Individual"]
+    for i in range(len(single)):
+        individual = getIndiByID(indi, single[i])
+        ftable.add_row([single[i], individual["NAME"]])
+    f.write(f"{str(ftable)} \n")
+    print(f"{str(ftable)} \n")
+    print("US 31 completed")
+    return single
