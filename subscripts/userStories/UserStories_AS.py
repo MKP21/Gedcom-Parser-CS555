@@ -1,4 +1,7 @@
 from datetime import datetime
+
+from prettytable import PrettyTable
+
 from subscripts.userStories.UserStories_MP import getIndiByID, getFamByID
 
 
@@ -224,3 +227,21 @@ def us26(indi, fam, f):
     print("User Story 26 Completed")
     return flag
 
+
+# User story 36, List recent deaths
+
+def us36(indi, fam, f):
+    print("User Story 36 - List of recent deaths in 30 days , running")
+    table = PrettyTable()
+    table.field_names = ["ID", "Name", "Death Date"]
+    today = datetime.now()
+    for ind in indi:
+        if ind['DEAT'] != 'NA':
+            death = ind['DEAT']
+            diff = int((today - datetime.strptime(str(death), '%Y-%m-%d %H:%M:%S')).days)
+            if diff <= 30:
+                f.write(f"ERROR: INDIVIDUAL: US36: {ind['NAME']} died recently within 30 days {ind['DEAT']} \n")
+                table.add_row([ind['INDI'], ind['NAME'], ind['DEAT']])
+
+    f.write(f"{str(table)} \n")
+    print("User Story 36 Completed")

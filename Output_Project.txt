@@ -70,7 +70,7 @@
 | @I70@ |      Kol /Singh/      |   F    | 01 Apr 2020 |  0   |  TRUE |      NA     | ['@F22@'] |        ['@F23@']         |
 | @I71@ |     Meetu /Singh/     |   M    | 03 Mar 1960 |  60  |  TRUE |      NA     | ['@F12@'] |        ['@F23@']         |
 | @I72@ |    Yoda /Skywalker/   |   M    | 17 Nov 1953 |  26  | FALSE | 05 Jul 1980 |     NA    |            NA            |
-| @I73@ |     Dhruvi /Vohra/    |   F    | 21 Dec 1937 |  82  |  TRUE |      NA     |     NA    |            NA            |
+| @I73@ |     Dhruvi /Vohra/    |   F    | 21 Dec 1935 |  84  |  TRUE |      NA     |     NA    |            NA            |
 | @I74@ |     Dakash /Vohra/    |   M    | 17 Dec 1939 |  80  |  TRUE |      NA     | ['@F20@'] |            NA            |
 | @I75@ |     Dhruvi /Vohra/    |   F    | 19 Dec 1937 |  82  |  TRUE |      NA     | ['@F19@'] |            NA            |
 | @I76@ |     Robert /Trump/    |   M    | 01 Mar 1960 |  60  |  TRUE |      NA     |     NA    |        ['@F24@']         |
@@ -122,8 +122,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-18 23:55:18.275344 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-18 23:55:18.275420 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-19 00:17:53.024168 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-19 00:17:53.024247 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -160,8 +160,8 @@ Error: INDIVIDUAL: US23: multiple people with the name Bulbul /Patel/ and birthd
 ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one family 
 Error: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 1977-02-03 00:00:00 exist in a family 
 Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1977-02-03 00:00:00 exist in a family 
-ERROR: INDIVIDUAL: US26:  @I72@ cannot find corresponding families. 
 ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families. 
+ERROR: INDIVIDUAL: US26:  @I72@ cannot find corresponding families. 
 ERROR: INDIVIDUAL US24: list of individual's age : 
 +---------+-----------------------+------+
 | INDI ID |          NAME         | AGE  |
@@ -235,7 +235,7 @@ ERROR: INDIVIDUAL US24: list of individual's age :
 |  @I70@  |      Kol /Singh/      |  0   |
 |  @I71@  |     Meetu /Singh/     |  60  |
 |  @I72@  |    Yoda /Skywalker/   |  26  |
-|  @I73@  |     Dhruvi /Vohra/    |  82  |
+|  @I73@  |     Dhruvi /Vohra/    |  84  |
 |  @I74@  |     Dakash /Vohra/    |  80  |
 |  @I75@  |     Dhruvi /Vohra/    |  82  |
 |  @I76@  |     Robert /Trump/    |  60  |
@@ -389,6 +389,7 @@ Info: FAMILY: US30: List all living married, running
 |  @I7@  | Elizabeth /Trump/  |
 |  @I8@  |  Thomas /Stevens/  |
 +--------+--------------------+ 
+Error: INDIVIDUAL: US32: @I73@, has multiple births
 Info: INDIVIDUAL: US33: List orphaned kids 
 +---------+--------------+
 | INDI ID |     NAME     |
@@ -406,6 +407,12 @@ Info: INDIVIDUAL: US35: List upcoming birthdays
 +---------+-------------+
 |  @I70@  | Kol /Singh/ |
 +---------+-------------+ 
+ERROR: INDIVIDUAL: US36: Kiran /Vohra/ died recently within 30 days 2020-04-13 00:00:00 
++-------+---------------+---------------------+
+|   ID  |      Name     |      Death Date     |
++-------+---------------+---------------------+
+| @I41@ | Kiran /Vohra/ | 2020-04-13 00:00:00 |
++-------+---------------+---------------------+ 
 +---------+------------------+
 | INDI ID |       NAME       |
 +---------+------------------+

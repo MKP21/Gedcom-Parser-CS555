@@ -7,7 +7,7 @@ from subscripts.userStories.UserStories_MP import us03, us08, us13, us18, us23, 
     getFamByID
 from subscripts.userStories.UserStories_MD import us04, us07, us14, us17, us24, us27, us34, us37
 from subscripts.userStories.UserStories_DK import us02, us09, us12, us19, us30, us32, us39, us35
-from subscripts.userStories.UserStories_AS import us05, us06, us11, us20, us25, us26
+from subscripts.userStories.UserStories_AS import us05, us06, us11, us20, us25, us26, us36
 
 import unittest
 
@@ -270,6 +270,12 @@ class TestCases(unittest.TestCase):
         value = us35(self.d[0], self.d[1], f)
         f.close()
         self.assertTrue(value)
+
+    def test_us36(self):
+        f = open("test.txt", "a")
+        value = us36(self.d[0], self.d[1], f)
+        f.close()
+        self.assertFalse(value)
 
     def test_us37(self):
         f = open("test.txt", "a")
