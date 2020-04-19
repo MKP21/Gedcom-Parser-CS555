@@ -67,7 +67,7 @@
 | @I68@ |      Deep /Singh/     |   M    | 08 Jun 1950 |  69  |  TRUE |      NA     | ['@F12@'] |        ['@F22@']         |
 | @I69@ |    Manisha /Singh/    |   F    | 05 Apr 0019 | 2001 |  TRUE |      NA     |     NA    |        ['@F22@']         |
 |  @I6@ | Frederick /Trump Jr./ |   M    | 14 Oct 1938 |  42  | FALSE | 06 Sep 1981 |  ['@F4@'] |            NA            |
-| @I70@ |      Kol /Singh/      |   F    | 05 Apr 1985 |  35  |  TRUE |      NA     | ['@F22@'] |        ['@F23@']         |
+| @I70@ |      Kol /Singh/      |   F    | 01 Apr 2020 |  0   |  TRUE |      NA     | ['@F22@'] |        ['@F23@']         |
 | @I71@ |     Meetu /Singh/     |   M    | 03 Mar 1960 |  60  |  TRUE |      NA     | ['@F12@'] |        ['@F23@']         |
 | @I72@ |    Yoda /Skywalker/   |   M    | 17 Nov 1953 |  26  | FALSE | 05 Jul 1980 |     NA    |            NA            |
 | @I73@ |     Dhruvi /Vohra/    |   F    | 21 Dec 1937 |  82  |  TRUE |      NA     |     NA    |            NA            |
@@ -100,7 +100,7 @@
 | @F20@ | 23 Sep 1935 |      NA     |   @I42@    |   Akash /Vohra/    |  @I43@  |    Tanu /Vohra/    |                                                                         ['@I74@']                                                                         |
 | @F21@ | 03 Apr 1970 |      NA     |   @I59@    |   Miami /Patel/    |  @I60@  |   Rinky /Gupta/    |                                                                     ['@I61@', '@I78@']                                                                    |
 | @F22@ | 02 Mar 1980 |      NA     |   @I68@    |    Deep /Singh/    |  @I69@  |  Manisha /Singh/   |                                                                         ['@I70@']                                                                         |
-| @F23@ | 03 Mar 1980 |      NA     |   @I71@    |   Meetu /Singh/    |  @I70@  |    Kol /Singh/     |                                                                             NA                                                                            |
+| @F23@ | 03 May 1980 |      NA     |   @I71@    |   Meetu /Singh/    |  @I70@  |    Kol /Singh/     |                                                                             NA                                                                            |
 | @F24@ | 01 Oct 1975 |      NA     |   @I76@    |   Robert /Trump/   |  @I77@  |  Martha /Blaine/   |                                                                             NA                                                                            |
 | @F25@ | 13 Oct 1997 |      NA     |   @I80@    |   Natraj /Laal/    |  @I79@  |  Rama /Skywalker/  |                                                                         ['@I81@']                                                                         |
 |  @F2@ | 16 Apr 1977 | 24 Aug 1990 |    @I1@    | Donald /Trump Sr./ |  @I12@  | Ivana /Zelnickova/ |                                                                ['@I13@', '@I16@', '@I17@']                                                                |
@@ -122,8 +122,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-17 12:11:45.999354 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-17 12:11:45.999419 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-18 23:55:18.275344 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-18 23:55:18.275420 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -160,8 +160,8 @@ Error: INDIVIDUAL: US23: multiple people with the name Bulbul /Patel/ and birthd
 ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one family 
 Error: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 1977-02-03 00:00:00 exist in a family 
 Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1977-02-03 00:00:00 exist in a family 
-ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families. 
 ERROR: INDIVIDUAL: US26:  @I72@ cannot find corresponding families. 
+ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families. 
 ERROR: INDIVIDUAL US24: list of individual's age : 
 +---------+-----------------------+------+
 | INDI ID |          NAME         | AGE  |
@@ -232,7 +232,7 @@ ERROR: INDIVIDUAL US24: list of individual's age :
 |  @I68@  |      Deep /Singh/     |  69  |
 |  @I69@  |    Manisha /Singh/    | 2001 |
 |   @I6@  | Frederick /Trump Jr./ |  42  |
-|  @I70@  |      Kol /Singh/      |  35  |
+|  @I70@  |      Kol /Singh/      |  0   |
 |  @I71@  |     Meetu /Singh/     |  60  |
 |  @I72@  |    Yoda /Skywalker/   |  26  |
 |  @I73@  |     Dhruvi /Vohra/    |  82  |
@@ -399,8 +399,13 @@ ERROR: FAMILY: US34: family with id @F10@ had wife @I14@ of age 41 twice the age
 ERROR: FAMILY: US34: family with id @F13@ had husband @I27@ of age 26 twice the age of his wife @I28@ of age 5 during their marriage 1975-07-10 00:00:00
 ERROR: FAMILY: US34: family with id @F1@ had husband @I1@ of age 31 twice the age of his wife @I2@ of age 7 during their marriage 1978-01-22 00:00:00
 ERROR: FAMILY: US34: family with id @F22@ had wife @I69@ of age 1960 twice the age of her husband @I68@ of age 29 during their marriage 1980-03-02 00:00:00
-ERROR: FAMILY: US34: family with id @F23@ had husband @I71@ of age 20 twice the age of his wife @I70@ of age 5 during their marriage 1980-03-03 00:00:00
 ERROR: FAMILY: US34: family with id @F8@ had wife @I11@ of age 125 twice the age of her husband @I10@ of age 27 during their marriage 1975-10-01 00:00:00
+Info: INDIVIDUAL: US35: List upcoming birthdays 
++---------+-------------+
+| INDI ID |     NAME    |
++---------+-------------+
+|  @I70@  | Kol /Singh/ |
++---------+-------------+ 
 +---------+------------------+
 | INDI ID |       NAME       |
 +---------+------------------+
@@ -431,3 +436,10 @@ Info: INDIVIDUAL: US38: List upcoming birthdays
 |  @I48@  |  Pratik /Vohra/  | 1925-05-07 00:00:00 |
 |  @I57@  | Abhishek /Vohra/ | 1937-05-18 00:00:00 |
 +---------+------------------+---------------------+ 
+Info: INDIVIDUAL: US39: List upcoming Anniversary 
++---------+---------------+
+| INDI ID |      NAME     |
++---------+---------------+
+|  @I71@  | Meetu /Singh/ |
+|  @I70@  |  Kol /Singh/  |
++---------+---------------+ 

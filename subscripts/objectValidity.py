@@ -44,7 +44,9 @@ def objectvalid(indi, fam, us32_ids):
     us32(us32_ids, f)
     us33(indi, fam, f)
     us34(indi,fam,f)
+    us35(indi, fam, f)
     us37(indi, fam, f)
     us38(indi, fam, f)
+    us39(indi, fam,f )
     f.close()
     return True

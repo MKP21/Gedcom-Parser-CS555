@@ -216,8 +216,11 @@ def us32(us32p, f):
 
 def us35(indi, fam, f):
     # Created empty list to store recent births
-    recent_birth = list()
     print("User Story 35-List recent births")
+    recent_birth = list()
+    ftable = prettytable.PrettyTable()
+    ftable.field_names = ["INDI ID", "NAME"]
+    f.write("Info: INDIVIDUAL: US35: List upcoming birthdays \n")
     # Iterating over individuals
     for individuals in indi:
         # Getting todays date
@@ -226,15 +229,20 @@ def us35(indi, fam, f):
         # Comparing today's date to 30 days constraint
         if 0 < (todays_date - age).days <= 30:
             recent_birth.append(individuals)
-
+    for rb in recent_birth:
+        ftable.add_row([rb["INDI"], rb["NAME"]])
+    f.write(f"{str(ftable)} \n")
     print("User Story 35 Completed")
     return recent_birth
 
 
 def us39(indi, fam, f):
     print("User Story 39 - List upcoming Anniversary, running")
+    f.write("Info: INDIVIDUAL: US39: List upcoming Anniversary \n")
     # Created empty list to store upcoming anniversary
     upcoming_anniversary = list()
+    ftable = prettytable.PrettyTable()
+    ftable.field_names = ["INDI ID","NAME"]
     # Iterating in families to check over each marriage
     for families in fam:
         # Getting Data of Husband and Wife to check if they are alive
@@ -251,6 +259,8 @@ def us39(indi, fam, f):
                 # If criteria matches we append object to list
                 upcoming_anniversary.append(husband)
                 upcoming_anniversary.append(wife)
-
+    for upa in upcoming_anniversary:
+        ftable.add_row([upa["INDI"],upa["NAME"]])
+    f.write(f"{str(ftable)} \n")
     print("User Story 39 Completed")
     return upcoming_anniversary
