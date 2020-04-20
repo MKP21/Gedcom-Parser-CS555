@@ -181,8 +181,8 @@ def us27(indi, fam, f):
     for person in indi:
         if person['BIRT'] == 'NA':
 
-            print(f"ERROR: INDIVIDUAL US24: no birth date found for {person['INDI']}")
-            f.write(f"ERROR: INDIVIDUAL US24: no birth date found for {person['INDI']} \n")
+            print(f"ERROR: INDIVIDUAL US27: no birth date found for {person['INDI']}")
+            f.write(f"ERROR: INDIVIDUAL US27: no birth date found for {person['INDI']} \n")
             flag = False
         else:
             b_date = person['BIRT']
@@ -194,7 +194,7 @@ def us27(indi, fam, f):
             ftable.field_names = ["INDI ID", "NAME", "AGE"]
     for l in list_of_age:
         ftable.add_row([l[0],l[1],l[2]])
-    f.write(f"ERROR: INDIVIDUAL US24: list of individual's age : \n")
+    f.write(f"ERROR: INDIVIDUAL US27: list of individual's age : \n")
     f.write(f"{str(ftable)} \n")
     print("Userstory 27 Completed")
     if flag:
@@ -275,6 +275,7 @@ def us37(indi, fam, f):
     for i in range(len(list_to_rtrn)):
         person = getIndiByID(indi, list_to_rtrn[i])
         ftable.add_row([list_to_rtrn[i],person['NAME']])
+    f.write(f"ERROR: INDIVIDUAL US27: List all living spouses and descendants of people who died in the last 30 days: \n")
     f.write(f"{str(ftable)} \n")
     print(f"{str(ftable)} \n")
     print("Userstory 37 Completed")

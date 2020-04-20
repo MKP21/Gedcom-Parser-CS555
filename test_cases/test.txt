@@ -7,8 +7,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-19 00:15:52.732080 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-19 00:15:52.732327 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-19 21:48:48.823480 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-19 21:48:48.823480 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -47,7 +47,7 @@ Error: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 197
 Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1977-02-03 00:00:00 exist in a family 
 ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families. 
 ERROR: INDIVIDUAL: US26:  @I72@ cannot find corresponding families. 
-ERROR: INDIVIDUAL US24: list of individual's age : 
+ERROR: INDIVIDUAL US27: list of individual's age : 
 +---------+-----------------------+------+
 | INDI ID |          NAME         | AGE  |
 +---------+-----------------------+------+
@@ -298,6 +298,7 @@ ERROR: INDIVIDUAL: US36: Kiran /Vohra/ died recently within 30 days 2020-04-13 0
 +-------+---------------+---------------------+
 | @I41@ | Kiran /Vohra/ | 2020-04-13 00:00:00 |
 +-------+---------------+---------------------+ 
+ERROR: INDIVIDUAL US27: List all living spouses and descendants of people who died in the last 30 days: 
 +---------+------------------+
 | INDI ID |       NAME       |
 +---------+------------------+

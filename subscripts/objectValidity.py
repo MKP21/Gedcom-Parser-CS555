@@ -7,7 +7,7 @@ from subscripts.userStories.UserStories_DK import us02, us09, us12, us19, us39, 
 from subscripts.userStories.UserStories_AS import us05, us06, us11, us20, us25, us26, us36
 
 
-def objectvalid(indi, fam, us32_ids):
+def objectvalid(indi, fam, us32_ids, us42_ids):
     f = open("Output_Project.txt", "a")
     f.write("\n \n")
     us01(indi, fam, f)
@@ -43,11 +43,12 @@ def objectvalid(indi, fam, us32_ids):
     us30(indi, fam, f)
     us32(us32_ids, f)
     us33(indi, fam, f)
-    us34(indi,fam,f)
+    us34(indi, fam, f)
     us35(indi, fam, f)
     us36(indi, fam, f)
     us37(indi, fam, f)
     us38(indi, fam, f)
-    us39(indi, fam,f )
+    us39(indi, fam, f)
+    print(us42_ids)
     f.close()
     return True

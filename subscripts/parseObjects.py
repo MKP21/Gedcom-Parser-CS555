@@ -8,6 +8,7 @@ import datetime
 
 
 def inddetails(obj, v):
+    us42 = list()
     if obj is None:
         # create a new INDI Dict, v[1] will be "INDI" in this line, v[2] will be the id
         obj = OrderedDict({
@@ -17,9 +18,9 @@ def inddetails(obj, v):
             "BIRT": "NA",  # datetime
             "DEAT": "NA",  # datetime
             "FAMC": "NA",  # array to check possible errors
-            "FAMS": "NA"   # array
+            "FAMS": "NA"  # array
         })
-        return obj
+        return obj, us42
     # end of if
     if v[1] in ("FAMC", "FAMS"):
         if obj[v[1]] == "NA":
@@ -35,23 +36,32 @@ def inddetails(obj, v):
             obj[v[1]] = None
 
     elif v[1] == "DATE":
-        if obj["DEAT"] is None:
-            # convert string to datetime
-            obj["DEAT"] = datetime.datetime.strptime(v[2], "%d %b %Y")
-        elif obj["BIRT"] is None:
-            obj["BIRT"] = datetime.datetime.strptime(v[2], "%d %b %Y")
-        else:
-            print("A Date exists without proper gedcom grammar")
-
+        try:
+            if obj["DEAT"] is None:
+                # convert string to datetime
+                obj["DEAT"] = datetime.datetime.strptime(v[2], "%d %b %Y")
+            elif obj["BIRT"] is None:
+                obj["BIRT"] = datetime.datetime.strptime(v[2], "%d %b %Y")
+            else:
+                print("A Date exists without proper gedcom grammar")
+        except:
+            date_details = v[2].split()
+            new_date = f"1 {date_details[1]} {date_details[2]}"
+            if obj["BIRT"] is None:
+                obj["BIRT"] = datetime.datetime.strptime(new_date, "%d %b %Y")
+            elif obj["DEAT"] is None:
+                obj["DEAT"] = datetime.datetime.strptime(new_date, "%d %b %Y")
+            us42.append(obj["INDI"])
     # other tags : INDI, NAME, SEX
     else:
         obj[v[1]] = v[2]
     # end of if
 
-    return obj
+    return obj, us42
 
 
 def famdetails(obj, v):
+    us42 = list()
     if obj is None:
         # create a new FAM Dict, v[1] will be "FAM" in this line
         obj = OrderedDict({
@@ -62,7 +72,7 @@ def famdetails(obj, v):
             "MARR": "NA",
             "DIV": "NA",
         })
-        return obj
+        return obj, us42
     # end of if
     if v[1] == "CHIL":
         if obj["CHIL"] == "NA":
@@ -75,15 +85,24 @@ def famdetails(obj, v):
             print(f"Error: {v} second marriage in same family")
             obj[v[1]] = None
     elif v[1] == "DATE":
-        if obj["DIV"] is None:
-            # convert string to datetime
-            obj["DIV"] = datetime.datetime.strptime(v[2], "%d %b %Y")
-        elif obj["MARR"] is None:
-            # convert string to datetime
-            obj["MARR"] = datetime.datetime.strptime(v[2], "%d %b %Y")
-        else:
-            print(f"Error with date {v}")
+        try:
+            if obj["DIV"] is None:
+                # convert string to datetime
+                obj["DIV"] = datetime.datetime.strptime(v[2], "%d %b %Y")
+            elif obj["MARR"] is None:
+                # convert string to datetime
+                obj["MARR"] = datetime.datetime.strptime(v[2], "%d %b %Y")
+            else:
+                print(f"Error with date {v}")
+        except:
+            date_details = v[2].split()
+            new_date = f"1 {date_details[1]} {date_details[2]}"
+            if obj["MARR"] is None:
+                obj["MARR"] = datetime.datetime.strptime(new_date, "%d %b %Y")
+            elif obj["DIV"] is None:
+                obj["DIV"] = datetime.datetime.strptime(new_date, "%d %b %Y")
+            us42.append(obj["FAM"])
     else:
         obj[v[1]] = v[2]
 
-    return obj
+    return obj, us42

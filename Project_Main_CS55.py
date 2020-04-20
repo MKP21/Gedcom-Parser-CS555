@@ -17,7 +17,7 @@ def main() -> None:
     outputtable(gedcom_list[0], gedcom_list[1])
 
     # run user story functions inside this function
-    objectvalid(gedcom_list[0], gedcom_list[1], gedcom_list[2])
+    objectvalid(gedcom_list[0], gedcom_list[1], gedcom_list[2], gedcom_list[3])
 
 
 if __name__ == "__main__":

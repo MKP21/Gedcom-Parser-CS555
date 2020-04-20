@@ -10,6 +10,7 @@ def fileParser(filename):
     indi = list()  # list of INDI objects
     fam = list()  # list of FAM objects
     us32_ids = list()
+    us42_ids = list()
 
     for line in f:
         elems = line.split()
@@ -45,13 +46,21 @@ def fileParser(filename):
             # NOTE, TRLR, HEAD
             continue
 
-        # use currtag to call function to create the appropriate Dict object
+        # use currtag to call function to create/edit the appropriate Dict object
+        # returns a list of object and also a id if line has us42 error
+        obj_lis = None
         if currtag == 'FAM':
-            obj = famdetails(obj, v)
+            obj_lis = famdetails(obj, v)
         elif currtag == 'INDI':
-            obj = inddetails(obj, v)
+            obj_lis = inddetails(obj, v)
         elif obj is None:  # the first valid line is not a FAM or IND
             currtag = None
+
+        # edited code for us42
+        if obj_lis is not None:
+            obj = obj_lis[0]
+            if len(obj_lis[1]) != 0:
+                us42_ids.append(obj_lis[1][0])
     # end of for
 
     # adding the last object in the file
@@ -66,4 +75,4 @@ def fileParser(filename):
     indi = sorted(indi, key=lambda i: i["INDI"])
     fam = sorted(fam, key=lambda i: i["FAM"])
 
-    return [indi, fam, us32_ids]
+    return [indi, fam, us32_ids,us42_ids]
