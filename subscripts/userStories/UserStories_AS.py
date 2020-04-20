@@ -245,3 +245,17 @@ def us36(indi, fam, f):
 
     f.write(f"{str(table)} \n")
     print("User Story 36 Completed")
+
+
+def us42(us42_ids, f):
+    print("User Story 42 - All dates should be a legitimate date ")
+    flag = True
+    for datess in us42_ids:
+        print(
+                f"ERROR : US42: Indi id -> {datess} has an invalid date")
+        f.write(
+                f"Error: INDIVIDUAL: US42: {datess} has an invalid date \n")
+        flag = False
+    print("User Story 42 Completed")
+    print("\n \n ------------------ Sprint 4 Complete--------------------")
+    return flag

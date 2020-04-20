@@ -7,7 +7,7 @@ from subscripts.userStories.UserStories_MP import us03, us08, us13, us18, us23, 
     getFamByID
 from subscripts.userStories.UserStories_MD import us04, us07, us14, us17, us24, us27, us34, us37
 from subscripts.userStories.UserStories_DK import us02, us09, us12, us19, us30, us32, us39, us35
-from subscripts.userStories.UserStories_AS import us05, us06, us11, us20, us25, us26, us36
+from subscripts.userStories.UserStories_AS import us05, us06, us11, us20, us25, us26, us36, us42
 
 import unittest
 
@@ -221,7 +221,6 @@ class TestCases(unittest.TestCase):
         f.close()
         self.assertTrue(flag)
 
-
     def test_us30(self):
         f = open("test.txt", "a")
         value = us30(self.d[0], self.d[1], f)
@@ -283,11 +282,10 @@ class TestCases(unittest.TestCase):
         flag = True
         for id in value:
             person = getIndiByID(self.d[0], id)
-            if person['DEAT']  != 'NA':
+            if person['DEAT'] != 'NA':
                 flag = False
         f.close()
         self.assertTrue(flag)
-
 
     def test_us38(self):
         # test will fail if a persons birthday in the list is not in the next 30 days
@@ -310,6 +308,13 @@ class TestCases(unittest.TestCase):
         value = us39(self.d[0], self.d[1], f)
         f.close()
         self.assertTrue(value)
+
+    def test_us42(self):
+        f = open("test.txt", "a")
+        value = us42(self.d[2], f)
+        f.close()
+        self.assertFalse(value)
+
 
 if __name__ == '__main__':
     unittest.main(exit=False, verbosity=2)

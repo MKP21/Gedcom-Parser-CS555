@@ -275,7 +275,7 @@ def us37(indi, fam, f):
     for i in range(len(list_to_rtrn)):
         person = getIndiByID(indi, list_to_rtrn[i])
         ftable.add_row([list_to_rtrn[i],person['NAME']])
-    f.write(f"ERROR: INDIVIDUAL US27: List all living spouses and descendants of people who died in the last 30 days: \n")
+    f.write(f"ERROR: INDIVIDUAL US37: List all living spouses and descendants of people who died in the last 30 days: \n")
     f.write(f"{str(ftable)} \n")
     print(f"{str(ftable)} \n")
     print("Userstory 37 Completed")

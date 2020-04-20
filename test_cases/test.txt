@@ -7,8 +7,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-19 21:48:48.823480 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-19 21:48:48.823480 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-20 13:15:52.447780 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-20 13:15:52.447929 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -45,8 +45,8 @@ Error: INDIVIDUAL: US23: multiple people with the name Bulbul /Patel/ and birthd
 ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one family 
 Error: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 1977-02-03 00:00:00 exist in a family 
 Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1977-02-03 00:00:00 exist in a family 
-ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families. 
 ERROR: INDIVIDUAL: US26:  @I72@ cannot find corresponding families. 
+ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families. 
 ERROR: INDIVIDUAL US27: list of individual's age : 
 +---------+-----------------------+------+
 | INDI ID |          NAME         | AGE  |
@@ -171,7 +171,7 @@ Info: FAMILY: US28: List siblings in decreasing order of age
 |  @F2@  |   Donald /Trump Jr./  | 1971-12-31 00:00:00 |
 |  @F2@  |     Ivanka /Trump/    | 1981-10-30 00:00:00 |
 |  @F2@  |      Eric /Trump/     | 1984-01-06 00:00:00 |
-|  @F4@  |    Maryanne /Trump/   | 1937-04-05 00:00:00 |
+|  @F4@  |    Maryanne /Trump/   | 1937-04-01 00:00:00 |
 |  @F4@  | Frederick /Trump Jr./ | 1938-10-14 00:00:00 |
 |  @F4@  |   Elizabeth /Trump/   | 1942-04-10 00:00:00 |
 |  @F4@  |   Donald /Trump Sr./  | 1946-06-14 00:00:00 |
@@ -336,3 +336,4 @@ Info: INDIVIDUAL: US39: List upcoming Anniversary
 |  @I71@  | Meetu /Singh/ |
 |  @I70@  |  Kol /Singh/  |
 +---------+---------------+ 
+Error: INDIVIDUAL: US42: @I73@ has an invalid date 
