@@ -7,8 +7,8 @@ ERROR: FAMILY: us04: @F8@: divorce 1974-05-11 00:00:00 before marriage 1975-10-0
 ERROR: INDIVIDUAL : US05 : @I26@ : Married 1940-12-03 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
 ERROR: FAMILY : US06 : @I25@ : Divorced 2010-01-01 00:00:00 after wifi's (@I25@) death on 1955-05-04 00:00:00 
 ERROR: FAMILY : US06 : @I26@ : Divorced 2010-01-01 00:00:00 after husband's (@I26@) death on 1920-04-02 00:00:00 
-ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-20 13:15:52.447780 
-ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-20 13:15:52.447929 
+ERROR: INDIVIDUAL: us07: @I11@: birth 1850-03-07 00:00:00 before 150 years from current date 2020-04-20 13:27:42.463072 
+ERROR: INDIVIDUAL: us07: @I69@: birth 0019-04-05 00:00:00 before 150 years from current date 2020-04-20 13:27:42.463250 
 Error: INDIVIDUAL: US08: -> @I13@, Birth before marriage of parents 
 Error: INDIVIDUAL: US08: -> @I19@, Birth before marriage of parents 
 Error: INDIVIDUAL: US09: @I27@ Luke /Skywalker/ Birth after death of parents  
@@ -40,13 +40,13 @@ Error: FAMILY: US18: spouses @I36@ and @I37@ are siblings
 Error: FAMILY: US19: spouses @I35@ and @I34@ are first cousins
 Error: INDIVIDUAL US 20  @I70@ has married their aunt/uncle @I71@ 
  Error: INDI: US 21: Not correct gender for the role husband: @I35@in family @F17@
+Error: INDI: US 22: Duplicate ids {'@I74@'}
 Error: INDIVIDUAL: US23: multiple people with the name Yoda /Skywalker/ and birthdate 1953-11-17 00:00:00 exist 
 Error: INDIVIDUAL: US23: multiple people with the name Bulbul /Patel/ and birthdate 1977-02-03 00:00:00 exist 
 ERROR: FAMILY: US24: LINENUMBER: @F8@: has same named spouses Robert /Trump/, Martha /Blaine/ and marriage date 1975-10-01 00:00:00 with more than one family 
 Error: INDIVIDUAL: US25: multiple children with the name @I61@ and birthdate 1977-02-03 00:00:00 exist in a family 
 Error: INDIVIDUAL: US25: multiple children with the name @I78@ and birthdate 1977-02-03 00:00:00 exist in a family 
 ERROR: INDIVIDUAL: US26:  @I72@ cannot find corresponding families. 
-ERROR: INDIVIDUAL: US26:  @I73@ cannot find corresponding families. 
 ERROR: INDIVIDUAL US27: list of individual's age : 
 +---------+-----------------------+------+
 | INDI ID |          NAME         | AGE  |
@@ -120,7 +120,7 @@ ERROR: INDIVIDUAL US27: list of individual's age :
 |  @I70@  |      Kol /Singh/      |  0   |
 |  @I71@  |     Meetu /Singh/     |  60  |
 |  @I72@  |    Yoda /Skywalker/   |  26  |
-|  @I73@  |     Dhruvi /Vohra/    |  84  |
+|  @I74@  |     Dhruvi /Vohra/    |  84  |
 |  @I74@  |     Dakash /Vohra/    |  80  |
 |  @I75@  |     Dhruvi /Vohra/    |  82  |
 |  @I76@  |     Robert /Trump/    |  60  |
@@ -166,6 +166,8 @@ Info: FAMILY: US28: List siblings in decreasing order of age
 | @F19@  |     Dhruvi /Vohra/    | 1937-12-19 00:00:00 |
 | @F19@  |     Guddu /Vohra/     | 1940-02-19 00:00:00 |
 | @F19@  |    Drashti /Vohra/    | 2922-01-15 00:00:00 |
+| @F20@  |     Dhruvi /Vohra/    | 1935-12-21 00:00:00 |
+| @F20@  |     Dhruvi /Vohra/    | 1935-12-21 00:00:00 |
 | @F21@  |     Bulbul /Patel/    | 1977-02-03 00:00:00 |
 | @F21@  |     Bulbul /Patel/    | 1977-02-03 00:00:00 |
 |  @F2@  |   Donald /Trump Jr./  | 1971-12-31 00:00:00 |
@@ -268,13 +270,13 @@ US 31: single's list:
 |  @I58@  |    Guddu /Vohra/    |
 |   @I5@  |   Maryanne /Trump/  |
 |  @I61@  |    Bulbul /Patel/   |
-|  @I73@  |    Dhruvi /Vohra/   |
-|  @I74@  |    Dakash /Vohra/   |
+|  @I74@  |    Dhruvi /Vohra/   |
+|  @I74@  |    Dhruvi /Vohra/   |
 |  @I75@  |    Dhruvi /Vohra/   |
 |  @I78@  |    Bulbul /Patel/   |
 |  @I81@  |     Popat /Laal/    |
 +---------+---------------------+ 
-Error: INDIVIDUAL: US32: @I73@, has multiple births
+Error: INDIVIDUAL: US32: @I74@, has multiple births
 Info: INDIVIDUAL: US33: List orphaned kids 
 +---------+--------------+
 | INDI ID |     NAME     |
@@ -298,7 +300,7 @@ ERROR: INDIVIDUAL: US36: Kiran /Vohra/ died recently within 30 days 2020-04-13 0
 +-------+---------------+---------------------+
 | @I41@ | Kiran /Vohra/ | 2020-04-13 00:00:00 |
 +-------+---------------+---------------------+ 
-ERROR: INDIVIDUAL US27: List all living spouses and descendants of people who died in the last 30 days: 
+ERROR: INDIVIDUAL US37: List all living spouses and descendants of people who died in the last 30 days: 
 +---------+------------------+
 | INDI ID |       NAME       |
 +---------+------------------+
@@ -336,4 +338,4 @@ Info: INDIVIDUAL: US39: List upcoming Anniversary
 |  @I71@  | Meetu /Singh/ |
 |  @I70@  |  Kol /Singh/  |
 +---------+---------------+ 
-Error: INDIVIDUAL: US42: @I73@ has an invalid date 
+Error: INDIVIDUAL: US42: @I74@ has an invalid date 
