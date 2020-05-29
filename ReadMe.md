@@ -9,5 +9,5 @@ Please specify your input file in `Project_Main_CS555.py`, and run that script t
 * Input gedcom file: `sprint_04_v1.ged`
 * Output file: `Output_Project.txt`
 * Requirements:
-    Python - 3.7,
-    Pretty Table (lib) - 0.7.2
+    Python - `3.7`,
+    Pretty Table (lib) - `0.7.2`
